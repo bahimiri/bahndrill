@@ -121,25 +121,7 @@
     "Goldbeck (bei Osterburg), Bahnhof": [
       "S1"
     ],
-    "Magdeburg, Bahnhof Barleber See": [
-      "S1"
-    ],
-    "Magdeburg, Bahnhof Buckau": [
-      "S1"
-    ],
-    "Magdeburg, Bahnhof Hasselbachplatz": [
-      "S1"
-    ],
     "Magdeburg, Bahnhof Rothensee": [
-      "S1"
-    ],
-    "Magdeburg, Bahnhof SKET Industriepark": [
-      "S1"
-    ],
-    "Magdeburg, Bahnhof Salbke": [
-      "S1"
-    ],
-    "Magdeburg, Bahnhof S\u00fcdost": [
       "S1"
     ],
     "Magdeburg, Eichenweiler Bahnhof": [
@@ -185,7 +167,6 @@
       "S2"
     ],
     "S Babelsberg": [
-      "S1",
       "S7"
     ],
     "S Baumschulenweg": [
@@ -204,7 +185,6 @@
       "S9"
     ],
     "S Bergfelde": [
-      "S1",
       "S8"
     ],
     "S Bernau Bhf": [
@@ -221,8 +201,7 @@
       "S42"
     ],
     "S Biesdorf": [
-      "S5",
-      "S7"
+      "S5"
     ],
     "S Birkenstein": [
       "S5"
@@ -232,7 +211,6 @@
       "S8"
     ],
     "S Blankenburg": [
-      "S1",
       "S2",
       "S26",
       "S8",
@@ -311,14 +289,12 @@
       "S85"
     ],
     "S Griebnitzsee Bhf": [
-      "S1",
       "S7"
     ],
     "S Grunewald": [
       "S3",
       "S5",
-      "S7",
-      "S9"
+      "S7"
     ],
     "S Gr\u00fcnau": [
       "S41",
@@ -344,7 +320,6 @@
     ],
     "S Heerstr.": [
       "S3",
-      "S5",
       "S9"
     ],
     "S Hegerm\u00fchle": [
@@ -393,8 +368,7 @@
       "S9"
     ],
     "S Julius-Leber-Br\u00fccke": [
-      "S1",
-      "S2"
+      "S1"
     ],
     "S Karlshorst": [
       "S3"
@@ -403,8 +377,7 @@
       "S2"
     ],
     "S Kaulsdorf": [
-      "S5",
-      "S7"
+      "S5"
     ],
     "S K\u00f6llnische Heide": [
       "S41",
@@ -449,8 +422,7 @@
       "S2"
     ],
     "S Mahlsdorf Bhf": [
-      "S5",
-      "S7"
+      "S5"
     ],
     "S Marienfelde": [
       "S2"
@@ -468,14 +440,12 @@
     ],
     "S Messe S\u00fcd": [
       "S3",
-      "S5",
       "S9"
     ],
     "S Mexikoplatz": [
       "S1"
     ],
     "S M\u00fchlenbeck-M\u00f6nchm\u00fchle": [
-      "S1",
       "S8"
     ],
     "S Neuenhagen (b Berlin)": [
@@ -502,7 +472,6 @@
     ],
     "S Olympiastadion": [
       "S3",
-      "S5",
       "S9"
     ],
     "S Oranienburg Bhf": [
@@ -537,7 +506,6 @@
       "S9"
     ],
     "S Pankow-Heinersdorf": [
-      "S1",
       "S2",
       "S26",
       "S8",
@@ -548,14 +516,10 @@
     ],
     "S Pichelsberg": [
       "S3",
-      "S5",
       "S9"
     ],
     "S Pl\u00e4nterwald": [
       "S41",
-      "S42",
-      "S46",
-      "S47",
       "S8",
       "S85",
       "S9"
@@ -564,7 +528,6 @@
       "S7"
     ],
     "S Potsdam Hauptbahnhof": [
-      "S1",
       "S7"
     ],
     "S Prenzlauer Allee": [
@@ -607,7 +570,6 @@
     ],
     "S Sch\u00f6neberg": [
       "S1",
-      "S2",
       "S41",
       "S42",
       "S46"
@@ -626,7 +588,6 @@
       "S9"
     ],
     "S Sch\u00f6nflie\u00df": [
-      "S1",
       "S8"
     ],
     "S Sch\u00f6nholz": [
@@ -701,8 +662,6 @@
     "S Treptower Park": [
       "S41",
       "S42",
-      "S46",
-      "S47",
       "S8",
       "S85",
       "S9"
@@ -875,7 +834,6 @@
       "U7"
     ],
     "S+U Pankow": [
-      "S1",
       "S2",
       "S26",
       "S8",
@@ -938,7 +896,6 @@
     ],
     "S+U Wuhletal": [
       "S5",
-      "S7",
       "U5"
     ],
     "S+U Yorckstr.": [
@@ -948,8 +905,7 @@
       "U7"
     ],
     "S+U Yorckstr. (Gro\u00dfg\u00f6rschenstr.)": [
-      "S1",
-      "S2"
+      "S1"
     ],
     "S+U Zoologischer Garten Bhf": [
       "S3",
@@ -958,18 +914,6 @@
       "S9",
       "U2",
       "U9"
-    ],
-    "Sch\u00f6nebeck S\u00fcd": [
-      "S1"
-    ],
-    "Sch\u00f6nebeck(Elbe)": [
-      "S1"
-    ],
-    "Sch\u00f6nebeck-Bad Salzelmen": [
-      "S1"
-    ],
-    "Sch\u00f6nebeck-Frohse": [
-      "S1"
     ],
     "Seehausen (Altmark), Bahnhof": [
       "S1"

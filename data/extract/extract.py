@@ -28,7 +28,18 @@ def get_line_information():
     return routes, route_colors
 
 
+def get_exceptional_service_ids():
+    excluded_ids = set()
+    with open('../GTFS/calendar_dates.txt', 'r') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if row['exception_type'] == '1':
+                excluded_ids.add(row['service_id'])
+    return excluded_ids
+
+
 def get_trips(routes):
+    exceptional_services = get_exceptional_service_ids()
     trip_to_route = {}
     with open('../GTFS/trips.txt', 'r') as f:
         reader = csv.DictReader(f)
@@ -36,7 +47,9 @@ def get_trips(routes):
             route_id = row['route_id']
             trip_id = row['trip_id']
             if route_id in routes and route_id not in trip_to_route:
-                trip_to_route[trip_id] = routes[route_id]
+                service_id = row['service_id']
+                if service_id not in exceptional_services:
+                    trip_to_route[trip_id] = routes[route_id]
     return trip_to_route
 
 
@@ -94,3 +107,4 @@ with open('data.json', 'w') as file:
     }, file, indent=2, sort_keys=True)
 
 # todo: GTFS Daten runterladen
+# todo pathways, z.b. u wilmersdorfer str <-> s charlottenburg
