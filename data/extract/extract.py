@@ -35,7 +35,7 @@ def get_exceptional_service_ids():
     with open('../GTFS/calendar_dates.txt', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            if row['exception_type'] == '1':
+            if row['exception_type'] == '2':
                 ones += 1
                 excluded_ids.add(row['service_id'])
             else:
@@ -63,7 +63,7 @@ def get_regular_service_ids():
 
 def get_trips(routes):
     exceptional_services = get_exceptional_service_ids()
-    # regular_services = get_regular_service_ids()
+    regular_services = get_regular_service_ids()
     trip_to_route = {}
     with open('../GTFS/trips.txt', 'r') as f:
         reader = csv.DictReader(f)
@@ -73,9 +73,10 @@ def get_trips(routes):
             if route_id in routes and route_id not in trip_to_route:
                 service_id = row['service_id']
                 # print(service_id)
+                # if service_id not in exceptional_services and service_id in regular_services:
                 # if service_id not in exceptional_services:
-                if service_id in regular_services:
-                    trip_to_route[trip_id] = routes[route_id]
+                # if service_id in regular_services:
+                trip_to_route[trip_id] = routes[route_id]
     return trip_to_route
 
 
