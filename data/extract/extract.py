@@ -61,7 +61,7 @@ with open('../GTFS/stops.txt', 'r') as f:
 
 stop_names_to_lines_final = {}
 for name, lines in stop_names_to_lines.items():
-    stop_names_to_lines_final[name] = list(lines)
+    stop_names_to_lines_final[name] = sorted(list(lines))
 
 with open('data.json', 'w') as file:
     json.dump({
@@ -69,5 +69,4 @@ with open('data.json', 'w') as file:
         'stops': stop_names_to_lines_final
     }, file, indent=2)
 
-# todo: anzahl aller stops ausgeben lassen und verifizieren
 # todo: GTFS Daten runterladen

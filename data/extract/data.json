@@ -133,8 +133,8 @@
       "S1"
     ],
     "S Birkenwerder Bhf": [
-      "S8",
-      "S1"
+      "S1",
+      "S8"
     ],
     "Goldbeck (bei Osterburg), Bahnhof": [
       "S1"
@@ -164,77 +164,77 @@
       "S1"
     ],
     "S+U Westhafen": [
+      "S41",
       "S42",
-      "U9",
-      "S41"
+      "U9"
     ],
     "S Bellevue": [
-      "S9",
-      "S3"
+      "S3",
+      "S9"
     ],
     "S Tiergarten": [
-      "S9",
-      "S3"
+      "S3",
+      "S9"
     ],
     "S+U Berlin Hauptbahnhof": [
-      "S9",
       "S15",
-      "S3"
+      "S3",
+      "S9"
     ],
     "S+U Gesundbrunnen Bhf": [
-      "S42",
-      "U8",
-      "S15",
-      "S41",
       "S1",
-      "S26",
+      "S15",
       "S2",
-      "S25"
+      "S25",
+      "S26",
+      "S41",
+      "S42",
+      "U8"
     ],
     "S+U Jungfernheide Bhf": [
+      "S41",
       "S42",
-      "U7",
-      "S41"
+      "U7"
     ],
     "S Beusselstr.": [
-      "S42",
-      "S41"
+      "S41",
+      "S42"
     ],
     "S Potsdam Hauptbahnhof": [
       "S7"
     ],
     "S+U Zoologischer Garten Bhf": [
+      "S3",
       "S7",
-      "U9",
       "S9",
-      "S3"
+      "U9"
     ],
     "S Charlottenburg Bhf": [
+      "S3",
       "S7",
-      "S9",
-      "S3"
+      "S9"
     ],
     "S Westkreuz": [
-      "S42",
-      "S7",
-      "S9",
+      "S3",
       "S41",
+      "S42",
       "S46",
-      "S3"
+      "S7",
+      "S9"
     ],
     "S Messe Nord/ZOB": [
+      "S41",
       "S42",
-      "S46",
-      "S41"
+      "S46"
     ],
     "S Savignyplatz": [
+      "S3",
       "S7",
-      "S9",
-      "S3"
+      "S9"
     ],
     "S Olympiastadion": [
-      "S9",
-      "S3"
+      "S3",
+      "S9"
     ],
     "S Messe S\u00fcd": [
       "S9"
@@ -246,48 +246,48 @@
       "S9"
     ],
     "S Westend": [
+      "S41",
       "S42",
-      "S46",
-      "S41"
+      "S46"
     ],
     "S Spandau Bhf": [
       "S9"
     ],
     "S Halensee": [
+      "S41",
       "S42",
-      "S46",
-      "S41"
+      "S46"
     ],
     "S Hohenzollerndamm": [
+      "S41",
       "S42",
-      "S46",
-      "S41"
+      "S46"
     ],
     "S+U Bundesplatz": [
+      "S41",
       "S42",
-      "U9",
       "S46",
-      "S41"
+      "U9"
     ],
     "S+U Heidelberger Platz": [
+      "S41",
       "S42",
       "S46",
-      "U3",
-      "S41"
+      "U3"
     ],
     "S Grunewald": [
-      "S7",
-      "S3"
+      "S3",
+      "S7"
     ],
     "S Wannsee Bhf": [
-      "S7",
-      "S1"
+      "S1",
+      "S7"
     ],
     "S+U Innsbrucker Platz": [
+      "S41",
       "S42",
-      "U4",
       "S46",
-      "S41"
+      "U4"
     ],
     "S Priesterweg": [
       "S25"
@@ -313,27 +313,27 @@
       "U6"
     ],
     "S Sonnenallee": [
-      "S42",
-      "S41"
+      "S41",
+      "S42"
     ],
     "S K\u00f6llnische Heide": [
       "S46"
     ],
     "S+U Neuk\u00f6lln": [
+      "S41",
       "S42",
-      "U7",
       "S46",
-      "S41"
+      "U7"
     ],
     "S+U Hermannstr.": [
-      "S46",
       "S41",
+      "S46",
       "U8"
     ],
     "S Sch\u00f6nholz": [
-      "S85",
       "S1",
-      "S25"
+      "S25",
+      "S85"
     ],
     "S Tegel": [
       "S25"
@@ -345,87 +345,87 @@
       "S25"
     ],
     "S+U Friedrichstr. Bhf": [
+      "S1",
+      "S2",
+      "S25",
+      "S3",
       "S7",
       "S9",
-      "S1",
-      "S25",
-      "S2",
-      "U6",
-      "S3"
+      "U6"
     ],
     "S Hackescher Markt": [
+      "S3",
       "S7",
-      "S9",
-      "S3"
+      "S9"
     ],
     "S+U Alexanderplatz Bhf": [
-      "U5",
+      "S3",
       "S7",
       "S9",
       "U2",
-      "U8",
-      "S3"
+      "U5",
+      "U8"
     ],
     "S+U Jannowitzbr\u00fccke": [
+      "S3",
       "S7",
       "S9",
-      "S3",
       "U8"
     ],
     "S+U Sch\u00f6nhauser Allee": [
+      "S41",
       "S42",
       "S8",
-      "U2",
-      "S41",
-      "S85"
+      "S85",
+      "U2"
     ],
     "S Prenzlauer Allee": [
+      "S41",
       "S42",
-      "S85",
       "S8",
-      "S41"
+      "S85"
     ],
     "S Bornholmer Str.": [
-      "S8",
       "S1",
+      "S2",
       "S25",
       "S26",
-      "S2",
+      "S8",
       "S85"
     ],
     "S Ostkreuz Bhf": [
-      "S7",
-      "S8",
-      "S41",
-      "S75",
-      "S85",
       "S3",
-      "S9",
-      "S5"
+      "S41",
+      "S5",
+      "S7",
+      "S75",
+      "S8",
+      "S85",
+      "S9"
     ],
     "S Ostbahnhof": [
-      "S7",
-      "S9",
+      "S3",
       "S5",
-      "S3"
+      "S7",
+      "S9"
     ],
     "S Pankow-Heinersdorf": [
-      "S26",
       "S2",
+      "S26",
       "S8"
     ],
     "S+U Pankow": [
-      "S26",
-      "U2",
       "S2",
-      "S8"
+      "S26",
+      "S8",
+      "U2"
     ],
     "S Buch": [
       "S2"
     ],
     "S Blankenburg": [
-      "S26",
       "S2",
+      "S26",
       "S8"
     ],
     "S Karow Bhf": [
@@ -447,17 +447,17 @@
       "S3"
     ],
     "S N\u00f6ldnerplatz": [
+      "S5",
       "S7",
-      "S9",
       "S75",
-      "S5"
+      "S9"
     ],
     "S+U Lichtenberg Bhf": [
-      "U5",
+      "S5",
       "S7",
-      "S9",
       "S75",
-      "S5"
+      "S9",
+      "U5"
     ],
     "S Karlshorst": [
       "S3"
@@ -481,9 +481,9 @@
       "S5"
     ],
     "S Friedrichsfelde Ost": [
+      "S5",
       "S7",
-      "S75",
-      "S5"
+      "S75"
     ],
     "S Springpfuhl": [
       "S7",
@@ -517,37 +517,37 @@
       "S3"
     ],
     "S Baumschulenweg": [
-      "S8",
       "S41",
-      "S85",
-      "S46"
+      "S46",
+      "S8",
+      "S85"
     ],
     "S Pl\u00e4nterwald": [
-      "S85",
+      "S41",
       "S8",
-      "S41"
+      "S85"
     ],
     "S Sch\u00f6neweide Bhf": [
-      "S8",
       "S41",
-      "S47",
       "S46",
+      "S47",
+      "S8",
       "S85"
     ],
     "S Oberspree": [
       "S47"
     ],
     "S Johannisthal": [
-      "S85",
+      "S41",
       "S46",
       "S8",
-      "S41"
+      "S85"
     ],
     "S Adlershof": [
-      "S85",
+      "S41",
       "S46",
       "S8",
-      "S41"
+      "S85"
     ],
     "S Stresow": [
       "S9"
@@ -565,8 +565,8 @@
       "S1"
     ],
     "S Hohen Neuendorf": [
-      "S8",
-      "S1"
+      "S1",
+      "S8"
     ],
     "S Bergfelde": [
       "S8"
@@ -626,19 +626,19 @@
       "S2"
     ],
     "S+U Wedding": [
-      "S42",
-      "U6",
       "S15",
-      "S41"
+      "S41",
+      "S42",
+      "U6"
     ],
     "Magdeburg, Bahnhof Rothensee": [
       "S1"
     ],
     "S Humboldthain": [
-      "S26",
-      "S2",
       "S1",
-      "S25"
+      "S2",
+      "S25",
+      "S26"
     ],
     "S Zehlendorf": [
       "S1"
@@ -653,14 +653,14 @@
       "S1"
     ],
     "S Nikolassee": [
-      "S7",
-      "S1"
+      "S1",
+      "S7"
     ],
     "S Sch\u00f6neberg": [
-      "S42",
-      "S46",
       "S1",
-      "S41"
+      "S41",
+      "S42",
+      "S46"
     ],
     "S+U Yorckstr. (Gro\u00dfg\u00f6rschenstr.)": [
       "S1"
@@ -669,8 +669,8 @@
       "S1"
     ],
     "S+U Rathaus Steglitz": [
-      "U9",
-      "S1"
+      "S1",
+      "U9"
     ],
     "S Feuerbachstr.": [
       "S1"
@@ -682,56 +682,56 @@
       "S1"
     ],
     "S+U Wuhletal": [
-      "U5",
-      "S5"
+      "S5",
+      "U5"
     ],
     "S Wilhelmsruh": [
-      "S85",
-      "S1"
+      "S1",
+      "S85"
     ],
     "S S\u00fcdkreuz Bhf": [
-      "S42",
-      "S41",
-      "S25",
       "S2",
+      "S25",
+      "S41",
+      "S42",
       "S46"
     ],
     "S+U Yorckstr.": [
-      "U7",
+      "S2",
       "S25",
-      "S2"
+      "U7"
     ],
     "S Gr\u00fcnau": [
-      "S85",
+      "S41",
       "S46",
       "S8",
-      "S41"
+      "S85"
     ],
     "S Anhalter Bahnhof": [
-      "S25",
-      "S2",
-      "S1"
-    ],
-    "S+U Potsdamer Platz Bhf": [
-      "S25",
-      "S2",
-      "S1"
-    ],
-    "S Nordbahnhof": [
-      "S26",
-      "S2",
       "S1",
+      "S2",
       "S25"
     ],
-    "S Oranienburger Str.": [
-      "S25",
+    "S+U Potsdamer Platz Bhf": [
+      "S1",
       "S2",
-      "S1"
+      "S25"
+    ],
+    "S Nordbahnhof": [
+      "S1",
+      "S2",
+      "S25",
+      "S26"
+    ],
+    "S Oranienburger Str.": [
+      "S1",
+      "S2",
+      "S25"
     ],
     "S+U Brandenburger Tor": [
-      "S25",
+      "S1",
       "S2",
-      "S1"
+      "S25"
     ],
     "Magdeburg, Bahnhof S\u00fcdost": [
       "S1"
@@ -758,56 +758,56 @@
       "S1"
     ],
     "S Hermsdorf": [
-      "S85",
-      "S1"
+      "S1",
+      "S85"
     ],
     "S+U Warschauer Str.": [
-      "S7",
-      "S9",
-      "S75",
+      "S3",
       "S5",
-      "U3",
-      "S3"
+      "S7",
+      "S75",
+      "S9",
+      "U3"
     ],
     "S Frohnau": [
-      "S85",
-      "S1"
+      "S1",
+      "S85"
     ],
     "S Waidmannslust": [
-      "S85",
-      "S1"
+      "S1",
+      "S85"
     ],
     "S+U Wittenau": [
-      "S85",
       "S1",
+      "S85",
       "U8"
     ],
     "S Greifswalder Str.": [
+      "S41",
       "S42",
-      "S85",
       "S8",
-      "S41"
+      "S85"
     ],
     "S Landsberger Allee": [
-      "S85",
+      "S41",
       "S8",
-      "S41"
+      "S85"
     ],
     "S Storkower Str.": [
-      "S85",
+      "S41",
       "S8",
-      "S41"
+      "S85"
     ],
     "S+U Frankfurter Allee": [
-      "U5",
-      "S85",
+      "S41",
       "S8",
-      "S41"
+      "S85",
+      "U5"
     ],
     "S Treptower Park": [
+      "S41",
       "S42",
       "S8",
-      "S41",
       "S85"
     ],
     "U Schlesisches Tor": [
@@ -824,12 +824,12 @@
       "U3"
     ],
     "U Hallesches Tor": [
-      "U6",
-      "U3"
+      "U3",
+      "U6"
     ],
     "U M\u00f6ckernbr\u00fccke": [
-      "U7",
-      "U3"
+      "U3",
+      "U7"
     ],
     "U Gleisdreieck": [
       "U3"
@@ -847,8 +847,8 @@
       "U3"
     ],
     "U Kurf\u00fcrstendamm": [
-      "U9",
-      "U1"
+      "U1",
+      "U9"
     ],
     "U Uhlandstr.": [
       "U1"
@@ -869,15 +869,15 @@
       "U3"
     ],
     "U Spichernstr.": [
-      "U9",
-      "U3"
+      "U3",
+      "U9"
     ],
     "U Hohenzollernplatz": [
       "U3"
     ],
     "U Fehrbelliner Platz": [
-      "U7",
-      "U3"
+      "U3",
+      "U7"
     ],
     "U R\u00fcdesheimer Platz": [
       "U3"
@@ -889,8 +889,8 @@
       "U4"
     ],
     "U Bayerischer Platz": [
-      "U7",
-      "U4"
+      "U4",
+      "U7"
     ],
     "U Rathaus Sch\u00f6neberg": [
       "U4"
@@ -956,8 +956,8 @@
       "U6"
     ],
     "U Leopoldplatz": [
-      "U9",
-      "U6"
+      "U6",
+      "U9"
     ],
     "U Reinickendorfer Str.": [
       "U6"
@@ -978,8 +978,8 @@
       "U6"
     ],
     "U Mehringdamm": [
-      "U7",
-      "U6"
+      "U6",
+      "U7"
     ],
     "U Platz der Luftbr\u00fccke": [
       "U6"
@@ -1092,8 +1092,8 @@
       "U8"
     ],
     "U Osloer Str.": [
-      "U9",
-      "U8"
+      "U8",
+      "U9"
     ],
     "U Pankstr.": [
       "U8"
