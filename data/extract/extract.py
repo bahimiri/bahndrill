@@ -1,5 +1,6 @@
 import csv
 from enum import Enum
+import json
 
 
 class RouteType(Enum):
@@ -24,7 +25,7 @@ with open('../GTFS/routes.txt', 'r') as f:
 
 # lines = sorted([routes[route_id] for route_id in routes])
 # print(lines)
-print(routes)
+# print(routes)
 
 route_to_trip = {}
 with open('../GTFS/trips.txt', 'r') as f:
@@ -52,7 +53,7 @@ for route_id, trip_id in route_to_trip.items():
 
 # print(stop_to_lines)
 #
-result = []
+# result = []
 stop_names_to_lines = {}
 with open('../GTFS/stops.txt', 'r') as f:
     reader = csv.DictReader(f)
@@ -60,16 +61,28 @@ with open('../GTFS/stops.txt', 'r') as f:
         stop_id = row['stop_id']
         if stop_id in stop_to_lines:
             stop_names_to_lines.setdefault(row['stop_name'], set()).update(stop_to_lines[stop_id])
-            result.append({
-                'name': row['stop_name'],
-                'lines': sorted(stop_to_lines[stop_id])
-            })
+            # result.append({
+            #     'name': row['stop_name'],
+            #     'lines': sorted(stop_to_lines[stop_id])
+            # })
 
 
 # for stop in result:
 #     print(f"{stop['name']}: {' ,'.join(stop['lines'])}")
 for name, lines in stop_names_to_lines.items():
     print(f"{name}: {', '.join(lines)}")
+
+
+# Writing JSON to a file
+stop_names_to_lines_final = {}
+for name, lines in stop_names_to_lines.items():
+    stop_names_to_lines_final[name] = list(lines)
+data = {
+    'routes': routes,
+    'stops': stop_names_to_lines_final
+}
+with open('data.json', 'w') as file:
+    json.dump(data, file, indent=2)
 
 # todo: anzahl aller stops ausgeben lassen und verifizieren
 # todo: GTFS Daten runterladen
