@@ -28,7 +28,7 @@ def get_line_information():
     return routes, route_colors
 
 
-def get_lines_per_stop(routes):
+def get_trip_for_routes(routes):
     route_to_trip = {}
     with open('../GTFS/trips.txt', 'r') as f:
         reader = csv.DictReader(f)
@@ -37,21 +37,33 @@ def get_lines_per_stop(routes):
             trip_id = row['trip_id']
             if route_id in routes and route_id not in route_to_trip:
                 route_to_trip[route_id] = trip_id
+    return route_to_trip
 
+
+def get_stops_for_trips(trips):
     trip_to_stops = {}
     with open('../GTFS/stop_times.txt', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
             trip_id = row['trip_id']
-            if trip_id in set(route_to_trip.values()):
+            if trip_id in trips:
                 trip_to_stops.setdefault(trip_id, []).append(row['stop_id'])
+    return trip_to_stops
 
+
+def get_lines_per_stop_id(routes):
+    route_to_trip = get_trip_for_routes(routes)
+    trip_to_stops = get_stops_for_trips(set(route_to_trip.values()))
     stop_to_lines = {}
     for route_id, trip_id in route_to_trip.items():
         line_name = routes[route_id]
         for stop_id in trip_to_stops.get(trip_id, []):
             stop_to_lines.setdefault(stop_id, set()).add(line_name)
+    return stop_to_lines
 
+
+def get_lines_per_stop_name(routes):
+    stop_to_lines = get_lines_per_stop_id(routes)
     stop_names_to_lines = {}
     with open('../GTFS/stops.txt', 'r') as f:
         reader = csv.DictReader(f)
@@ -60,19 +72,19 @@ def get_lines_per_stop(routes):
             if stop_id in stop_to_lines:
                 stop_name = row['stop_name'].replace(' (Berlin)', '')
                 stop_names_to_lines.setdefault(stop_name, set()).update(stop_to_lines[stop_id])
+
+    for name, line_names in stop_names_to_lines.items():
+        stop_names_to_lines[name] = sorted(list(line_names))
     return stop_names_to_lines
 
 
 lines, line_colors = get_line_information()
-lines_per_stop = get_lines_per_stop(lines)
-stop_names_to_lines_final = {}
-for name, lines in lines_per_stop.items():
-    stop_names_to_lines_final[name] = sorted(list(lines))
+lines_per_stop = get_lines_per_stop_name(lines)
 
 with open('data.json', 'w') as file:
     json.dump({
         'lines': line_colors,
-        'stops': stop_names_to_lines_final
+        'stops': lines_per_stop
     }, file, indent=2)
 
 # todo: GTFS Daten runterladen
