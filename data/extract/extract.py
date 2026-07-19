@@ -62,16 +62,23 @@ def get_lines_per_stop_id(routes):
     return stop_to_lines
 
 
-def get_lines_per_stop_name(routes):
-    stop_to_lines = get_lines_per_stop_id(routes)
-    stop_names_to_lines = {}
+def get_stop_translations():
+    stop_names = {}
     with open('../GTFS/stops.txt', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
             stop_id = row['stop_id']
-            if stop_id in stop_to_lines:
-                stop_name = row['stop_name'].replace(' (Berlin)', '')
-                stop_names_to_lines.setdefault(stop_name, set()).update(stop_to_lines[stop_id])
+            stop_name = row['stop_name']
+            stop_names[stop_id] = stop_name.replace(' (Berlin)', '')
+    return stop_names
+
+
+def get_lines_per_stop_name(routes):
+    stop_to_lines = get_lines_per_stop_id(routes)
+    stop_translations = get_stop_translations()
+    stop_names_to_lines = {}
+    for stop_id, stop_lines in stop_to_lines.items():
+        stop_names_to_lines.setdefault(stop_translations[stop_id], set()).update(stop_lines)
 
     for name, line_names in stop_names_to_lines.items():
         stop_names_to_lines[name] = sorted(list(line_names))
