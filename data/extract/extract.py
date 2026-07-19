@@ -6,13 +6,14 @@ with open('../GTFS/routes.txt', 'r') as f:
     for row in reader:
         route_type = int(row['route_type'])
         route_name = row.get('route_short_name', '')
-        if route_type == 400:
+        if route_type == 400: # u-bahn
             routes[row['route_id']] = route_name
-        elif route_type == 109 and route_name.startswith('S'):
+        elif route_type == 109: # s-bahn
             routes[row['route_id']] = route_name
 
 # lines = sorted([routes[route_id] for route_id in routes])
 # print(lines)
+# print(routes)
 
 route_to_trip = {}
 with open('../GTFS/trips.txt', 'r') as f:
@@ -22,6 +23,7 @@ with open('../GTFS/trips.txt', 'r') as f:
         trip_id = row['trip_id']
         if route_id in routes and route_id not in route_to_trip:
             route_to_trip[route_id] = row['trip_id']
+# print(route_to_trip)
 
 trip_to_stops = {}
 with open('../GTFS/stop_times.txt', 'r') as f:
@@ -37,17 +39,25 @@ for route_id, trip_id in route_to_trip.items():
     for stop_id in trip_to_stops.get(trip_id, []):
         stop_to_lines.setdefault(stop_id, set()).add(line_name)
 
+# print(stop_to_lines)
+#
 result = []
+stop_names_to_lines = {}
 with open('../GTFS/stops.txt', 'r') as f:
     reader = csv.DictReader(f)
     for row in reader:
         stop_id = row['stop_id']
         if stop_id in stop_to_lines:
+            stop_names_to_lines.setdefault(row['stop_name'], set()).update(stop_to_lines[stop_id])
             result.append({
                 'name': row['stop_name'],
                 'lines': sorted(stop_to_lines[stop_id])
             })
 
 
-for stop in result:
-    print(f"{stop['name']}: {' ,'.join(stop['lines'])}")
+# for stop in result:
+#     print(f"{stop['name']}: {' ,'.join(stop['lines'])}")
+for name, lines in stop_names_to_lines.items():
+    print(f"{name}: {', '.join(lines)}")
+
+# todo: anzahl aller stops ausgeben lassen und verifizieren
