@@ -1,267 +1,102 @@
 {
-  "routes": {
-    "19156_109": {
-      "name": "S1",
-      "color": "",
-      "text_color": ""
-    },
-    "19155_109": {
-      "name": "S4",
-      "color": "",
-      "text_color": ""
-    },
-    "28572_109": {
-      "name": "S15",
+  "lines": {
+    "S1": {
       "color": "DA6BA2",
       "text_color": "FFFFFF"
     },
-    "28571_109": {
-      "name": "S15",
+    "S15": {
       "color": "DA6BA2",
       "text_color": "FFFFFF"
     },
-    "25929_109": {
-      "name": "S3",
+    "S3": {
       "color": "0066AD",
       "text_color": "FFFFFF"
     },
-    "24864_109": {
-      "name": "S5",
+    "S5": {
       "color": "EB7405",
       "text_color": "FFFFFF"
     },
-    "22240_109": {
-      "name": "S85",
+    "S85": {
       "color": "66AA22",
       "text_color": "FFFFFF"
     },
-    "21649_109": {
-      "name": "S25",
+    "S25": {
       "color": "007734",
       "text_color": "FFFFFF"
     },
-    "18950_109": {
-      "name": "S3",
-      "color": "0066AD",
-      "text_color": "FFFFFF"
-    },
-    "18949_109": {
-      "name": "S26",
+    "S26": {
       "color": "007734",
       "text_color": "FFFFFF"
     },
-    "16815_109": {
-      "name": "S7",
+    "S7": {
       "color": "816DA6",
       "text_color": "FFFFFF"
     },
-    "16814_109": {
-      "name": "S7",
-      "color": "816DA6",
-      "text_color": "FFFFFF"
-    },
-    "11561_109": {
-      "name": "S3",
-      "color": "0066AD",
-      "text_color": "FFFFFF"
-    },
-    "11537_109": {
-      "name": "S46",
+    "S46": {
       "color": "CD9C53",
       "text_color": "FFFFFF"
     },
-    "11536_109": {
-      "name": "S46",
-      "color": "CD9C53",
-      "text_color": "FFFFFF"
-    },
-    "10277_109": {
-      "name": "S1",
-      "color": "DA6BA2",
-      "text_color": "FFFFFF"
-    },
-    "10276_109": {
-      "name": "S1",
-      "color": "DA6BA2",
-      "text_color": "FFFFFF"
-    },
-    "10271_109": {
-      "name": "S9",
+    "S9": {
       "color": "992746",
       "text_color": "FFFFFF"
     },
-    "10229_109": {
-      "name": "S47",
+    "S47": {
       "color": "CD9C53",
       "text_color": "FFFFFF"
     },
-    "10228_109": {
-      "name": "S42",
+    "S42": {
       "color": "CB6418",
       "text_color": "FFFFFF"
     },
-    "10227_109": {
-      "name": "S42",
-      "color": "CB6418",
-      "text_color": "FFFFFF"
-    },
-    "10226_109": {
-      "name": "S42",
-      "color": "CB6418",
-      "text_color": "FFFFFF"
-    },
-    "10225_109": {
-      "name": "S41",
+    "S41": {
       "color": "AD5937",
       "text_color": "FFFFFF"
     },
-    "10224_109": {
-      "name": "S41",
-      "color": "AD5937",
-      "text_color": "FFFFFF"
-    },
-    "10223_109": {
-      "name": "S41",
-      "color": "AD5937",
-      "text_color": "FFFFFF"
-    },
-    "10170_109": {
-      "name": "S9",
-      "color": "992746",
-      "text_color": "FFFFFF"
-    },
-    "10167_109": {
-      "name": "S8",
+    "S8": {
       "color": "66AA22",
       "text_color": "FFFFFF"
     },
-    "10166_109": {
-      "name": "S75",
+    "S75": {
       "color": "816DA6",
       "text_color": "FFFFFF"
     },
-    "10165_109": {
-      "name": "S75",
-      "color": "816DA6",
-      "text_color": "FFFFFF"
-    },
-    "10163_109": {
-      "name": "S7",
-      "color": "816DA6",
-      "text_color": "FFFFFF"
-    },
-    "10162_109": {
-      "name": "S7",
-      "color": "816DA6",
-      "text_color": "FFFFFF"
-    },
-    "10160_109": {
-      "name": "S5",
-      "color": "EB7405",
-      "text_color": "FFFFFF"
-    },
-    "10159_109": {
-      "name": "S5",
-      "color": "EB7405",
-      "text_color": "FFFFFF"
-    },
-    "10158_109": {
-      "name": "S5",
-      "color": "EB7405",
-      "text_color": "FFFFFF"
-    },
-    "10157_109": {
-      "name": "S5",
-      "color": "EB7405",
-      "text_color": "FFFFFF"
-    },
-    "10155_109": {
-      "name": "S46",
-      "color": "CD9C53",
-      "text_color": "FFFFFF"
-    },
-    "10150_109": {
-      "name": "S3",
-      "color": "0066AD",
-      "text_color": "FFFFFF"
-    },
-    "10149_109": {
-      "name": "S3",
-      "color": "0066AD",
-      "text_color": "FFFFFF"
-    },
-    "10148_109": {
-      "name": "S3",
-      "color": "0066AD",
-      "text_color": "FFFFFF"
-    },
-    "10145_109": {
-      "name": "S25",
+    "S2": {
       "color": "007734",
       "text_color": "FFFFFF"
     },
-    "10144_109": {
-      "name": "S2",
-      "color": "007734",
-      "text_color": "FFFFFF"
-    },
-    "10143_109": {
-      "name": "S2",
-      "color": "007734",
-      "text_color": "FFFFFF"
-    },
-    "10142_109": {
-      "name": "S1",
-      "color": "DA6BA2",
-      "text_color": "FFFFFF"
-    },
-    "10141_109": {
-      "name": "S1",
-      "color": "DA6BA2",
-      "text_color": "FFFFFF"
-    },
-    "17526_400": {
-      "name": "U9",
+    "U9": {
       "color": "F3791D",
       "text_color": "000000"
     },
-    "17525_400": {
-      "name": "U8",
+    "U8": {
       "color": "224F86",
       "text_color": "FFFFFF"
     },
-    "17523_400": {
-      "name": "U7",
+    "U7": {
       "color": "009BD5",
       "text_color": "FFFFFF"
     },
-    "17521_400": {
-      "name": "U6",
+    "U6": {
       "color": "8C6DAB",
       "text_color": "FFFFFF"
     },
-    "17518_400": {
-      "name": "U5",
+    "U5": {
       "color": "7E5330",
       "text_color": "FFFFFF"
     },
-    "17516_400": {
-      "name": "U4",
+    "U4": {
       "color": "F0D722",
       "text_color": "000000"
     },
-    "17515_400": {
-      "name": "U3",
+    "U3": {
       "color": "16683D",
       "text_color": "FFFFFF"
     },
-    "17514_400": {
-      "name": "U2",
+    "U2": {
       "color": "DA421E",
       "text_color": "FFFFFF"
     },
-    "17512_400": {
-      "name": "U1",
+    "U1": {
       "color": "7DAD4C",
       "text_color": "FFFFFF"
     }
@@ -273,23 +108,8 @@
     "Eichstedt (Altmark), Bahnhof": [
       "S1"
     ],
-    "P\u00f6nitz (bei Leipzig), Bahnhof": [
-      "S4"
-    ],
     "Geestgottberg, Bahnhof": [
       "S1"
-    ],
-    "Leipzig-Thekla, Bahnhof": [
-      "S4"
-    ],
-    "Leipzig-Heiterblick, Bhf": [
-      "S4"
-    ],
-    "Torgau, Bahnhof": [
-      "S4"
-    ],
-    "Taucha (bei Leipzig), Bahnhof": [
-      "S4"
     ],
     "Zielitz, Bahnhof": [
       "S1"
@@ -300,17 +120,8 @@
     "Osterburg, Bahnhof": [
       "S1"
     ],
-    "Eilenburg, Bahnhof Ost": [
-      "S4"
-    ],
     "Demker, Bahnhof": [
       "S1"
-    ],
-    "Jesewitz (bei Leipzig), Bahnhof": [
-      "S4"
-    ],
-    "Mockrehna, Bahnhof": [
-      "S4"
     ],
     "Angern-Rog\u00e4tz, Bahnhof": [
       "S1"
@@ -325,17 +136,11 @@
       "S8",
       "S1"
     ],
-    "Eilenburg, Bahnhof": [
-      "S4"
-    ],
     "Goldbeck (bei Osterburg), Bahnhof": [
       "S1"
     ],
     "Wolmirstedt, Bahnhof": [
       "S1"
-    ],
-    "Dobersch\u00fctz, Bahnhof": [
-      "S4"
     ],
     "Magdeburg-Neustadt, Bahnhof": [
       "S1"
@@ -358,46 +163,16 @@
     "Zielitz, Bahnhof Ort": [
       "S1"
     ],
-    "Dahlen(Sachs)": [
-      "S4"
-    ],
-    "Altenbach": [
-      "S4"
-    ],
-    "Borsdorf(Sachs)": [
-      "S4"
-    ],
-    "Oschatz": [
-      "S4"
-    ],
-    "Leipzig-Engelsdorf, Bahnhof": [
-      "S4"
-    ],
-    "K\u00fchren": [
-      "S4"
-    ],
-    "Gerichshain": [
-      "S4"
-    ],
-    "Bennewitz": [
-      "S4"
-    ],
-    "Wurzen": [
-      "S4"
-    ],
-    "Machern(Sachs)": [
-      "S4"
-    ],
-    "S+U Westhafen (Berlin)": [
+    "S+U Westhafen": [
+      "S42",
       "U9",
-      "S41",
-      "S42"
+      "S41"
     ],
-    "S Bellevue (Berlin)": [
+    "S Bellevue": [
       "S9",
       "S3"
     ],
-    "S Tiergarten (Berlin)": [
+    "S Tiergarten": [
       "S9",
       "S3"
     ],
@@ -406,375 +181,375 @@
       "S15",
       "S3"
     ],
-    "S+U Gesundbrunnen Bhf (Berlin)": [
-      "S26",
-      "S41",
-      "S15",
-      "S25",
-      "S1",
+    "S+U Gesundbrunnen Bhf": [
       "S42",
+      "U8",
+      "S15",
+      "S41",
+      "S1",
+      "S26",
       "S2",
-      "U8"
+      "S25"
     ],
-    "S+U Jungfernheide Bhf (Berlin)": [
+    "S+U Jungfernheide Bhf": [
+      "S42",
       "U7",
-      "S41",
-      "S42"
+      "S41"
     ],
-    "S Beusselstr. (Berlin)": [
-      "S41",
-      "S42"
+    "S Beusselstr.": [
+      "S42",
+      "S41"
     ],
     "S Potsdam Hauptbahnhof": [
       "S7"
     ],
-    "S+U Zoologischer Garten Bhf (Berlin)": [
+    "S+U Zoologischer Garten Bhf": [
+      "S7",
       "U9",
       "S9",
-      "S7",
       "S3"
     ],
-    "S Charlottenburg Bhf (Berlin)": [
+    "S Charlottenburg Bhf": [
+      "S7",
       "S9",
-      "S7",
       "S3"
     ],
-    "S Westkreuz (Berlin)": [
+    "S Westkreuz": [
+      "S42",
+      "S7",
       "S9",
       "S41",
-      "S7",
+      "S46",
+      "S3"
+    ],
+    "S Messe Nord/ZOB": [
       "S42",
       "S46",
-      "S3"
+      "S41"
     ],
-    "S Messe Nord/ZOB (Berlin)": [
-      "S41",
-      "S46",
-      "S42"
-    ],
-    "S Savignyplatz (Berlin)": [
-      "S9",
+    "S Savignyplatz": [
       "S7",
-      "S3"
-    ],
-    "S Olympiastadion (Berlin)": [
       "S9",
       "S3"
     ],
-    "S Messe S\u00fcd (Berlin)": [
+    "S Olympiastadion": [
+      "S9",
+      "S3"
+    ],
+    "S Messe S\u00fcd": [
       "S9"
     ],
-    "S Pichelsberg (Berlin)": [
+    "S Pichelsberg": [
       "S9"
     ],
-    "S Heerstr. (Berlin)": [
+    "S Heerstr.": [
       "S9"
     ],
-    "S Westend (Berlin)": [
-      "S41",
+    "S Westend": [
+      "S42",
       "S46",
-      "S42"
+      "S41"
     ],
-    "S Spandau Bhf (Berlin)": [
+    "S Spandau Bhf": [
       "S9"
     ],
-    "S Halensee (Berlin)": [
-      "S41",
+    "S Halensee": [
+      "S42",
       "S46",
-      "S42"
+      "S41"
     ],
-    "S Hohenzollerndamm (Berlin)": [
-      "S41",
+    "S Hohenzollerndamm": [
+      "S42",
       "S46",
-      "S42"
+      "S41"
     ],
-    "S+U Bundesplatz (Berlin)": [
+    "S+U Bundesplatz": [
+      "S42",
       "U9",
-      "S41",
       "S46",
-      "S42"
+      "S41"
     ],
-    "S+U Heidelberger Platz (Berlin)": [
-      "S41",
+    "S+U Heidelberger Platz": [
+      "S42",
       "S46",
       "U3",
-      "S42"
+      "S41"
     ],
-    "S Grunewald (Berlin)": [
+    "S Grunewald": [
       "S7",
       "S3"
     ],
-    "S Wannsee Bhf (Berlin)": [
+    "S Wannsee Bhf": [
       "S7",
       "S1"
     ],
-    "S+U Innsbrucker Platz (Berlin)": [
+    "S+U Innsbrucker Platz": [
+      "S42",
       "U4",
-      "S41",
       "S46",
-      "S42"
+      "S41"
     ],
-    "S Priesterweg (Berlin)": [
+    "S Priesterweg": [
       "S25"
     ],
-    "S S\u00fcdende (Berlin)": [
+    "S S\u00fcdende": [
       "S25"
     ],
-    "S Lichterfelde S\u00fcd (Berlin)": [
+    "S Lichterfelde S\u00fcd": [
       "S25"
     ],
-    "S Osdorfer Str. (Berlin)": [
+    "S Osdorfer Str.": [
       "S25"
     ],
-    "S Lichterfelde Ost Bhf (Berlin)": [
+    "S Lichterfelde Ost Bhf": [
       "S25"
     ],
-    "S Lankwitz (Berlin)": [
+    "S Lankwitz": [
       "S25"
     ],
-    "S+U Tempelhof (Berlin)": [
+    "S+U Tempelhof": [
+      "S42",
       "S46",
-      "U6",
-      "S42"
+      "U6"
     ],
-    "S Sonnenallee (Berlin)": [
-      "S41",
-      "S42"
+    "S Sonnenallee": [
+      "S42",
+      "S41"
     ],
-    "S K\u00f6llnische Heide (Berlin)": [
+    "S K\u00f6llnische Heide": [
       "S46"
     ],
-    "S+U Neuk\u00f6lln (Berlin)": [
+    "S+U Neuk\u00f6lln": [
+      "S42",
       "U7",
-      "S41",
       "S46",
-      "S42"
+      "S41"
     ],
-    "S+U Hermannstr. (Berlin)": [
-      "S41",
+    "S+U Hermannstr.": [
       "S46",
+      "S41",
       "U8"
     ],
-    "S Sch\u00f6nholz (Berlin)": [
-      "S25",
+    "S Sch\u00f6nholz": [
+      "S85",
       "S1",
+      "S25"
+    ],
+    "S Tegel": [
+      "S25"
+    ],
+    "S Heiligensee": [
+      "S25"
+    ],
+    "S Schulzendorf": [
+      "S25"
+    ],
+    "S+U Friedrichstr. Bhf": [
+      "S7",
+      "S9",
+      "S1",
+      "S25",
+      "S2",
+      "U6",
+      "S3"
+    ],
+    "S Hackescher Markt": [
+      "S7",
+      "S9",
+      "S3"
+    ],
+    "S+U Alexanderplatz Bhf": [
+      "U5",
+      "S7",
+      "S9",
+      "U2",
+      "U8",
+      "S3"
+    ],
+    "S+U Jannowitzbr\u00fccke": [
+      "S7",
+      "S9",
+      "S3",
+      "U8"
+    ],
+    "S+U Sch\u00f6nhauser Allee": [
+      "S42",
+      "S8",
+      "U2",
+      "S41",
       "S85"
     ],
-    "S Tegel (Berlin)": [
-      "S25"
-    ],
-    "S Heiligensee (Berlin)": [
-      "S25"
-    ],
-    "S Schulzendorf (Berlin)": [
-      "S25"
-    ],
-    "S+U Friedrichstr. Bhf (Berlin)": [
-      "S9",
-      "S25",
-      "U6",
-      "S7",
-      "S1",
-      "S2",
-      "S3"
-    ],
-    "S Hackescher Markt (Berlin)": [
-      "S9",
-      "S7",
-      "S3"
-    ],
-    "S+U Alexanderplatz Bhf (Berlin)": [
-      "S9",
-      "S7",
-      "U5",
-      "U2",
-      "S3",
-      "U8"
-    ],
-    "S+U Jannowitzbr\u00fccke (Berlin)": [
-      "S9",
-      "S7",
-      "S3",
-      "U8"
-    ],
-    "S+U Sch\u00f6nhauser Allee (Berlin)": [
-      "S41",
+    "S Prenzlauer Allee": [
       "S42",
       "S85",
       "S8",
-      "U2"
+      "S41"
     ],
-    "S Prenzlauer Allee (Berlin)": [
-      "S85",
-      "S41",
+    "S Bornholmer Str.": [
       "S8",
-      "S42"
-    ],
-    "S Bornholmer Str. (Berlin)": [
-      "S26",
-      "S25",
       "S1",
+      "S25",
+      "S26",
       "S2",
-      "S8",
       "S85"
     ],
-    "S Ostkreuz Bhf (Berlin)": [
+    "S Ostkreuz Bhf": [
       "S7",
       "S8",
+      "S41",
       "S75",
+      "S85",
       "S3",
-      "S85",
-      "S41",
       "S9",
       "S5"
     ],
-    "S Ostbahnhof (Berlin)": [
-      "S9",
+    "S Ostbahnhof": [
       "S7",
+      "S9",
       "S5",
       "S3"
     ],
-    "S Pankow-Heinersdorf (Berlin)": [
+    "S Pankow-Heinersdorf": [
       "S26",
-      "S8",
-      "S2"
-    ],
-    "S+U Pankow (Berlin)": [
-      "S26",
-      "S8",
-      "U2",
-      "S2"
-    ],
-    "S Buch (Berlin)": [
-      "S2"
-    ],
-    "S Blankenburg (Berlin)": [
-      "S26",
-      "S8",
-      "S2"
-    ],
-    "S Karow Bhf (Berlin)": [
-      "S2"
-    ],
-    "S Wartenberg (Berlin)": [
-      "S75"
-    ],
-    "S Hohensch\u00f6nhausen Bhf (Berlin)": [
-      "S75"
-    ],
-    "S Gehrenseestr. (Berlin)": [
-      "S75"
-    ],
-    "S Rummelsburg (Berlin)": [
-      "S3"
-    ],
-    "S Betriebsbahnhof Rummelsburg (Berlin)": [
-      "S3"
-    ],
-    "S N\u00f6ldnerplatz (Berlin)": [
-      "S9",
-      "S75",
-      "S7",
-      "S5"
-    ],
-    "S+U Lichtenberg Bhf (Berlin)": [
-      "S9",
-      "S7",
-      "S5",
-      "U5",
-      "S75"
-    ],
-    "S Karlshorst (Berlin)": [
-      "S3"
-    ],
-    "S Marzahn (Berlin)": [
-      "S7"
-    ],
-    "S Raoul-Wallenberg-Str. (Berlin)": [
-      "S7"
-    ],
-    "S Mehrower Allee (Berlin)": [
-      "S7"
-    ],
-    "S Ahrensfelde Bhf (Berlin)": [
-      "S7"
-    ],
-    "S Poelchaustr. (Berlin)": [
-      "S7"
-    ],
-    "S Biesdorf (Berlin)": [
-      "S5"
-    ],
-    "S Friedrichsfelde Ost (Berlin)": [
-      "S75",
-      "S7",
-      "S5"
-    ],
-    "S Springpfuhl (Berlin)": [
-      "S75",
-      "S7"
-    ],
-    "S Kaulsdorf (Berlin)": [
-      "S5"
-    ],
-    "S Mahlsdorf Bhf (Berlin)": [
-      "S5"
-    ],
-    "S K\u00f6penick (Berlin)": [
-      "S3"
-    ],
-    "S Wuhlheide (Berlin)": [
-      "S3"
-    ],
-    "S Spindlersfeld (Berlin)": [
-      "S47"
-    ],
-    "S Hirschgarten (Berlin)": [
-      "S3"
-    ],
-    "S Friedrichshagen (Berlin)": [
-      "S3"
-    ],
-    "S Rahnsdorf (Berlin)": [
-      "S3"
-    ],
-    "S Wilhelmshagen (Berlin)": [
-      "S3"
-    ],
-    "S Baumschulenweg (Berlin)": [
-      "S41",
-      "S85",
-      "S46",
+      "S2",
       "S8"
     ],
-    "S Pl\u00e4nterwald (Berlin)": [
-      "S41",
-      "S8",
-      "S85"
+    "S+U Pankow": [
+      "S26",
+      "U2",
+      "S2",
+      "S8"
     ],
-    "S Sch\u00f6neweide Bhf (Berlin)": [
+    "S Buch": [
+      "S2"
+    ],
+    "S Blankenburg": [
+      "S26",
+      "S2",
+      "S8"
+    ],
+    "S Karow Bhf": [
+      "S2"
+    ],
+    "S Wartenberg": [
+      "S75"
+    ],
+    "S Hohensch\u00f6nhausen Bhf": [
+      "S75"
+    ],
+    "S Gehrenseestr.": [
+      "S75"
+    ],
+    "S Rummelsburg": [
+      "S3"
+    ],
+    "S Betriebsbahnhof Rummelsburg": [
+      "S3"
+    ],
+    "S N\u00f6ldnerplatz": [
+      "S7",
+      "S9",
+      "S75",
+      "S5"
+    ],
+    "S+U Lichtenberg Bhf": [
+      "U5",
+      "S7",
+      "S9",
+      "S75",
+      "S5"
+    ],
+    "S Karlshorst": [
+      "S3"
+    ],
+    "S Marzahn": [
+      "S7"
+    ],
+    "S Raoul-Wallenberg-Str.": [
+      "S7"
+    ],
+    "S Mehrower Allee": [
+      "S7"
+    ],
+    "S Ahrensfelde Bhf": [
+      "S7"
+    ],
+    "S Poelchaustr.": [
+      "S7"
+    ],
+    "S Biesdorf": [
+      "S5"
+    ],
+    "S Friedrichsfelde Ost": [
+      "S7",
+      "S75",
+      "S5"
+    ],
+    "S Springpfuhl": [
+      "S7",
+      "S75"
+    ],
+    "S Kaulsdorf": [
+      "S5"
+    ],
+    "S Mahlsdorf Bhf": [
+      "S5"
+    ],
+    "S K\u00f6penick": [
+      "S3"
+    ],
+    "S Wuhlheide": [
+      "S3"
+    ],
+    "S Spindlersfeld": [
+      "S47"
+    ],
+    "S Hirschgarten": [
+      "S3"
+    ],
+    "S Friedrichshagen": [
+      "S3"
+    ],
+    "S Rahnsdorf": [
+      "S3"
+    ],
+    "S Wilhelmshagen": [
+      "S3"
+    ],
+    "S Baumschulenweg": [
+      "S8",
+      "S41",
+      "S85",
+      "S46"
+    ],
+    "S Pl\u00e4nterwald": [
+      "S85",
+      "S8",
+      "S41"
+    ],
+    "S Sch\u00f6neweide Bhf": [
+      "S8",
       "S41",
       "S47",
       "S46",
-      "S8",
       "S85"
     ],
-    "S Oberspree (Berlin)": [
+    "S Oberspree": [
       "S47"
     ],
-    "S Johannisthal (Berlin)": [
-      "S41",
+    "S Johannisthal": [
+      "S85",
       "S46",
       "S8",
-      "S85"
+      "S41"
     ],
-    "S Adlershof (Berlin)": [
-      "S41",
+    "S Adlershof": [
+      "S85",
       "S46",
       "S8",
-      "S85"
+      "S41"
     ],
-    "S Stresow (Berlin)": [
+    "S Stresow": [
       "S9"
     ],
     "S Hennigsdorf Bhf": [
@@ -850,110 +625,110 @@
     "S Bernau-Friedenstal": [
       "S2"
     ],
-    "S+U Wedding (Berlin)": [
-      "S41",
-      "S15",
+    "S+U Wedding": [
+      "S42",
       "U6",
-      "S42"
+      "S15",
+      "S41"
     ],
     "Magdeburg, Bahnhof Rothensee": [
       "S1"
     ],
-    "S Humboldthain (Berlin)": [
+    "S Humboldthain": [
       "S26",
-      "S25",
       "S2",
+      "S1",
+      "S25"
+    ],
+    "S Zehlendorf": [
       "S1"
     ],
-    "S Zehlendorf (Berlin)": [
+    "S Sundgauer Str.": [
       "S1"
     ],
-    "S Sundgauer Str. (Berlin)": [
+    "S Mexikoplatz": [
       "S1"
     ],
-    "S Mexikoplatz (Berlin)": [
+    "S Schlachtensee": [
       "S1"
     ],
-    "S Schlachtensee (Berlin)": [
-      "S1"
-    ],
-    "S Nikolassee (Berlin)": [
+    "S Nikolassee": [
       "S7",
       "S1"
     ],
-    "S Sch\u00f6neberg (Berlin)": [
-      "S41",
+    "S Sch\u00f6neberg": [
+      "S42",
       "S46",
       "S1",
-      "S42"
+      "S41"
     ],
-    "S+U Yorckstr. (Gro\u00dfg\u00f6rschenstr.) (Berlin)": [
+    "S+U Yorckstr. (Gro\u00dfg\u00f6rschenstr.)": [
       "S1"
     ],
-    "S Friedenau (Berlin)": [
+    "S Friedenau": [
       "S1"
     ],
-    "S+U Rathaus Steglitz (Berlin)": [
+    "S+U Rathaus Steglitz": [
       "U9",
       "S1"
     ],
-    "S Feuerbachstr. (Berlin)": [
+    "S Feuerbachstr.": [
       "S1"
     ],
-    "S Lichterfelde West (Berlin)": [
+    "S Lichterfelde West": [
       "S1"
     ],
-    "S Botanischer Garten (Berlin)": [
+    "S Botanischer Garten": [
       "S1"
     ],
-    "S+U Wuhletal (Berlin)": [
+    "S+U Wuhletal": [
       "U5",
       "S5"
     ],
-    "S Wilhelmsruh (Berlin)": [
-      "S1",
-      "S85"
+    "S Wilhelmsruh": [
+      "S85",
+      "S1"
     ],
-    "S S\u00fcdkreuz Bhf (Berlin)": [
+    "S S\u00fcdkreuz Bhf": [
+      "S42",
       "S41",
       "S25",
-      "S42",
-      "S46",
-      "S2"
+      "S2",
+      "S46"
     ],
-    "S+U Yorckstr. (Berlin)": [
+    "S+U Yorckstr.": [
       "U7",
       "S25",
       "S2"
     ],
-    "S Gr\u00fcnau (Berlin)": [
-      "S41",
+    "S Gr\u00fcnau": [
+      "S85",
       "S46",
       "S8",
-      "S85"
+      "S41"
     ],
-    "S Anhalter Bahnhof (Berlin)": [
+    "S Anhalter Bahnhof": [
       "S25",
       "S2",
       "S1"
     ],
-    "S+U Potsdamer Platz Bhf (Berlin)": [
+    "S+U Potsdamer Platz Bhf": [
       "S25",
       "S2",
       "S1"
     ],
-    "S Nordbahnhof (Berlin)": [
+    "S Nordbahnhof": [
       "S26",
+      "S2",
+      "S1",
+      "S25"
+    ],
+    "S Oranienburger Str.": [
       "S25",
       "S2",
       "S1"
     ],
-    "S Oranienburger Str. (Berlin)": [
-      "S25",
-      "S2",
-      "S1"
-    ],
-    "S+U Brandenburger Tor (Berlin)": [
+    "S+U Brandenburger Tor": [
       "S25",
       "S2",
       "S1"
@@ -979,435 +754,405 @@
     "Sch\u00f6nebeck S\u00fcd": [
       "S1"
     ],
-    "S Julius-Leber-Br\u00fccke (Berlin)": [
+    "S Julius-Leber-Br\u00fccke": [
       "S1"
     ],
-    "Leipzig-St\u00f6tteritz, Bahnhof": [
-      "S4"
+    "S Hermsdorf": [
+      "S85",
+      "S1"
     ],
-    "Leipzig, V\u00f6lkerschlachtdenkmal": [
-      "S4"
-    ],
-    "S Hermsdorf (Berlin)": [
-      "S1",
-      "S85"
-    ],
-    "S+U Warschauer Str. (Berlin)": [
-      "S9",
+    "S+U Warschauer Str.": [
       "S7",
-      "U3",
-      "S5",
+      "S9",
       "S75",
+      "S5",
+      "U3",
       "S3"
     ],
-    "S Frohnau (Berlin)": [
-      "S1",
-      "S85"
-    ],
-    "S Waidmannslust (Berlin)": [
-      "S1",
-      "S85"
-    ],
-    "S+U Wittenau (Berlin)": [
-      "U8",
-      "S1",
-      "S85"
-    ],
-    "S Greifswalder Str. (Berlin)": [
+    "S Frohnau": [
       "S85",
-      "S41",
-      "S8",
-      "S42"
+      "S1"
     ],
-    "S Landsberger Allee (Berlin)": [
-      "S41",
-      "S8",
-      "S85"
+    "S Waidmannslust": [
+      "S85",
+      "S1"
     ],
-    "S Storkower Str. (Berlin)": [
-      "S41",
-      "S8",
-      "S85"
+    "S+U Wittenau": [
+      "S85",
+      "S1",
+      "U8"
     ],
-    "S+U Frankfurter Allee (Berlin)": [
-      "U5",
-      "S41",
-      "S8",
-      "S85"
-    ],
-    "S Treptower Park (Berlin)": [
-      "S41",
+    "S Greifswalder Str.": [
       "S42",
       "S85",
-      "S8"
+      "S8",
+      "S41"
     ],
-    "Leipzig, Anger-Crottendorf": [
-      "S4"
+    "S Landsberger Allee": [
+      "S85",
+      "S8",
+      "S41"
     ],
-    "Leipzig, Bayerischer Bhf": [
-      "S4"
+    "S Storkower Str.": [
+      "S85",
+      "S8",
+      "S41"
     ],
-    "Leipzig, Markt": [
-      "S4"
+    "S+U Frankfurter Allee": [
+      "U5",
+      "S85",
+      "S8",
+      "S41"
     ],
-    "Leipzig, MDR": [
-      "S4"
+    "S Treptower Park": [
+      "S42",
+      "S8",
+      "S41",
+      "S85"
     ],
-    "Leipzig, Nord": [
-      "S4"
-    ],
-    "Leipzig, Wilhelm-Leuschner-Platz": [
-      "S4"
-    ],
-    "Leipzig, Hauptbahnhof": [
-      "S4"
-    ],
-    "U Schlesisches Tor (Berlin)": [
+    "U Schlesisches Tor": [
       "U3"
     ],
-    "U G\u00f6rlitzer Bahnhof (Berlin)": [
+    "U G\u00f6rlitzer Bahnhof": [
       "U3"
     ],
-    "U Kottbusser Tor (Berlin)": [
+    "U Kottbusser Tor": [
       "U3",
       "U8"
     ],
-    "U Prinzenstr. (Berlin)": [
+    "U Prinzenstr.": [
       "U3"
     ],
-    "U Hallesches Tor (Berlin)": [
+    "U Hallesches Tor": [
       "U6",
       "U3"
     ],
-    "U M\u00f6ckernbr\u00fccke (Berlin)": [
+    "U M\u00f6ckernbr\u00fccke": [
       "U7",
       "U3"
     ],
-    "U Gleisdreieck (Berlin)": [
+    "U Gleisdreieck": [
       "U3"
     ],
-    "U Kurf\u00fcrstenstr. (Berlin)": [
+    "U Kurf\u00fcrstenstr.": [
       "U3"
     ],
-    "U Nollendorfplatz (Berlin)": [
-      "U4",
+    "U Nollendorfplatz": [
+      "U1",
+      "U3",
+      "U4"
+    ],
+    "U Wittenbergplatz": [
       "U1",
       "U3"
     ],
-    "U Wittenbergplatz (Berlin)": [
-      "U1",
-      "U3"
-    ],
-    "U Kurf\u00fcrstendamm (Berlin)": [
+    "U Kurf\u00fcrstendamm": [
       "U9",
       "U1"
     ],
-    "U Uhlandstr. (Berlin)": [
+    "U Uhlandstr.": [
       "U1"
     ],
-    "U Vinetastr. (Berlin)": [
+    "U Vinetastr.": [
       "U2"
     ],
-    "U Eberswalder Str. (Berlin)": [
+    "U Eberswalder Str.": [
       "U2"
     ],
-    "U Senefelderplatz (Berlin)": [
+    "U Senefelderplatz": [
       "U2"
     ],
-    "U Rosa-Luxemburg-Platz (Berlin)": [
+    "U Rosa-Luxemburg-Platz": [
       "U2"
     ],
-    "U Augsburger Str. (Berlin)": [
+    "U Augsburger Str.": [
       "U3"
     ],
-    "U Spichernstr. (Berlin)": [
+    "U Spichernstr.": [
       "U9",
       "U3"
     ],
-    "U Hohenzollernplatz (Berlin)": [
+    "U Hohenzollernplatz": [
       "U3"
     ],
-    "U Fehrbelliner Platz (Berlin)": [
+    "U Fehrbelliner Platz": [
       "U7",
       "U3"
     ],
-    "U R\u00fcdesheimer Platz (Berlin)": [
+    "U R\u00fcdesheimer Platz": [
       "U3"
     ],
-    "U Breitenbachplatz (Berlin)": [
+    "U Breitenbachplatz": [
       "U3"
     ],
-    "U Viktoria-Luise-Platz (Berlin)": [
+    "U Viktoria-Luise-Platz": [
       "U4"
     ],
-    "U Bayerischer Platz (Berlin)": [
+    "U Bayerischer Platz": [
       "U7",
       "U4"
     ],
-    "U Rathaus Sch\u00f6neberg (Berlin)": [
+    "U Rathaus Sch\u00f6neberg": [
       "U4"
     ],
-    "U H\u00f6now (Berlin)": [
+    "U H\u00f6now": [
       "U5"
     ],
-    "U Louis-Lewin-Str. (Berlin)": [
+    "U Louis-Lewin-Str.": [
       "U5"
     ],
-    "U Hellersdorf (Berlin)": [
+    "U Hellersdorf": [
       "U5"
     ],
-    "U Cottbusser Platz (Berlin)": [
+    "U Cottbusser Platz": [
       "U5"
     ],
-    "U Kienberg (G\u00e4rten der Welt) (Berlin)": [
+    "U Kienberg (G\u00e4rten der Welt)": [
       "U5"
     ],
-    "U Kaulsdorf-Nord (Berlin)": [
+    "U Kaulsdorf-Nord": [
       "U5"
     ],
-    "U Elsterwerdaer Platz (Berlin)": [
+    "U Elsterwerdaer Platz": [
       "U5"
     ],
-    "U Biesdorf-S\u00fcd (Berlin)": [
+    "U Biesdorf-S\u00fcd": [
       "U5"
     ],
-    "U Tierpark (Berlin)": [
+    "U Tierpark": [
       "U5"
     ],
-    "U Friedrichsfelde (Berlin)": [
+    "U Friedrichsfelde": [
       "U5"
     ],
-    "U Magdalenenstr. (Berlin)": [
+    "U Magdalenenstr.": [
       "U5"
     ],
-    "U Samariterstr. (Berlin)": [
+    "U Samariterstr.": [
       "U5"
     ],
-    "U Frankfurter Tor (Berlin)": [
+    "U Frankfurter Tor": [
       "U5"
     ],
-    "U Weberwiese (Berlin)": [
+    "U Weberwiese": [
       "U5"
     ],
-    "U Strausberger Platz (Berlin)": [
+    "U Strausberger Platz": [
       "U5"
     ],
-    "U Schillingstr. (Berlin)": [
+    "U Schillingstr.": [
       "U5"
     ],
-    "U Kurt-Schumacher-Platz (Berlin)": [
+    "U Kurt-Schumacher-Platz": [
       "U6"
     ],
-    "U Afrikanische Str. (Berlin)": [
+    "U Afrikanische Str.": [
       "U6"
     ],
-    "U Rehberge (Berlin)": [
+    "U Rehberge": [
       "U6"
     ],
-    "U Seestr. (Berlin)": [
+    "U Seestr.": [
       "U6"
     ],
-    "U Leopoldplatz (Berlin)": [
+    "U Leopoldplatz": [
       "U9",
       "U6"
     ],
-    "U Reinickendorfer Str. (Berlin)": [
+    "U Reinickendorfer Str.": [
       "U6"
     ],
-    "U Schwartzkopffstr. (Berlin)": [
+    "U Schwartzkopffstr.": [
       "U6"
     ],
-    "U Naturkundemuseum (Berlin)": [
+    "U Naturkundemuseum": [
       "U6"
     ],
-    "U Oranienburger Tor (Berlin)": [
+    "U Oranienburger Tor": [
       "U6"
     ],
-    "U Stadtmitte (Berlin)": [
+    "U Stadtmitte": [
       "U6"
     ],
-    "U Kochstr. (Checkpoint Charlie) (Berlin)": [
+    "U Kochstr. (Checkpoint Charlie)": [
       "U6"
     ],
-    "U Mehringdamm (Berlin)": [
+    "U Mehringdamm": [
       "U7",
       "U6"
     ],
-    "U Platz der Luftbr\u00fccke (Berlin)": [
+    "U Platz der Luftbr\u00fccke": [
       "U6"
     ],
-    "U Paradestr. (Berlin)": [
+    "U Paradestr.": [
       "U6"
     ],
-    "S+U Rathaus Spandau (Berlin)": [
+    "S+U Rathaus Spandau": [
       "U7"
     ],
-    "U Altstadt Spandau (Berlin)": [
+    "U Altstadt Spandau": [
       "U7"
     ],
-    "U Zitadelle (Berlin)": [
+    "U Zitadelle": [
       "U7"
     ],
-    "U Haselhorst (Berlin)": [
+    "U Haselhorst": [
       "U7"
     ],
-    "U Paulsternstr. (Berlin)": [
+    "U Paulsternstr.": [
       "U7"
     ],
-    "U Rohrdamm (Berlin)": [
+    "U Rohrdamm": [
       "U7"
     ],
-    "U Siemensdamm (Berlin)": [
+    "U Siemensdamm": [
       "U7"
     ],
-    "U Halemweg (Berlin)": [
+    "U Halemweg": [
       "U7"
     ],
-    "U Jakob-Kaiser-Platz (Berlin)": [
+    "U Jakob-Kaiser-Platz": [
       "U7"
     ],
-    "U Mierendorffplatz (Berlin)": [
+    "U Mierendorffplatz": [
       "U7"
     ],
-    "U Richard-Wagner-Platz (Berlin)": [
+    "U Richard-Wagner-Platz": [
       "U7"
     ],
-    "U Bismarckstr. (Berlin)": [
+    "U Bismarckstr.": [
       "U7"
     ],
-    "U Wilmersdorfer Str. (Berlin)": [
+    "U Wilmersdorfer Str.": [
       "U7"
     ],
-    "U Adenauerplatz (Berlin)": [
+    "U Adenauerplatz": [
       "U7"
     ],
-    "U Konstanzer Str. (Berlin)": [
+    "U Konstanzer Str.": [
       "U7"
     ],
-    "U Blissestr. (Berlin)": [
+    "U Blissestr.": [
       "U7"
     ],
-    "U Berliner Str. (Berlin)": [
-      "U9",
+    "U Berliner Str.": [
+      "U7",
+      "U9"
+    ],
+    "U Eisenacher Str.": [
       "U7"
     ],
-    "U Eisenacher Str. (Berlin)": [
+    "U Kleistpark": [
       "U7"
     ],
-    "U Kleistpark (Berlin)": [
+    "U Gneisenaustr.": [
       "U7"
     ],
-    "U Gneisenaustr. (Berlin)": [
+    "U S\u00fcdstern": [
       "U7"
     ],
-    "U S\u00fcdstern (Berlin)": [
-      "U7"
-    ],
-    "U Hermannplatz (Berlin)": [
+    "U Hermannplatz": [
       "U7",
       "U8"
     ],
-    "U Rathaus Neuk\u00f6lln (Berlin)": [
+    "U Rathaus Neuk\u00f6lln": [
       "U7"
     ],
-    "U Karl-Marx-Str. (Berlin)": [
+    "U Karl-Marx-Str.": [
       "U7"
     ],
-    "U Grenzallee (Berlin)": [
+    "U Grenzallee": [
       "U7"
     ],
-    "U Blaschkoallee (Berlin)": [
+    "U Blaschkoallee": [
       "U7"
     ],
-    "U Parchimer Allee (Berlin)": [
+    "U Parchimer Allee": [
       "U7"
     ],
-    "U Britz-S\u00fcd (Berlin)": [
+    "U Britz-S\u00fcd": [
       "U7"
     ],
-    "U Rathaus Reinickendorf (Berlin)": [
+    "U Rathaus Reinickendorf": [
       "U8"
     ],
-    "S+U Karl-Bonhoeffer-Nervenklinik (Berlin)": [
+    "S+U Karl-Bonhoeffer-Nervenklinik": [
       "U8"
     ],
-    "U Lindauer Allee (Berlin)": [
+    "U Lindauer Allee": [
       "U8"
     ],
-    "U Paracelsus-Bad (Berlin)": [
+    "U Paracelsus-Bad": [
       "U8"
     ],
-    "U Residenzstr. (Berlin)": [
+    "U Residenzstr.": [
       "U8"
     ],
-    "U Franz-Neumann-Platz (Berlin)": [
+    "U Franz-Neumann-Platz": [
       "U8"
     ],
-    "U Osloer Str. (Berlin)": [
+    "U Osloer Str.": [
       "U9",
       "U8"
     ],
-    "U Pankstr. (Berlin)": [
+    "U Pankstr.": [
       "U8"
     ],
-    "U Voltastr. (Berlin)": [
+    "U Voltastr.": [
       "U8"
     ],
-    "U Bernauer Str. (Berlin)": [
+    "U Bernauer Str.": [
       "U8"
     ],
-    "U Rosenthaler Platz (Berlin)": [
+    "U Rosenthaler Platz": [
       "U8"
     ],
-    "U Weinmeisterstr. (Berlin)": [
+    "U Weinmeisterstr.": [
       "U8"
     ],
-    "U Heinrich-Heine-Str. (Berlin)": [
+    "U Heinrich-Heine-Str.": [
       "U8"
     ],
-    "U Moritzplatz (Berlin)": [
+    "U Moritzplatz": [
       "U8"
     ],
-    "U Sch\u00f6nleinstr. (Berlin)": [
+    "U Sch\u00f6nleinstr.": [
       "U8"
     ],
-    "U Boddinstr. (Berlin)": [
+    "U Boddinstr.": [
       "U8"
     ],
-    "U Leinestr. (Berlin)": [
+    "U Leinestr.": [
       "U8"
     ],
-    "U Nauener Platz (Berlin)": [
+    "U Nauener Platz": [
       "U9"
     ],
-    "U Amrumer Str. (Berlin)": [
+    "U Amrumer Str.": [
       "U9"
     ],
-    "U Birkenstr. (Berlin)": [
+    "U Birkenstr.": [
       "U9"
     ],
-    "U Turmstr. (Berlin)": [
+    "U Turmstr.": [
       "U9"
     ],
-    "U Hansaplatz (Berlin)": [
+    "U Hansaplatz": [
       "U9"
     ],
-    "U G\u00fcntzelstr. (Berlin)": [
+    "U G\u00fcntzelstr.": [
       "U9"
     ],
-    "U Friedrich-Wilhelm-Platz (Berlin)": [
+    "U Friedrich-Wilhelm-Platz": [
       "U9"
     ],
-    "U Walther-Schreiber-Platz (Berlin)": [
+    "U Walther-Schreiber-Platz": [
       "U9"
     ],
-    "U Schlo\u00dfstr. (Berlin)": [
+    "U Schlo\u00dfstr.": [
       "U9"
     ],
-    "Leipzig, Mockauer Str. Bhf": [
-      "S4"
-    ],
-    "U Unter den Linden (Berlin)": [
+    "U Unter den Linden": [
       "U6"
     ],
     "Stendal Hochschule": [

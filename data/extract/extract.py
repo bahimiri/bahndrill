@@ -8,6 +8,7 @@ class RouteType(Enum):
     S_BAHN = 109
 
 routes = {}
+route_colors = {}
 with open('../GTFS/routes.txt', 'r') as f:
     reader = csv.DictReader(f)
     for row in reader:
@@ -17,15 +18,13 @@ with open('../GTFS/routes.txt', 'r') as f:
         route_color = row['route_color']
         route_text_color = row['route_text_color']
         if route_type == RouteType.U_BAHN.value or route_type == RouteType.S_BAHN.value:
-            routes[route_id] = {
-                'name': route_name,
+            if route_name == 'S4':
+                continue
+            routes[route_id] = route_name
+            route_colors[route_name] = {
                 'color': route_color,
                 'text_color': route_text_color,
             }
-
-# lines = sorted([routes[route_id] for route_id in routes])
-# print(lines)
-# print(routes)
 
 route_to_trip = {}
 with open('../GTFS/trips.txt', 'r') as f:
@@ -35,7 +34,6 @@ with open('../GTFS/trips.txt', 'r') as f:
         trip_id = row['trip_id']
         if route_id in routes and route_id not in route_to_trip:
             route_to_trip[route_id] = row['trip_id']
-# print(route_to_trip)
 
 trip_to_stops = {}
 with open('../GTFS/stop_times.txt', 'r') as f:
@@ -47,42 +45,29 @@ with open('../GTFS/stop_times.txt', 'r') as f:
 
 stop_to_lines = {}
 for route_id, trip_id in route_to_trip.items():
-    line_name = routes[route_id]['name']
+    line_name = routes[route_id]
     for stop_id in trip_to_stops.get(trip_id, []):
         stop_to_lines.setdefault(stop_id, set()).add(line_name)
 
-# print(stop_to_lines)
-#
-# result = []
 stop_names_to_lines = {}
 with open('../GTFS/stops.txt', 'r') as f:
     reader = csv.DictReader(f)
     for row in reader:
         stop_id = row['stop_id']
         if stop_id in stop_to_lines:
-            stop_names_to_lines.setdefault(row['stop_name'], set()).update(stop_to_lines[stop_id])
-            # result.append({
-            #     'name': row['stop_name'],
-            #     'lines': sorted(stop_to_lines[stop_id])
-            # })
+            stop_name = row['stop_name'].replace(' (Berlin)', '')
+            stop_names_to_lines.setdefault(stop_name, set()).update(stop_to_lines[stop_id])
 
 
-# for stop in result:
-#     print(f"{stop['name']}: {' ,'.join(stop['lines'])}")
-for name, lines in stop_names_to_lines.items():
-    print(f"{name}: {', '.join(lines)}")
-
-
-# Writing JSON to a file
 stop_names_to_lines_final = {}
 for name, lines in stop_names_to_lines.items():
     stop_names_to_lines_final[name] = list(lines)
-data = {
-    'routes': routes,
-    'stops': stop_names_to_lines_final
-}
+
 with open('data.json', 'w') as file:
-    json.dump(data, file, indent=2)
+    json.dump({
+        'lines': route_colors,
+        'stops': stop_names_to_lines_final
+    }, file, indent=2)
 
 # todo: anzahl aller stops ausgeben lassen und verifizieren
 # todo: GTFS Daten runterladen
