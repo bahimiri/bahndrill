@@ -54,9 +54,7 @@ def get_regular_service_ids():
             wednesday = int(row['wednesday'])
             thursday = int(row['thursday'])
             friday = int(row['friday'])
-            saturday = int(row['saturday'])
-            sunday = int(row['sunday'])
-            if sum([monday, tuesday, wednesday, thursday, friday, saturday, sunday]) >= 5:
+            if sum([monday, tuesday, wednesday, thursday, friday]) >= 5:
                 regular_ids.add(row['service_id'])
     return regular_ids
 
@@ -75,8 +73,8 @@ def get_trips(routes):
                 # print(service_id)
                 # if service_id not in exceptional_services and service_id in regular_services:
                 # if service_id not in exceptional_services:
-                # if service_id in regular_services:
-                trip_to_route[trip_id] = routes[route_id]
+                if service_id in regular_services:
+                    trip_to_route[trip_id] = routes[route_id]
     return trip_to_route
 
 
