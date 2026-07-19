@@ -28,16 +28,16 @@ def get_line_information():
     return routes, route_colors
 
 
-def get_trip_for_routes(routes):
-    route_to_trip = {}
+def get_trips(routes):
+    trip_to_route = {}
     with open('../GTFS/trips.txt', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
             route_id = row['route_id']
             trip_id = row['trip_id']
-            if route_id in routes and route_id not in route_to_trip:
-                route_to_trip[route_id] = trip_id
-    return route_to_trip
+            if route_id in routes and route_id not in trip_to_route:
+                trip_to_route[trip_id] = route_id
+    return trip_to_route
 
 
 def get_stops_for_trips(trips):
@@ -52,10 +52,10 @@ def get_stops_for_trips(trips):
 
 
 def get_lines_per_stop_id(routes):
-    route_to_trip = get_trip_for_routes(routes)
-    trip_to_stops = get_stops_for_trips(set(route_to_trip.values()))
+    trip_to_route = get_trips(routes)
+    trip_to_stops = get_stops_for_trips(trip_to_route.keys())
     stop_to_lines = {}
-    for route_id, trip_id in route_to_trip.items():
+    for trip_id, route_id in trip_to_route.items():
         line_name = routes[route_id]
         for stop_id in trip_to_stops.get(trip_id, []):
             stop_to_lines.setdefault(stop_id, set()).add(line_name)
