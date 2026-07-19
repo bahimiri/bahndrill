@@ -85,6 +85,6 @@ with open('data.json', 'w') as file:
     json.dump({
         'lines': line_colors,
         'stops': lines_per_stop
-    }, file, indent=2)
+    }, file, indent=2, sort_keys=True)
 
 # todo: GTFS Daten runterladen
