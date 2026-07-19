@@ -1,4 +1,10 @@
 import csv
+from enum import Enum
+
+
+class RouteType(Enum):
+    U_BAHN = 400
+    S_BAHN = 109
 
 routes = {}
 with open('../GTFS/routes.txt', 'r') as f:
@@ -6,14 +12,19 @@ with open('../GTFS/routes.txt', 'r') as f:
     for row in reader:
         route_type = int(row['route_type'])
         route_name = row.get('route_short_name', '')
-        if route_type == 400: # u-bahn
-            routes[row['route_id']] = route_name
-        elif route_type == 109: # s-bahn
-            routes[row['route_id']] = route_name
+        route_id = row['route_id']
+        route_color = row['route_color']
+        route_text_color = row['route_text_color']
+        if route_type == RouteType.U_BAHN.value or route_type == RouteType.S_BAHN.value:
+            routes[route_id] = {
+                'name': route_name,
+                'color': route_color,
+                'text_color': route_text_color,
+            }
 
 # lines = sorted([routes[route_id] for route_id in routes])
 # print(lines)
-# print(routes)
+print(routes)
 
 route_to_trip = {}
 with open('../GTFS/trips.txt', 'r') as f:
@@ -35,7 +46,7 @@ with open('../GTFS/stop_times.txt', 'r') as f:
 
 stop_to_lines = {}
 for route_id, trip_id in route_to_trip.items():
-    line_name = routes[route_id]
+    line_name = routes[route_id]['name']
     for stop_id in trip_to_stops.get(trip_id, []):
         stop_to_lines.setdefault(stop_id, set()).add(line_name)
 
@@ -61,3 +72,4 @@ for name, lines in stop_names_to_lines.items():
     print(f"{name}: {', '.join(lines)}")
 
 # todo: anzahl aller stops ausgeben lassen und verifizieren
+# todo: GTFS Daten runterladen
