@@ -1,6 +1,7 @@
 import csv
 from enum import Enum
 import json
+import datetime as dt
 
 
 class RouteType(Enum):
@@ -30,14 +31,83 @@ def get_line_information():
 
 def get_trips(routes):
     trip_to_route = {}
+    trip_to_service_id = {}
     with open('../GTFS/trips.txt', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
             route_id = row['route_id']
             trip_id = row['trip_id']
-            if route_id in routes and route_id not in trip_to_route:
+            if route_id in routes:
                 trip_to_route[trip_id] = routes[route_id]
-    return trip_to_route
+                trip_to_service_id[trip_id] = row['service_id']
+    return trip_to_route, trip_to_service_id
+
+
+def weekday_count(start_date, end_date):
+    week        = {}
+    for i in range((end_date - start_date).days):
+        day       = (start_date + dt.timedelta(days=i+1)).weekday()
+        week[day] = week[day] + 1 if day in week else 1
+    for day in range(7):
+        if day not in week:
+            week[day] = 0
+    return week
+
+
+def get_day_count_in_range(start_date, end_date, days):
+    weekday_counts = weekday_count(start_date, end_date)
+    return sum(weekday_counts[i] * int(days[i]) for i in range(len(days)))
+
+
+def convert_date(date_string):
+    return dt.datetime.strptime(date_string, '%Y%m%d')
+    return dt.date.fromisoformat(f'{date_string[:4]}-{date_string[4:6]}-{date_string[6:]}')
+
+
+def get_service_days():
+    totals = {}
+    calendar = {}
+    with open('../GTFS/calendar.txt', 'r') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            service_id, monday, tuesday, wednesday, thursday, friday, saturday, sunday, start_date, end_date = row['service_id'], row['monday'], row['tuesday'], row['wednesday'], row['thursday'], row['friday'], row['saturday'], row['sunday'], row['start_date'], row['end_date']
+            days = [monday, tuesday, wednesday, thursday, friday, saturday, sunday]
+            calendar[service_id] = {
+                'start_date': convert_date(start_date),
+                'end_date': convert_date(end_date),
+                'days': days
+            }
+
+    added = {}
+    removed = {}
+    with open('../GTFS/calendar_dates.txt', 'r') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            service_id, date, exception_type = row["service_id"], row["date"], row["exception_type"]
+            if exception_type == '1':
+                added.setdefault(service_id, []).append(convert_date(date))
+            elif exception_type == '2':
+                removed.setdefault(service_id, []).append(convert_date(date))
+    for service_id in calendar:
+        add = [calendar[service_id]['start_date']] if service_id not in added else sorted(added[service_id])
+        remove = [] if service_id not in removed else sorted(removed[service_id])
+        for i in range(len(add)):
+            end_date = calendar[service_id]['end_date'] if i >= len(remove) else remove[i]
+            count = get_day_count_in_range(add[i], end_date, calendar[service_id]['days'])
+            if service_id in totals:
+                totals[service_id] += count
+            else:
+                totals[service_id] = count
+    return totals
+
+
+def filter_trips(trip_to_service_id):
+    service_days = get_service_days()
+    filtered = []
+    for trip_id, service_id in trip_to_service_id.items():
+        if service_days[service_id] > 30: # todo cutoff wählen
+            filtered.append(trip_id)
+    return filtered
 
 
 def get_stops_for_trips(trips):
@@ -52,10 +122,13 @@ def get_stops_for_trips(trips):
 
 
 def get_lines_per_stop_id(routes):
-    trip_to_route = get_trips(routes)
+    trip_to_route, trip_to_service_id = get_trips(routes)
+    relevant_trips = filter_trips(trip_to_service_id)
     trip_to_stops = get_stops_for_trips(trip_to_route.keys())
     stop_to_lines = {}
     for trip_id, line_name in trip_to_route.items():
+        if trip_id not in relevant_trips:
+            continue
         for stop_id in trip_to_stops.get(trip_id, []):
             stop_to_lines.setdefault(stop_id, set()).add(line_name)
     return stop_to_lines
