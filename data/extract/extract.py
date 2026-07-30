@@ -45,6 +45,7 @@ class ServiceStorage:
 
     def is_regular_service(self, service_id):
         return self.service_days.get(service_id, 0) > 100
+        # return self.calendar_service_days[service_id] <= self.service_days[service_id]
 
     @staticmethod
     def get_calendar_service_days():
@@ -54,14 +55,14 @@ class ServiceStorage:
         with open('../GTFS/calendar.txt', 'r') as f:
             reader = csv.DictReader(f)
             for row in reader:
-                service_id, monday, tuesday, wednesday, thursday, friday, saturday, sunday, start_date, end_date = row['service_id'], row['monday'], row['tuesday'], row['wednesday'], row['thursday'], row['friday'], row['saturday'], row['sunday'], row['start_date'], row['end_date']
+                service_id = row['service_id']
+                monday, tuesday, wednesday, thursday, friday, saturday, sunday = row['monday'], row['tuesday'], row['wednesday'], row['thursday'], row['friday'], row['saturday'], row['sunday']
+                start_date, end_date = ServiceStorage.convert_date(row['start_date']), ServiceStorage.convert_date(row['end_date'])
                 days = [monday, tuesday, wednesday, thursday, friday, saturday, sunday]
                 min_date = start_date if min_date is None or start_date < min_date else min_date
                 max_date = end_date if max_date is None or end_date > max_date else max_date
-                count = ServiceStorage.get_day_count_in_range(
-                    ServiceStorage.convert_date(start_date),
-                    ServiceStorage.convert_date(end_date),
-                    days)
+
+                count = ServiceStorage.get_day_count_in_range( start_date, end_date, days)
                 service_days[service_id] = count
         return service_days, min_date, max_date
 
@@ -185,9 +186,16 @@ class LineStorage:
             }
         return colors
 
-
+#1055
+#1056
+#1078
+#976
+#978
 def main():
     line_storage = LineStorage()
+    for line in line_storage.lines.values():
+        if line.name == 'S41':
+            print(line)
     with open('data.json', 'w') as file:
         stop = line_storage.get_lines_per_stop()
         json.dump({
