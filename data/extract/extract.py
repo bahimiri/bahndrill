@@ -18,11 +18,9 @@ class Line:
         self.color = color
         self.text_color = text_color
         self.trips = set()
-        self.services = set()
 
-    def add_trip(self, trip_id, service_id):
+    def add_trip(self, trip_id):
         self.trips.add(trip_id)
-        self.services.add(service_id)
 
     def __str__(self):
         return f'{self.name} ({self.color}, {self.text_color})'
@@ -95,21 +93,33 @@ class StopStorage:
         return self.stops.get(trip_id, [])
 
 
-def read_s_and_u_lines():
-    routes = {}
-    with open('../GTFS/routes.txt', 'r') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            route_type = int(row['route_type'])
-            route_id = row['route_id']
-            if route_type != RouteType.U_BAHN.value and route_type != RouteType.S_BAHN.value:
-                continue
-            route_name = row.get('route_short_name', '')
-            route_color = row['route_color']
-            if route_name == 'S4' or len(route_color) == 0: # todo braucht man s4 check noch?
-                continue
-            routes[route_id] = Line(route_id, route_type, route_name, route_color, row['route_text_color'])
-    return routes
+class LineStorage:
+    def __init__(self):
+        self.lines = {}
+        with open('../GTFS/routes.txt', 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                route_type = int(row['route_type'])
+                route_id = row['route_id']
+                if route_type != RouteType.U_BAHN.value and route_type != RouteType.S_BAHN.value:
+                    continue
+                route_name = row.get('route_short_name', '')
+                route_color = row['route_color']
+                if route_name == 'S4' or len(route_color) == 0: # todo braucht man s4 check noch?
+                    continue
+                self.lines[route_id] = Line(route_id, route_type, route_name, route_color, row['route_text_color'])
+
+    def add_trips(self):
+        services = ServiceStorage()
+        with open('../GTFS/trips.txt', 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                route_id = row['route_id']
+                if route_id in self.lines:
+                    trip_id = row['trip_id']
+                    service_id = row['service_id']
+                    if services.service_days[service_id] > 100:
+                        self.lines[route_id].add_trip(trip_id)
 
 
 # for route_id, line in lines.items():
@@ -117,17 +127,7 @@ def read_s_and_u_lines():
 # print(len(lines))
 
 
-def add_trips(lines: Dict[str, Line]):
-    services = ServiceStorage()
-    with open('../GTFS/trips.txt', 'r') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            route_id = row['route_id']
-            if route_id in lines:
-                trip_id = row['trip_id']
-                service_id = row['service_id']
-                if services.service_days[service_id] > 100:
-                    lines[route_id].add_trip(trip_id, service_id)  # todo: braucht man service_id noch?
+
 
 
 
@@ -181,8 +181,8 @@ def add_trips(lines: Dict[str, Line]):
 #     }, file, indent=2, sort_keys=True)
 
 def main():
-    lines = read_s_and_u_lines()
-    add_trips(lines)
+    lines = LineStorage()
+    lines.add_trips()
 
 main()
 
