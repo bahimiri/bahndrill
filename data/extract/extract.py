@@ -114,8 +114,6 @@ class LineStorage:
     def __init__(self):
         self.stop_translator = StopTranslator()
         self.lines = LineStorage.read_u_and_s_lines()
-        self.stop_storage = None
-        self.add_trips()
         self.add_stops()
 
     @staticmethod
@@ -135,7 +133,7 @@ class LineStorage:
                 lines[route_id] = Line(route_id, route_type, route_name, route_color, row['route_text_color'])
         return lines
 
-    def add_trips(self):
+    def add_stops(self):
         services = ServiceStorage()
         trips = set()
         with open('../GTFS/trips.txt', 'r') as f:
@@ -148,13 +146,10 @@ class LineStorage:
                     if services.service_days[service_id] > 100:
                         self.lines[route_id].add_trip(trip_id)
                         trips.add(trip_id)
-        self.stop_storage = StopStorage(trips)
-
-
-    def add_stops(self):
+        stop_storage = StopStorage(trips)
         for _, line in self.lines.items():
             for trip_id in line.trips:
-                line.add_stops([self.stop_translator.translate(stop_id) for stop_id in self.stop_storage.get_stops(trip_id)])
+                line.add_stops([self.stop_translator.translate(stop_id) for stop_id in stop_storage.get_stops(trip_id)])
 
     def get_lines_per_stop(self):
         stops = {}
