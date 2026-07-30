@@ -19,11 +19,12 @@ def get_line_information():
             route_id = row['route_id']
             if route_type == RouteType.U_BAHN.value or route_type == RouteType.S_BAHN.value:
                 route_name = row.get('route_short_name', '')
-                if route_name == 'S4':
+                route_color = row['route_color']
+                if route_name == 'S4' or len(route_color) == 0:
                     continue
                 routes[route_id] = route_name
                 route_colors[route_name] = {
-                    'color': row['route_color'],
+                    'color': route_color,
                     'text_color': row['route_text_color'],
                 }
     return routes, route_colors

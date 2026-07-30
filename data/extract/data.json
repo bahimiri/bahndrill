@@ -102,42 +102,9 @@
     }
   },
   "stops": {
-    "Angern-Rog\u00e4tz, Bahnhof": [
-      "S1"
-    ],
-    "Demker, Bahnhof": [
-      "S1"
-    ],
-    "Eichstedt (Altmark), Bahnhof": [
-      "S1"
-    ],
     "Flughafen BER": [
       "S85",
       "S9"
-    ],
-    "Geestgottberg, Bahnhof": [
-      "S1"
-    ],
-    "Goldbeck (bei Osterburg), Bahnhof": [
-      "S1"
-    ],
-    "Magdeburg, Bahnhof Rothensee": [
-      "S1"
-    ],
-    "Magdeburg, Eichenweiler Bahnhof": [
-      "S1"
-    ],
-    "Magdeburg, Hauptbahnhof": [
-      "S1"
-    ],
-    "Magdeburg-Neustadt, Bahnhof": [
-      "S1"
-    ],
-    "Mahlwinkel, Bahnhof": [
-      "S1"
-    ],
-    "Osterburg, Bahnhof": [
-      "S1"
     ],
     "S Adlershof": [
       "S46",
@@ -877,21 +844,6 @@
       "U2",
       "U9"
     ],
-    "Seehausen (Altmark), Bahnhof": [
-      "S1"
-    ],
-    "Stendal Hochschule": [
-      "S1"
-    ],
-    "Stendal, Bahnhof Stadtsee": [
-      "S1"
-    ],
-    "Stendal, Hauptbahnhof": [
-      "S1"
-    ],
-    "Tangerh\u00fctte, Bahnhof": [
-      "S1"
-    ],
     "U Adenauerplatz": [
       "U7"
     ],
@@ -1346,18 +1298,6 @@
     ],
     "U Zwickauer Damm": [
       "U7"
-    ],
-    "Wittenberge, Bahnhof": [
-      "S1"
-    ],
-    "Wolmirstedt, Bahnhof": [
-      "S1"
-    ],
-    "Zielitz, Bahnhof": [
-      "S1"
-    ],
-    "Zielitz, Bahnhof Ort": [
-      "S1"
     ]
   }
 }
