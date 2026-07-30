@@ -66,38 +66,29 @@ def convert_date(date_string):
 
 def get_service_days():
     totals = {}
-    calendar = {}
+    # calendar = {}
     with open('../GTFS/calendar.txt', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
             service_id, monday, tuesday, wednesday, thursday, friday, saturday, sunday, start_date, end_date = row['service_id'], row['monday'], row['tuesday'], row['wednesday'], row['thursday'], row['friday'], row['saturday'], row['sunday'], row['start_date'], row['end_date']
             days = [monday, tuesday, wednesday, thursday, friday, saturday, sunday]
-            calendar[service_id] = {
-                'start_date': convert_date(start_date),
-                'end_date': convert_date(end_date),
-                'days': days
-            }
+            count = get_day_count_in_range(convert_date(start_date), convert_date(end_date), days)
+            # calendar[service_id] = {
+            #     'start_date': convert_date(start_date),
+            #     'end_date': convert_date(end_date),
+            #     'days': days
+            # }
+            totals[service_id] = count
 
-    added = {}
-    removed = {}
     with open('../GTFS/calendar_dates.txt', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            service_id, date, exception_type = row["service_id"], row["date"], row["exception_type"]
+            service_id, exception_type = row["service_id"], row["exception_type"]
             if exception_type == '1':
-                added.setdefault(service_id, []).append(convert_date(date))
+                totals[service_id] += 1
             elif exception_type == '2':
-                removed.setdefault(service_id, []).append(convert_date(date))
-    for service_id in calendar:
-        add = [calendar[service_id]['start_date']] if service_id not in added else sorted(added[service_id])
-        remove = [] if service_id not in removed else sorted(removed[service_id])
-        for i in range(len(add)):
-            end_date = calendar[service_id]['end_date'] if i >= len(remove) else remove[i]
-            count = get_day_count_in_range(add[i], end_date, calendar[service_id]['days'])
-            if service_id in totals:
-                totals[service_id] += count
-            else:
-                totals[service_id] = count
+                totals[service_id] -= 1
+    print(totals)
     return totals
 
 
@@ -105,7 +96,8 @@ def filter_trips(trip_to_service_id):
     service_days = get_service_days()
     filtered = []
     for trip_id, service_id in trip_to_service_id.items():
-        if service_days[service_id] > 30: # todo cutoff wählen
+        if service_days[service_id] > 100: # todo cutoff wählen
+            print(trip_id, service_id, service_days[service_id])
             filtered.append(trip_id)
     return filtered
 
@@ -141,6 +133,7 @@ def get_stop_translations():
         for row in reader:
             stop_id = row['stop_id']
             stop_name = row['stop_name']
+            print(stop_name)
             stop_names[stop_id] = stop_name.replace(' (Berlin)', '')
     return stop_names
 
