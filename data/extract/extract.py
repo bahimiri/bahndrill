@@ -2,7 +2,6 @@ import csv
 from enum import Enum
 import json
 import datetime as dt
-from typing import Dict
 
 
 class RouteType(Enum):
@@ -131,7 +130,7 @@ class LineStorage:
                     continue
                 route_name = row.get('route_short_name', '')
                 route_color = row['route_color']
-                if route_name == 'S4' or len(route_color) == 0: # todo braucht man s4 check noch?
+                if len(route_color) == 0:
                     continue
                 lines[route_id] = Line(route_id, route_type, route_name, route_color, row['route_text_color'])
         return lines
@@ -175,54 +174,6 @@ class LineStorage:
             }
         return colors
 
-
-# for route_id, line in lines.items():
-#     print(route_id, line)
-# print(len(lines))
-
-
-
-
-
-
-#
-#
-# def get_lines_per_stop_id(routes):
-#     trip_to_route, trip_to_service_id = get_trips(routes)
-#     relevant_trips = filter_trips(trip_to_service_id)
-#     trip_to_stops = get_stops_for_trips(trip_to_route.keys())
-#     stop_to_lines = {}
-#     for trip_id, line_name in trip_to_route.items():
-#         if trip_id not in relevant_trips:
-#             continue
-#         for stop_id in trip_to_stops.get(trip_id, []):
-#             stop_to_lines.setdefault(stop_id, set()).add(line_name)
-#     return stop_to_lines
-#
-#
-
-#
-#
-# def get_lines_per_stop_name(routes):
-#     stop_to_lines = get_lines_per_stop_id(routes)
-#     stop_translations = get_stop_translations()
-#     stop_names_to_lines = {}
-#     for stop_id, stop_lines in stop_to_lines.items():
-#         stop_names_to_lines.setdefault(stop_translations[stop_id], set()).update(stop_lines)
-#
-#     for name, line_names in stop_names_to_lines.items():
-#         stop_names_to_lines[name] = sorted(list(line_names))
-#     return stop_names_to_lines
-#
-#
-# lines, line_colors = get_line_information()
-# lines_per_stop = get_lines_per_stop_name(lines)
-#
-# with open('data.json', 'w') as file:
-#     json.dump({
-#         'lines': line_colors,
-#         'stops': lines_per_stop
-#     }, file, indent=2, sort_keys=True)
 
 def main():
     line_storage = LineStorage()
