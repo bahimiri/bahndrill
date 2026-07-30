@@ -89,7 +89,6 @@ def get_service_days():
                 totals[service_id] += 1
             elif exception_type == '2':
                 totals[service_id] -= 1
-    print(totals)
     return totals
 
 
@@ -97,8 +96,7 @@ def filter_trips(trip_to_service_id):
     service_days = get_service_days()
     filtered = []
     for trip_id, service_id in trip_to_service_id.items():
-        if service_days[service_id] > 100: # todo cutoff wählen
-            print(trip_id, service_id, service_days[service_id])
+        if service_days[service_id] > 100:
             filtered.append(trip_id)
     return filtered
 
@@ -134,7 +132,6 @@ def get_stop_translations():
         for row in reader:
             stop_id = row['stop_id']
             stop_name = row['stop_name']
-            print(stop_name)
             stop_names[stop_id] = stop_name.replace(' (Berlin)', '')
     return stop_names
 
