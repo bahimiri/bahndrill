@@ -45,9 +45,9 @@ def get_trips(routes):
 
 
 def weekday_count(start_date, end_date):
-    week        = {}
-    for i in range((end_date - start_date).days):
-        day       = (start_date + dt.timedelta(days=i+1)).weekday()
+    week = {}
+    for i in range((end_date - start_date).days + 1):
+        day = (start_date + dt.timedelta(days=i)).weekday()
         week[day] = week[day] + 1 if day in week else 1
     for day in range(7):
         if day not in week:
@@ -158,3 +158,4 @@ with open('data.json', 'w') as file:
     }, file, indent=2, sort_keys=True)
 
 # todo: GTFS Daten runterladen
+# todo: encoding in data.json
