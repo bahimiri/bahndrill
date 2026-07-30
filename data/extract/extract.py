@@ -18,12 +18,16 @@ class Line:
         self.color = color
         self.text_color = text_color
         self.trips = set()
+        self.stops = set()
 
     def add_trip(self, trip_id):
         self.trips.add(trip_id)
 
+    def add_stops(self, stops):
+        self.stops = self.stops.union(stops)
+
     def __str__(self):
-        return f'{self.name} ({self.color}, {self.text_color})'
+        return f'{self.name} ({self.color}, {self.text_color}) with stops: {", ".join(self.stops)}'
 
 
 class Stop:
@@ -93,9 +97,31 @@ class StopStorage:
         return self.stops.get(trip_id, [])
 
 
+class StopTranslator:
+    def __init__(self):
+        self.stop_names = {}
+        with open('../GTFS/stops.txt', 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                stop_id = row['stop_id']
+                stop_name = row['stop_name']
+                self.stop_names[stop_id] = stop_name.replace(' (Berlin)', '')
+
+    def translate(self, stop_id):
+        return self.stop_names.get(stop_id)
+
+
 class LineStorage:
     def __init__(self):
-        self.lines = {}
+        self.stop_translator = StopTranslator()
+        self.lines = LineStorage.read_u_and_s_lines()
+        self.stop_storage = None
+        self.add_trips()
+        self.add_stops()
+
+    @staticmethod
+    def read_u_and_s_lines():
+        lines = {}
         with open('../GTFS/routes.txt', 'r') as f:
             reader = csv.DictReader(f)
             for row in reader:
@@ -107,10 +133,12 @@ class LineStorage:
                 route_color = row['route_color']
                 if route_name == 'S4' or len(route_color) == 0: # todo braucht man s4 check noch?
                     continue
-                self.lines[route_id] = Line(route_id, route_type, route_name, route_color, row['route_text_color'])
+                lines[route_id] = Line(route_id, route_type, route_name, route_color, row['route_text_color'])
+        return lines
 
     def add_trips(self):
         services = ServiceStorage()
+        trips = set()
         with open('../GTFS/trips.txt', 'r') as f:
             reader = csv.DictReader(f)
             for row in reader:
@@ -120,13 +148,19 @@ class LineStorage:
                     service_id = row['service_id']
                     if services.service_days[service_id] > 100:
                         self.lines[route_id].add_trip(trip_id)
+                        trips.add(trip_id)
+        self.stop_storage = StopStorage(trips)
+
+
+    def add_stops(self):
+        for _, line in self.lines.items():
+            for trip_id in line.trips:
+                line.add_stops([self.stop_translator.translate(stop_id) for stop_id in self.stop_storage.get_stops(trip_id)])
 
 
 # for route_id, line in lines.items():
 #     print(route_id, line)
 # print(len(lines))
-
-
 
 
 
@@ -148,15 +182,7 @@ class LineStorage:
 #     return stop_to_lines
 #
 #
-# def get_stop_translations():
-#     stop_names = {}
-#     with open('../GTFS/stops.txt', 'r') as f:
-#         reader = csv.DictReader(f)
-#         for row in reader:
-#             stop_id = row['stop_id']
-#             stop_name = row['stop_name']
-#             stop_names[stop_id] = stop_name.replace(' (Berlin)', '')
-#     return stop_names
+
 #
 #
 # def get_lines_per_stop_name(routes):
@@ -181,8 +207,9 @@ class LineStorage:
 #     }, file, indent=2, sort_keys=True)
 
 def main():
-    lines = LineStorage()
-    lines.add_trips()
+    line_storage = LineStorage()
+    for route_id, line in line_storage.lines.items():
+        print(route_id, line)
 
 main()
 
