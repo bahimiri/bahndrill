@@ -98,7 +98,7 @@ def filter_trips(trip_to_service_id):
     for trip_id, service_id in trip_to_service_id.items():
         if service_days[service_id] > 100:
             filtered.append(trip_id)
-    return filtered, service_days
+    return filtered
 
 
 def get_stops_for_trips(trips):
@@ -114,17 +114,15 @@ def get_stops_for_trips(trips):
 
 def get_lines_per_stop_id(routes):
     trip_to_route, trip_to_service_id = get_trips(routes)
-    relevant_trips, service_days = filter_trips(trip_to_service_id)
+    relevant_trips = filter_trips(trip_to_service_id)
     trip_to_stops = get_stops_for_trips(trip_to_route.keys())
     stop_to_lines = {}
-    bla = {}
     for trip_id, line_name in trip_to_route.items():
         if trip_id not in relevant_trips:
             continue
         for stop_id in trip_to_stops.get(trip_id, []):
             stop_to_lines.setdefault(stop_id, set()).add(line_name)
-            bla.setdefault(stop_id, set()).add((line_name, service_days[trip_to_service_id[trip_id]]))
-    return stop_to_lines, bla
+    return stop_to_lines
 
 
 def get_stop_translations():
@@ -139,12 +137,11 @@ def get_stop_translations():
 
 
 def get_lines_per_stop_name(routes):
-    stop_to_lines, bla = get_lines_per_stop_id(routes)
+    stop_to_lines = get_lines_per_stop_id(routes)
     stop_translations = get_stop_translations()
     stop_names_to_lines = {}
     for stop_id, stop_lines in stop_to_lines.items():
         stop_names_to_lines.setdefault(stop_translations[stop_id], set()).update(stop_lines)
-        print(stop_translations[stop_id], bla[stop_id])
 
     for name, line_names in stop_names_to_lines.items():
         stop_names_to_lines[name] = sorted(list(line_names))
