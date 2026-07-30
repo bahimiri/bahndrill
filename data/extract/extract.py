@@ -157,6 +157,24 @@ class LineStorage:
             for trip_id in line.trips:
                 line.add_stops([self.stop_translator.translate(stop_id) for stop_id in self.stop_storage.get_stops(trip_id)])
 
+    def get_lines_per_stop(self):
+        stops = {}
+        for line in self.lines.values():
+            for stop in line.stops:
+                stops.setdefault(stop, set()).add(line.name)
+        for stop, line_names in stops.items():
+            stops[stop] = sorted(list(line_names))
+        return stops
+
+    def get_all_line_colors(self):
+        colors = {}
+        for line in self.lines.values():
+            colors[line.name] = {
+                'color': line.color,
+                'text_color': line.text_color
+            }
+        return colors
+
 
 # for route_id, line in lines.items():
 #     print(route_id, line)
@@ -208,8 +226,12 @@ class LineStorage:
 
 def main():
     line_storage = LineStorage()
-    for route_id, line in line_storage.lines.items():
-        print(route_id, line)
+    with open('data.json', 'w') as file:
+        stop = line_storage.get_lines_per_stop()
+        json.dump({
+            'lines': line_storage.get_all_line_colors(),
+            'stops': stop
+        }, file, indent=2, sort_keys=True)
 
 main()
 
