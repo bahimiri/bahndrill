@@ -182,7 +182,7 @@ def main():
         json.dump({
             'lines': line_storage.get_all_line_colors(),
             'stops': stop
-        }, file, indent=2, sort_keys=True)
+        }, file, indent=2, sort_keys=True, ensure_ascii=False)
 
 main()
 
