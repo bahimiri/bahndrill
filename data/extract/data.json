@@ -175,6 +175,7 @@
     ],
     "S Blankenburg": [
       "S2",
+      "S26",
       "S8"
     ],
     "S Blankenfelde (TF) Bhf": [
@@ -187,6 +188,7 @@
       "S1",
       "S2",
       "S25",
+      "S26",
       "S8",
       "S85"
     ],
@@ -209,7 +211,8 @@
       "S25"
     ],
     "S Eichwalde": [
-      "S46"
+      "S46",
+      "S8"
     ],
     "S Erkner Bhf": [
       "S3"
@@ -232,7 +235,8 @@
       "S3"
     ],
     "S Frohnau": [
-      "S1"
+      "S1",
+      "S85"
     ],
     "S Gehrenseestr.": [
       "S75"
@@ -247,14 +251,11 @@
       "S7"
     ],
     "S Grunewald": [
-      "S3",
-      "S5",
       "S7"
     ],
     "S Gr\u00fcnau": [
       "S46",
-      "S8",
-      "S85"
+      "S8"
     ],
     "S Gr\u00fcnbergallee": [
       "S85",
@@ -285,7 +286,8 @@
       "S25"
     ],
     "S Hermsdorf": [
-      "S1"
+      "S1",
+      "S85"
     ],
     "S Hirschgarten": [
       "S3"
@@ -308,7 +310,8 @@
     "S Humboldthain": [
       "S1",
       "S2",
-      "S25"
+      "S25",
+      "S26"
     ],
     "S Johannisthal": [
       "S46",
@@ -411,8 +414,7 @@
     "S N\u00f6ldnerplatz": [
       "S5",
       "S7",
-      "S75",
-      "S9"
+      "S75"
     ],
     "S Oberspree": [
       "S47"
@@ -438,7 +440,6 @@
       "S3",
       "S5",
       "S7",
-      "S75",
       "S9"
     ],
     "S Ostkreuz Bhf": [
@@ -449,8 +450,7 @@
       "S7",
       "S75",
       "S8",
-      "S85",
-      "S9"
+      "S85"
     ],
     "S Pankow-Heinersdorf": [
       "S2",
@@ -534,7 +534,8 @@
     ],
     "S Sch\u00f6nholz": [
       "S1",
-      "S25"
+      "S25",
+      "S85"
     ],
     "S Sonnenallee": [
       "S41",
@@ -607,7 +608,8 @@
       "S9"
     ],
     "S Waidmannslust": [
-      "S1"
+      "S1",
+      "S85"
     ],
     "S Wannsee Bhf": [
       "S1",
@@ -635,17 +637,20 @@
       "S9"
     ],
     "S Wildau": [
-      "S46"
+      "S46",
+      "S8"
     ],
     "S Wilhelmshagen": [
       "S3"
     ],
     "S Wilhelmsruh": [
-      "S1"
+      "S1",
+      "S85"
     ],
     "S Wollankstr.": [
       "S1",
-      "S25"
+      "S25",
+      "S85"
     ],
     "S Wuhlheide": [
       "S3"
@@ -657,7 +662,8 @@
       "S2"
     ],
     "S Zeuthen": [
-      "S46"
+      "S46",
+      "S8"
     ],
     "S+U Alexanderplatz Bhf": [
       "S3",
@@ -755,7 +761,6 @@
       "S5",
       "S7",
       "S75",
-      "S9",
       "U5"
     ],
     "S+U Neuk\u00f6lln": [
@@ -779,6 +784,7 @@
       "U2"
     ],
     "S+U Rathaus Spandau": [
+      "(S3)",
       "U7"
     ],
     "S+U Rathaus Steglitz": [
@@ -821,6 +827,7 @@
     ],
     "S+U Wittenau": [
       "S1",
+      "S85",
       "U8"
     ],
     "S+U Wuhletal": [
