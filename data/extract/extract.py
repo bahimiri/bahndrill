@@ -40,26 +40,42 @@ class Stop:
 
 class ServiceStorage:
     def __init__(self):
-        self.service_days = {}
+        self.calendar_service_days, self.start_date, self.end_date = self.get_calendar_service_days()
+        self.service_days = self.get_adjusted_service_days(self.calendar_service_days)
+
+    def is_regular_service(self, service_id):
+        return self.service_days.get(service_id, 0) > 100
+
+    @staticmethod
+    def get_calendar_service_days():
+        service_days = {}
+        min_date = None
+        max_date = None
         with open('../GTFS/calendar.txt', 'r') as f:
             reader = csv.DictReader(f)
             for row in reader:
                 service_id, monday, tuesday, wednesday, thursday, friday, saturday, sunday, start_date, end_date = row['service_id'], row['monday'], row['tuesday'], row['wednesday'], row['thursday'], row['friday'], row['saturday'], row['sunday'], row['start_date'], row['end_date']
                 days = [monday, tuesday, wednesday, thursday, friday, saturday, sunday]
+                min_date = start_date if min_date is None or start_date < min_date else min_date
+                max_date = end_date if max_date is None or end_date > max_date else max_date
                 count = ServiceStorage.get_day_count_in_range(
                     ServiceStorage.convert_date(start_date),
                     ServiceStorage.convert_date(end_date),
                     days)
-                self.service_days[service_id] = count
+                service_days[service_id] = count
+        return service_days, min_date, max_date
 
+    @staticmethod
+    def get_adjusted_service_days(service_days):
         with open('../GTFS/calendar_dates.txt', 'r') as f:
             reader = csv.DictReader(f)
             for row in reader:
                 service_id, exception_type = row["service_id"], row["exception_type"]
                 if exception_type == '1':
-                    self.service_days[service_id] += 1
+                    service_days[service_id] += 1
                 elif exception_type == '2':
-                    self.service_days[service_id] -= 1
+                    service_days[service_id] -= 1
+        return service_days
 
     @staticmethod
     def weekday_count(start_date, end_date):
@@ -143,7 +159,7 @@ class LineStorage:
                 if route_id in self.lines:
                     trip_id = row['trip_id']
                     service_id = row['service_id']
-                    if services.service_days[service_id] > 100:
+                    if services.is_regular_service(service_id):
                         self.lines[route_id].add_trip(trip_id)
                         trips.add(trip_id)
         stop_storage = StopStorage(trips)
