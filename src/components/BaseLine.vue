@@ -2,7 +2,10 @@
 import type { Line } from '@/types/lines.ts'
 import { isSBahn } from '@/utils/lineType.ts'
 
-withDefaults(defineProps<{ line: Line; isSelected?: boolean }>(), { isSelected: false })
+withDefaults(defineProps<{ line: Line; isActionable?: boolean; isSelected?: boolean }>(), {
+  isActionable: false,
+  isSelected: false,
+})
 
 defineEmits(['click'])
 </script>
@@ -10,17 +13,20 @@ defineEmits(['click'])
 <template>
   <div>
     <button
+      v-if="isActionable"
       role="option"
+      class="line"
       :class="{ selected: isSelected, 's-bahn': isSBahn(line) }"
       :aria-checked="isSelected"
       @click="$emit('click')"
     >
       {{ line.name }}
     </button>
+    <div v-else class="line" :class="{ 's-bahn': isSBahn(line) }">{{ line.name }}</div>
   </div>
 </template>
 <style lang="scss" scoped>
-button {
+.line {
   box-sizing: border-box;
   background-color: v-bind('`${line.color}`');
   color: v-bind('`${line.textColor}`');

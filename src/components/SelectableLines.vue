@@ -37,6 +37,7 @@ const toggleLine = (lineName: LineName) => {
           :key="line.name"
           :line="line"
           :is-selected="lineSelections[line.name]"
+          is-actionable
           @click="toggleLine(line.name)"
         />
       </div>
@@ -46,6 +47,7 @@ const toggleLine = (lineName: LineName) => {
           :key="line.name"
           :line="line"
           :is-selected="lineSelections[line.name]"
+          is-actionable
           @click="toggleLine(line.name)"
         />
       </div>
