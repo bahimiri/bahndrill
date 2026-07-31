@@ -1,0 +1,10 @@
+name: Build
+
+on: push
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    uses: ./.github/workflows/reusable-build.yml
