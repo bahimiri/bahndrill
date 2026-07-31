@@ -37,7 +37,7 @@ class Stop:
     def add_line(self, line):
         self.lines.append(line)
 
-
+# todo: idee: daten subset für eine linie (z.B. S1 (Babelsberg)) erstellen und dann debuggen
 class ServiceStorage:
     def __init__(self):
         self.calendar_service_days, self.start_date, self.end_date = self.get_calendar_service_days()
