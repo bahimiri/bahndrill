@@ -2,8 +2,10 @@
 import SelectableLines from '@/components/SelectableLines.vue'
 import { storeToRefs } from 'pinia'
 import { useLineData } from '@/stores/lineData.ts'
-import { nextTick, onBeforeMount, onMounted, ref, watch, watchEffect } from 'vue'
-import type { LineName, LineStop } from '@/types/lines.ts'
+import { ref, watch } from 'vue'
+import type { Line, LineName, LineStop } from '@/types/lines.ts'
+import BaseButton from '@/components/BaseButton.vue'
+import BaseLine from '@/components/BaseLine.vue'
 
 const { initialized, stops, lines } = storeToRefs(useLineData())
 
@@ -14,7 +16,7 @@ const getAllDeselectedConfiguration = () =>
   >
 const lineSelections = ref(getAllDeselectedConfiguration())
 
-const correctedAnswer = ref<Array<LineName> | null>(null)
+const correctedAnswer = ref<Array<Line> | null>(null)
 const getNextStop = () => {
   return stops.value[Math.floor(Math.random() * stops.value.length)]!
 }
@@ -43,7 +45,9 @@ const checkAnswer = () => {
   const isCorrect =
     correctAnswer.filter((line) => selectedLines.includes(line)).length === correctAnswer.length
   if (!isCorrect) {
-    correctedAnswer.value = correctAnswer
+    correctedAnswer.value = correctAnswer.map(
+      (lineName) => lines.value.find((line) => line.name === lineName)!,
+    )
   } else {
     showNext()
   }
@@ -59,10 +63,36 @@ const handleContinue = () => {
 </script>
 
 <template>
-  <div>
-    <h2>{{ stop?.name }}</h2>
-    <selectable-lines v-model="lineSelections" />
-    <button @click="handleContinue()">Weiter</button>
-    <p v-if="correctedAnswer">{{ correctedAnswer.join(', ') }}</p>
+  <div class="match-lines-for-stations">
+    <selectable-lines v-if="stop" v-model="lineSelections" :stop="stop" class="mb-24" />
+    <base-button @click="handleContinue()">Weiter</base-button>
+    <div v-if="correctedAnswer" class="mt-24">
+      <p class="mb-12">Richtig wäre gewesen:</p>
+      <ul>
+        <li v-for="line in correctedAnswer" :key="line.name">
+          <base-line :line="line" />
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.match-lines-for-stations {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5rem;
+  row-gap: 0.75rem;
+}
+
+li {
+  list-style: none;
+}
+</style>

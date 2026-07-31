@@ -12,7 +12,7 @@ onBeforeMount(async () => {
 </script>
 
 <template>
-  <h1>Bahndrill</h1>
+  <h1 class="mb-24">Welche Bahn fährt hier?</h1>
   <match-lines-for-stations />
 </template>
 
