@@ -1,9 +1,11 @@
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { defineStore } from 'pinia'
 import type { Line, LineName, LineStop } from '@/types/lines.ts'
 
 export const useLineData = defineStore('lineData', () => {
   const lines = ref<Array<Line>>([])
+  const undergroundLines = computed(() => lines.value.filter(({ name }) => name.startsWith('U')))
+  const trainLines = computed(() => lines.value.filter(({ name }) => name.startsWith('S')))
   const stops = ref<Array<LineStop>>([])
 
   function setLines(storageLines: Record<LineName, { color: string; text_color: string }>) {
@@ -23,6 +25,8 @@ export const useLineData = defineStore('lineData', () => {
 
   return {
     lines,
+    undergroundLines,
+    trainLines,
     stops,
     setLines,
     setStops,

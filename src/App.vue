@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onBeforeMount } from 'vue'
 import { useLineData } from '@/stores/lineData.ts'
+import MatchLinesForStations from '@/components/MatchLinesForStations.vue'
 
 const lineDataStore = useLineData()
 onBeforeMount(async () => {
@@ -11,8 +12,8 @@ onBeforeMount(async () => {
 </script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>well done</p>
+  <h1>Bahndrill</h1>
+  <match-lines-for-stations />
 </template>
 
 <style scoped></style>
