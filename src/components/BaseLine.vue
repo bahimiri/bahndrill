@@ -16,7 +16,7 @@ defineEmits(['click'])
       v-if="isActionable"
       role="option"
       class="line"
-      :class="{ selected: isSelected, 's-bahn': isSBahn(line) }"
+      :class="{ selected: isSelected, 's-bahn': isSBahn(line), actionable: isActionable }"
       :aria-checked="isSelected"
       @click="$emit('click')"
     >
@@ -42,6 +42,14 @@ defineEmits(['click'])
   &.selected {
     box-shadow: var(--light-green) 0 0 0.75rem;
     border: 2px solid var(--light-green);
+  }
+
+  &.actionable {
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
   }
 }
 </style>
