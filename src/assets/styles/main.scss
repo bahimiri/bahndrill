@@ -1,3 +1,6 @@
+@use "colors";
+@use "spacings";
+
 @font-face {
   font-family: 'Fira Sans Condensed';
   src: url('../fonts/FiraSansCondensed-Regular.ttf') format('truetype');
@@ -23,6 +26,11 @@
   font-display: swap;
 }
 
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
 html,
 body,
 button,
@@ -30,4 +38,11 @@ input,
 textarea,
 select {
   font-family: 'Fira Sans Condensed', ui-sans-serif, sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }

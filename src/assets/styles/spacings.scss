@@ -1,0 +1,36 @@
+:root {
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+}
+
+$spacing-sizes: 4, 8, 12, 16, 24, 32;
+
+$sides: (
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+);
+
+@function get-property-name($property, $side) {
+  @if $side == '' {
+    @return $property;
+  } @else {
+    @return #{$property}-#{$side};
+  }
+}
+
+@each $size in $spacing-sizes {
+  @each $side-abbreviation, $side in $sides {
+    $class-name: '.m#{$side-abbreviation}-#{$size}';
+    $property-name: get-property-name(margin, $side);
+
+    #{$class-name} {
+      #{$property-name}: var(--space-#{$size});
+    }
+  }
+}

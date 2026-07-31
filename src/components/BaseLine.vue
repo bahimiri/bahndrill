@@ -4,7 +4,7 @@ import { isSBahn } from '@/utils/lineType.ts'
 
 withDefaults(defineProps<{ line: Line; isSelected?: boolean }>(), { isSelected: false })
 
-defineEmits(['clicked'])
+defineEmits(['click'])
 </script>
 
 <template>
@@ -13,7 +13,7 @@ defineEmits(['clicked'])
       role="option"
       :class="{ selected: isSelected, 's-bahn': isSBahn(line) }"
       :aria-checked="isSelected"
-      @click="$emit('clicked')"
+      @click="$emit('click')"
     >
       {{ line.name }}
     </button>
@@ -21,10 +21,11 @@ defineEmits(['clicked'])
 </template>
 <style lang="scss" scoped>
 button {
+  box-sizing: border-box;
   background-color: v-bind('`${line.color}`');
   color: v-bind('`${line.textColor}`');
-  border: none;
-  padding: 4px 12px;
+  border: 2px solid v-bind('`${line.color}`');
+  padding: 2px 10px;
   font-size: 1.25rem;
   font-weight: 550;
 
@@ -33,7 +34,8 @@ button {
   }
 
   &.selected {
-    border: 2px solid red;
+    box-shadow: var(--light-green) 0 0 0.75rem;
+    border: 2px solid var(--light-green);
   }
 }
 </style>

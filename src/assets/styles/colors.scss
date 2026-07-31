@@ -1,0 +1,13 @@
+:root {
+  --light-green: #D3EED4;
+  --dark-green: #26413C;
+  --dark: #1A1D1A;
+  --light: #F8F3F2;
+
+  --color-bg: var(--dark);
+  --color-text: var(--light);
+  //--color-primary: var(--light-green);
+  //--color-primary-text: var(--dark-green);
+  --color-primary: var(--dark-green);
+  --color-primary-text: var(--light-green);
+}

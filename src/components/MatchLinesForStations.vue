@@ -4,6 +4,7 @@ import { storeToRefs } from 'pinia'
 import { useLineData } from '@/stores/lineData.ts'
 import { nextTick, onBeforeMount, onMounted, ref, watch, watchEffect } from 'vue'
 import type { LineName, LineStop } from '@/types/lines.ts'
+import BaseButton from '@/components/BaseButton.vue'
 
 const { initialized, stops, lines } = storeToRefs(useLineData())
 
@@ -59,10 +60,16 @@ const handleContinue = () => {
 </script>
 
 <template>
-  <div>
-    <h2>{{ stop?.name }}</h2>
-    <selectable-lines v-model="lineSelections" />
-    <button @click="handleContinue()">Weiter</button>
+  <div class="match-lines-for-stations">
+    <selectable-lines v-if="stop" v-model="lineSelections" :stop="stop" class="mb-24" />
+    <base-button @click="handleContinue()">Weiter</base-button>
     <p v-if="correctedAnswer">{{ correctedAnswer.join(', ') }}</p>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.match-lines-for-stations {
+  display: flex;
+  flex-direction: column;
+}
+</style>
