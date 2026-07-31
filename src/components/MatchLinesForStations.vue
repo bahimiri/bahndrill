@@ -7,12 +7,12 @@ import type { LineName, LineStop } from '@/types/lines.ts'
 
 const { initialized, stops, lines } = storeToRefs(useLineData())
 
-const lineSelections = ref(
+const getAllDeselectedConfiguration = () =>
   Object.fromEntries(Object.keys(lines).map((lineName) => [lineName, false])) as Record<
     LineName,
     boolean
-  >,
-)
+  >
+const lineSelections = ref(getAllDeselectedConfiguration())
 
 const correctedAnswer = ref<Array<LineName> | null>(null)
 const getNextStop = () => {
@@ -29,6 +29,12 @@ watch(
   { once: true },
 )
 
+const showNext = () => {
+  lineSelections.value = getAllDeselectedConfiguration()
+  correctedAnswer.value = null
+  stop.value = getNextStop()
+}
+
 const checkAnswer = () => {
   const selectedLines = Object.keys(lineSelections.value).filter(
     (lineName) => lineSelections.value[lineName as LineName],
@@ -38,13 +44,14 @@ const checkAnswer = () => {
     correctAnswer.filter((line) => selectedLines.includes(line)).length === correctAnswer.length
   if (!isCorrect) {
     correctedAnswer.value = correctAnswer
+  } else {
+    showNext()
   }
 }
 
 const handleContinue = () => {
   if (correctedAnswer.value) {
-    correctedAnswer.value = null
-    stop.value = getNextStop()
+    showNext()
   } else {
     checkAnswer()
   }
