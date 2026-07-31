@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { useLineData } from '@/stores/lineData.ts'
 import { storeToRefs } from 'pinia'
 import type { LineName } from '@/types/lines.ts'
 
-const { lines, undergroundLines, trainLines } = storeToRefs(useLineData())
-const lineSelections = ref(
-  Object.fromEntries(Object.keys(lines).map((lineName) => [lineName, false])) as Record<
-    LineName,
-    boolean
-  >,
-)
+const lineSelections = defineModel<Record<LineName, boolean>>({ required: true })
+const emit = defineEmits(['update:modelValue'])
+
+const { undergroundLines, trainLines } = storeToRefs(useLineData())
+
 const toggleLine = (lineName: LineName) => {
-  lineSelections.value[lineName] = !lineSelections.value[lineName]
+  emit('update:modelValue', {
+    ...lineSelections.value,
+    [lineName]: !lineSelections.value[lineName],
+  })
 }
 </script>
 

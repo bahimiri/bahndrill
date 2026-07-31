@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 import type { Line, LineName, LineStop } from '@/types/lines.ts'
 
 export const useLineData = defineStore('lineData', () => {
+  const initialized = ref(false)
   const lines = ref<Array<Line>>([])
   const undergroundLines = computed(() => lines.value.filter(({ name }) => name.startsWith('U')))
   const trainLines = computed(() => lines.value.filter(({ name }) => name.startsWith('S')))
@@ -14,6 +15,9 @@ export const useLineData = defineStore('lineData', () => {
       color: storageLines[lineName].color,
       textColor: storageLines[lineName].text_color,
     }))
+    if (lines.value.length && stops.value.length) {
+      initialized.value = true
+    }
   }
 
   function setStops(storageStops: Record<string, Array<string>>) {
@@ -21,9 +25,13 @@ export const useLineData = defineStore('lineData', () => {
       name: stopName,
       lines: storageStops[stopName] as Array<LineName>,
     }))
+    if (lines.value.length && stops.value.length) {
+      initialized.value = true
+    }
   }
 
   return {
+    initialized,
     lines,
     undergroundLines,
     trainLines,
