@@ -1,0 +1,6 @@
+- linien sind nicht mehr actionable nachdem submitted wurde
+- größere viewports
+- weiter button bleibt aktiviert, nachdem man einmal raufgeklickt hat (mobil)
+- wiederholungen vermeiden
+- favicon
+- page title
