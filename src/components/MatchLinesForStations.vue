@@ -64,31 +64,33 @@ const showResult = ref(false)
 
 <template>
   <div class="match-lines-for-stations">
-    <template v-if="stop">
-      <p id="line-selection-description" class="mb-8">
-        Wähle alle Linien, die an der Station abfahren:
-      </p>
-      <p id="line-selection-label" ref="nextStop" class="station mb-16" tabindex="-1">
-        {{ stop.name }}
-      </p>
-      <div aria-live="assertive">
-        <selectable-lines
-          v-if="!showResult"
-          ref="selectableLinesSection"
-          v-model="lineSelections"
-          :stop="stop"
-          labelled-by-id="line-selection-label"
-          described-by-id="line-selection-description"
-          class="mb-24"
-        />
-        <result-view
-          v-else
-          :selected-lines="selectedLines"
-          :correct-lines="correctLines"
-          class="mb-24"
-        />
-      </div>
-    </template>
+    <div class="game">
+      <template v-if="stop">
+        <p id="line-selection-description" class="mb-8">
+          Wähle alle Linien, die an der Station abfahren:
+        </p>
+        <p id="line-selection-label" ref="nextStop" class="station mb-16" tabindex="-1">
+          {{ stop.name }}
+        </p>
+        <div aria-live="assertive">
+          <selectable-lines
+            v-if="!showResult"
+            ref="selectableLinesSection"
+            v-model="lineSelections"
+            :stop="stop"
+            labelled-by-id="line-selection-label"
+            described-by-id="line-selection-description"
+            class="mb-24"
+          />
+          <result-view
+            v-else
+            :selected-lines="selectedLines"
+            :correct-lines="correctLines"
+            class="mb-24"
+          />
+        </div>
+      </template>
+    </div>
     <base-button @click="handleContinue()">Weiter</base-button>
   </div>
 </template>
@@ -97,6 +99,11 @@ const showResult = ref(false)
 .match-lines-for-stations {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+
+  .game {
+    flex-grow: 1;
+  }
 
   .station {
     font-weight: bold;
