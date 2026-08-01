@@ -6,8 +6,9 @@
 
   --color-bg: var(--dark);
   --color-text: var(--light);
-  //--color-primary: var(--light-green);
-  //--color-primary-text: var(--dark-green);
-  --color-primary: var(--dark-green);
-  --color-primary-text: var(--light-green);
+  --color-border: var(--light-green);
+  --color-action-bg: var(--dark-green);
+  --color-action-text: var(--light-green);
+  --color-action-hover-bg: var(--light-green);
+  --color-action-hover-text: var(--dark-green);
 }
