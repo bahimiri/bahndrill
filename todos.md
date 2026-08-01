@@ -4,3 +4,6 @@
 - wiederholungen vermeiden
 - favicon
 - page title
+- Tarifbereiche unterstützen
+- Halt auf Karte anzeigen
+- mehr margin
