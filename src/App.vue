@@ -12,8 +12,33 @@ onBeforeMount(async () => {
 </script>
 
 <template>
-  <h1 class="mb-24">Welche Bahn fährt hier?</h1>
-  <match-lines-for-stations />
+  <div class="container">
+    <h1 class="mb-24">Welche Bahn fährt hier?</h1>
+    <match-lines-for-stations />
+  </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+@use '@/assets/styles/viewports';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+  max-width: 600px;
+  max-height: 100vh;
+
+  @include viewports.above-tablet {
+    flex-grow: unset;
+    border-radius: 0.5rem;
+    box-shadow: var(--dark-green) 0 0 0.5rem;
+    width: 600px;
+    height: 30rem;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+}
+</style>

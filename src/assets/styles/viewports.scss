@@ -1,0 +1,15 @@
+$tablet: 48em;
+$desktop: 64em;
+
+@mixin above-tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+
+@mixin above-desktop {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}

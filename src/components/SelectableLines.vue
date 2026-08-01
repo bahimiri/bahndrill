@@ -3,8 +3,9 @@ import { useLineData } from '@/stores/lineData.ts'
 import { storeToRefs } from 'pinia'
 import type { LineName, LineStop } from '@/types/lines.ts'
 import BaseLine from '@/components/BaseLine.vue'
+import { useTemplateRef } from 'vue'
 
-defineProps<{ stop: LineStop }>()
+defineProps<{ stop: LineStop; labelledById: string; describedById: string }>()
 const lineSelections = defineModel<Record<LineName, boolean>>({ required: true })
 const emit = defineEmits(['update:modelValue'])
 
@@ -20,14 +21,10 @@ const toggleLine = (lineName: LineName) => {
 
 <template>
   <div>
-    <p id="line-selection-description" class="mb-8">
-      Wähle alle Linien, die an der Station abfahren:
-    </p>
-    <p id="line-selection-label" class="station mb-16">{{ stop.name }}</p>
     <div
       role="listbox"
-      aria-labelledby="line-selection-label"
-      aria-describedby="line-selection-description"
+      :aria-labelledby="labelledById"
+      :aria-describedby="describedById"
       aria-multiselectable="true"
       aria-orientation="horizontal"
     >
@@ -56,11 +53,6 @@ const toggleLine = (lineName: LineName) => {
 </template>
 
 <style scoped lang="scss">
-.station {
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-
 .lines {
   display: flex;
   column-gap: 0.5rem;

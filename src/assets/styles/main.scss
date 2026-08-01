@@ -1,5 +1,6 @@
 @use "colors";
 @use "spacings";
+@use "viewports";
 
 @font-face {
   font-family: 'Fira Sans Condensed';
@@ -29,6 +30,22 @@
 html {
   background-color: var(--color-bg);
   color: var(--color-text);
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#app {
+  flex-grow: 1;
+  margin: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 html,

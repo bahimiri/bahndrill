@@ -2,10 +2,10 @@
 import SelectableLines from '@/components/SelectableLines.vue'
 import { storeToRefs } from 'pinia'
 import { useLineData } from '@/stores/lineData.ts'
-import { ref, watch } from 'vue'
-import type { Line, LineName, LineStop } from '@/types/lines.ts'
+import { computed, nextTick, ref, useTemplateRef, watch } from 'vue'
+import type { LineName, LineStop } from '@/types/lines.ts'
 import BaseButton from '@/components/BaseButton.vue'
-import BaseLine from '@/components/BaseLine.vue'
+import ResultView from '@/components/ResultView.vue'
 
 const { initialized, stops, lines } = storeToRefs(useLineData())
 
@@ -16,7 +16,6 @@ const getAllDeselectedConfiguration = () =>
   >
 const lineSelections = ref(getAllDeselectedConfiguration())
 
-const correctedAnswer = ref<Array<Line> | null>(null)
 const getNextStop = () => {
   return stops.value[Math.floor(Math.random() * stops.value.length)]!
 }
@@ -31,49 +30,68 @@ watch(
   { once: true },
 )
 
-const showNext = () => {
+const nextStopRef = useTemplateRef('nextStop')
+const showNext = async () => {
   lineSelections.value = getAllDeselectedConfiguration()
-  correctedAnswer.value = null
   stop.value = getNextStop()
+  await nextTick()
+  nextStopRef.value?.focus()
 }
 
-const checkAnswer = () => {
-  const selectedLines = Object.keys(lineSelections.value).filter(
+// TODO line mapping refactorn
+const selectedLines = computed(() => {
+  const selectedLineNames = Object.keys(lineSelections.value).filter(
     (lineName) => lineSelections.value[lineName as LineName],
   )
-  const correctAnswer = stop.value!.lines
-  const isCorrect =
-    correctAnswer.filter((line) => selectedLines.includes(line)).length === correctAnswer.length
-  if (!isCorrect) {
-    correctedAnswer.value = correctAnswer.map(
-      (lineName) => lines.value.find((line) => line.name === lineName)!,
-    )
-  } else {
+  return selectedLineNames.map((lineName) => lines.value.find((line) => line.name === lineName)!)
+})
+
+const correctLines = computed(() =>
+  (stop.value?.lines ?? []).map((lineName) => lines.value.find((line) => line.name === lineName)!),
+)
+
+const handleContinue = () => {
+  if (showResult.value) {
     showNext()
+    showResult.value = false
+  } else {
+    showResult.value = true
   }
 }
 
-const handleContinue = () => {
-  if (correctedAnswer.value) {
-    showNext()
-  } else {
-    checkAnswer()
-  }
-}
+const showResult = ref(false)
 </script>
 
 <template>
   <div class="match-lines-for-stations">
-    <selectable-lines v-if="stop" v-model="lineSelections" :stop="stop" class="mb-24" />
-    <base-button @click="handleContinue()">Weiter</base-button>
-    <div v-if="correctedAnswer" class="mt-24">
-      <p class="mb-12">Richtig wäre gewesen:</p>
-      <ul>
-        <li v-for="line in correctedAnswer" :key="line.name">
-          <base-line :line="line" />
-        </li>
-      </ul>
+    <div class="game">
+      <template v-if="stop">
+        <p id="line-selection-description" class="mb-8">
+          Wähle alle Linien, die an der Station abfahren:
+        </p>
+        <p id="line-selection-label" ref="nextStop" class="station mb-16" tabindex="-1">
+          {{ stop.name }}
+        </p>
+        <div aria-live="assertive">
+          <selectable-lines
+            v-if="!showResult"
+            ref="selectableLinesSection"
+            v-model="lineSelections"
+            :stop="stop"
+            labelled-by-id="line-selection-label"
+            described-by-id="line-selection-description"
+            class="mb-24"
+          />
+          <result-view
+            v-else
+            :selected-lines="selectedLines"
+            :correct-lines="correctLines"
+            class="mb-24"
+          />
+        </div>
+      </template>
     </div>
+    <base-button @click="handleContinue()">Weiter</base-button>
   </div>
 </template>
 
@@ -81,18 +99,15 @@ const handleContinue = () => {
 .match-lines-for-stations {
   display: flex;
   flex-direction: column;
-}
+  flex-grow: 1;
 
-ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 0.5rem;
-  row-gap: 0.75rem;
-}
+  .game {
+    flex-grow: 1;
+  }
 
-li {
-  list-style: none;
+  .station {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
 }
 </style>
