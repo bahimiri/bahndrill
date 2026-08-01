@@ -1,5 +1,6 @@
 @use "colors";
 @use "spacings";
+@use "viewports";
 
 @font-face {
   font-family: 'Fira Sans Condensed';
@@ -44,6 +45,7 @@ body {
   margin: 24px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 html,
