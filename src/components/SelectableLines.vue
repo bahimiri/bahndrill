@@ -3,6 +3,7 @@ import { useLineData } from '@/stores/lineData.ts'
 import { storeToRefs } from 'pinia'
 import type { LineName, LineStop } from '@/types/lines.ts'
 import BaseLine from '@/components/BaseLine.vue'
+import { useTemplateRef } from 'vue'
 
 defineProps<{ stop: LineStop }>()
 const lineSelections = defineModel<Record<LineName, boolean>>({ required: true })
@@ -16,6 +17,11 @@ const toggleLine = (lineName: LineName) => {
     [lineName]: !lineSelections.value[lineName],
   })
 }
+
+const nextStopRef = useTemplateRef('nextStop')
+defineExpose({
+  focus: () => nextStopRef.value?.focus(),
+})
 </script>
 
 <template>
@@ -23,7 +29,7 @@ const toggleLine = (lineName: LineName) => {
     <p id="line-selection-description" class="mb-8">
       Wähle alle Linien, die an der Station abfahren:
     </p>
-    <p id="line-selection-label" class="station mb-16">{{ stop.name }}</p>
+    <p id="line-selection-label" ref="nextStop" class="station mb-16" tabindex="-1">{{ stop.name }}</p>
     <div
       role="listbox"
       aria-labelledby="line-selection-label"

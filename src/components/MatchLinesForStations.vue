@@ -2,7 +2,7 @@
 import SelectableLines from '@/components/SelectableLines.vue'
 import { storeToRefs } from 'pinia'
 import { useLineData } from '@/stores/lineData.ts'
-import { ref, watch } from 'vue'
+import { ref, useTemplateRef, watch } from 'vue'
 import type { Line, LineName, LineStop } from '@/types/lines.ts'
 import BaseButton from '@/components/BaseButton.vue'
 import BaseLine from '@/components/BaseLine.vue'
@@ -31,10 +31,12 @@ watch(
   { once: true },
 )
 
+const selectableLinesSectionRef = useTemplateRef('selectableLinesSection')
 const showNext = () => {
   lineSelections.value = getAllDeselectedConfiguration()
   correctedAnswer.value = null
   stop.value = getNextStop()
+  selectableLinesSectionRef.value?.focus()
 }
 
 const checkAnswer = () => {
@@ -64,7 +66,13 @@ const handleContinue = () => {
 
 <template>
   <div class="match-lines-for-stations">
-    <selectable-lines v-if="stop" v-model="lineSelections" :stop="stop" class="mb-24" />
+    <selectable-lines
+      v-if="stop"
+      ref="selectableLinesSection"
+      v-model="lineSelections"
+      :stop="stop"
+      class="mb-24"
+    />
     <base-button @click="handleContinue()">Weiter</base-button>
     <div v-if="correctedAnswer" class="mt-24">
       <p class="mb-12">Richtig wäre gewesen:</p>
