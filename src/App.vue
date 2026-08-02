@@ -57,25 +57,22 @@ onBeforeMount(async () => {
 
   header {
     box-shadow: var(--dark-green) 0 0.5rem 0.5rem -0.5rem;
-    padding: 12px 24px;
+    padding: 16px 24px;
     display: flex;
     justify-content: center;
-
-    @include viewports.above-tablet {
-      padding: 16px 24px;
-    }
 
     div {
       display: flex;
       align-items: center;
       gap: var(--space-12);
+
       img {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 2rem;
+        height: 2rem;
       }
 
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
       }
 
       @include viewports.above-tablet {
