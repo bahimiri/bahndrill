@@ -41,6 +41,9 @@ onBeforeMount(async () => {
 
   main {
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 
   @include viewports.above-tablet {
@@ -50,12 +53,6 @@ onBeforeMount(async () => {
     width: 600px;
     height: 30rem;
     box-sizing: border-box;
-
-    main {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
   }
 
   header {
