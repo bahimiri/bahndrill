@@ -56,7 +56,7 @@ onBeforeMount(async () => {
   }
 
   header {
-    box-shadow: var(--dark-green) 0 0.5rem 0.5rem -0.5rem;
+    box-shadow: var(--dark-green) 0 0.75rem 0.5rem -0.5rem;
     padding: 16px 24px;
     display: flex;
     justify-content: center;
