@@ -16,11 +16,11 @@ const isCorrect = computed(() => {
 <template>
   <div class="result-view">
     <template v-if="isCorrect">
-      <h2 class="mb-8">Das war korrekt!</h2>
+      <h3 class="mb-8">Das war korrekt!</h3>
       <p class="mb-12">Hier hat man Anschluss an</p>
     </template>
     <template v-else>
-      <h2 class="mb-12">Deine Auswahl</h2>
+      <h3 class="mb-12">Deine Auswahl</h3>
       <div class="mb-16">
         <ul v-if="selectedLines.length">
           <li v-for="line in selectedLines" :key="line.name">
@@ -29,7 +29,7 @@ const isCorrect = computed(() => {
         </ul>
         <p v-else>keine Linien</p>
       </div>
-      <h2 class="mb-12">Richtig wäre gewesen</h2>
+      <h3 class="mb-12">Richtig wäre gewesen</h3>
     </template>
     <ul>
       <li v-for="line in correctLines" :key="line.name">
@@ -45,7 +45,7 @@ const isCorrect = computed(() => {
   border-radius: 0.5rem;
   padding: 16px;
 
-  h2 {
+  h3 {
     font-size: 1rem;
     font-weight: bold;
   }

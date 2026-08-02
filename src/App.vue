@@ -13,7 +13,8 @@ onBeforeMount(async () => {
 
 <template>
   <div class="container">
-    <h1 class="mb-24">Welche Bahn fährt hier?</h1>
+    <h1 class="mb-24">Bahndrill</h1>
+    <h2 class="mb-24">Welche Bahn fährt hier?</h2>
     <match-lines-for-stations />
   </div>
 </template>

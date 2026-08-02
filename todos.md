@@ -1,7 +1,6 @@
 - weiter button bleibt aktiviert, nachdem man einmal raufgeklickt hat (mobil)
 - wiederholungen vermeiden
 - favicon
-- page title
 - Tarifbereiche unterstützen
 - Halt auf Karte anzeigen
 - lernalgorithmus: wiedervorlage bei Fehler, sonst längeres Warten
