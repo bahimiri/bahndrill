@@ -1,5 +1,6 @@
 @use "colors";
 @use "spacings";
+@use "utils";
 @use "viewports";
 
 @font-face {
@@ -42,7 +43,6 @@ body {
 
 #app {
   flex-grow: 1;
-  margin: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;

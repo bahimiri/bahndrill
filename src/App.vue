@@ -13,8 +13,16 @@ onBeforeMount(async () => {
 
 <template>
   <div class="container">
-    <h1 class="mb-24">Welche Bahn fährt hier?</h1>
-    <match-lines-for-stations />
+    <header>
+      <div>
+        <img src="/src/assets/img/logo.svg" alt="" />
+        <h1>Bahndrill</h1>
+      </div>
+    </header>
+    <main>
+      <h2 class="mb-24">Welche Bahn fährt hier?</h2>
+      <match-lines-for-stations />
+    </main>
   </div>
 </template>
 
@@ -31,14 +39,59 @@ onBeforeMount(async () => {
   max-width: 600px;
   max-height: 100vh;
 
+  main {
+    padding: 24px;
+  }
+
   @include viewports.above-tablet {
     flex-grow: unset;
     border-radius: 0.5rem;
     box-shadow: var(--dark-green) 0 0 0.5rem;
     width: 600px;
     height: 30rem;
-    padding: 24px;
     box-sizing: border-box;
+
+    main {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+  }
+
+  header {
+    box-shadow: var(--dark-green) 0 0.5rem 0.5rem -0.5rem;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: center;
+
+    @include viewports.above-tablet {
+      padding: 16px 24px;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: var(--space-12);
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      @include viewports.above-tablet {
+        img {
+          width: 1.75rem;
+          height: 1.75rem;
+        }
+
+        h1 {
+          font-size: 1.75rem;
+        }
+      }
+    }
   }
 }
 </style>

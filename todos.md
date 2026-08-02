@@ -1,9 +1,9 @@
-- linien sind nicht mehr actionable nachdem submitted wurde
-- größere viewports
 - weiter button bleibt aktiviert, nachdem man einmal raufgeklickt hat (mobil)
 - wiederholungen vermeiden
-- favicon
-- page title
 - Tarifbereiche unterstützen
 - Halt auf Karte anzeigen
-- mehr margin
+- lernalgorithmus: wiedervorlage bei Fehler, sonst längeres Warten
+- statistiken
+- gamification
+- line mapping refactorn
+- lint job

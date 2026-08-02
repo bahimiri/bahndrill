@@ -9,6 +9,8 @@ defineEmits(['click'])
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/styles/utils';
+
 button {
   border: 1px solid var(--color-border);
   border-radius: 0.5rem;
@@ -18,7 +20,7 @@ button {
   padding: 8px 16px;
   cursor: pointer;
 
-  &:hover {
+  @include utils.on-active-or-hover {
     background-color: var(--color-action-hover-bg);
     color: var(--color-action-hover-text);
   }

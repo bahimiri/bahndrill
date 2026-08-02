@@ -26,6 +26,8 @@ defineEmits(['click'])
   </div>
 </template>
 <style lang="scss" scoped>
+@use '@/assets/styles/utils';
+
 .line {
   box-sizing: border-box;
   background-color: v-bind('`${line.color}`');
@@ -47,7 +49,7 @@ defineEmits(['click'])
   &.actionable {
     cursor: pointer;
 
-    &:hover {
+    @include utils.on-active-or-hover {
       filter: brightness(1.2);
     }
   }
