@@ -38,15 +38,16 @@
     height: 100%;
     box-sizing: border-box;
 
-    &:before {
+    &:after {
       content: '';
       position: absolute;
       left: 0;
       top: 0;
       right: 0;
       bottom: 0;
-      background-color: var(--light-green);
-      opacity: 40%;
+      background-color: var(--dark-green);
+      opacity: 45%;
+      backdrop-filter: blur(10px);
 
       @include viewports.above-tablet {
         border-radius: var(--game-container-border-radius);
