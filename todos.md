@@ -1,4 +1,3 @@
-- weiter button bleibt aktiviert, nachdem man einmal raufgeklickt hat (mobil)
 - wiederholungen vermeiden
 - Tarifbereiche unterstützen
 - Halt auf Karte anzeigen
@@ -7,3 +6,4 @@
 - gamification
 - line mapping refactorn
 - lint job
+- pwa Support

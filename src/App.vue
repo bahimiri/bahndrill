@@ -48,15 +48,15 @@ onBeforeMount(async () => {
 
   @include viewports.above-tablet {
     flex-grow: unset;
-    border-radius: 0.5rem;
+    border-radius: var(--game-container-border-radius);
     box-shadow: var(--dark-green) 0 0 0.5rem;
-    width: 600px;
-    height: 30rem;
+    width: var(--game-container-width);
+    height: var(--game-container-height);
     box-sizing: border-box;
   }
 
   header {
-    box-shadow: var(--dark-green) 0 0.5rem 0.5rem -0.5rem;
+    box-shadow: var(--dark-green) 0 0.75rem 0.5rem -0.5rem;
     padding: 16px 24px;
     display: flex;
     justify-content: center;

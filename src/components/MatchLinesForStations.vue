@@ -5,7 +5,8 @@ import { useLineData } from '@/stores/lineData.ts'
 import { computed, nextTick, ref, useTemplateRef, watch } from 'vue'
 import type { LineName, LineStop } from '@/types/lines.ts'
 import BaseButton from '@/components/BaseButton.vue'
-import ResultView from '@/components/ResultView.vue'
+import CorrectionView from '@/components/CorrectionView.vue'
+import SuccessBanner from '@/components/SuccessBanner.vue'
 
 const { initialized, stops, lines } = storeToRefs(useLineData())
 
@@ -34,8 +35,9 @@ const nextStopRef = useTemplateRef('nextStop')
 const showNext = async () => {
   lineSelections.value = getAllDeselectedConfiguration()
   stop.value = getNextStop()
-  await nextTick()
-  nextStopRef.value?.focus()
+  setTimeout(() => {
+    nextStopRef.value?.focus()
+  }, 0)
 }
 
 // TODO line mapping refactorn
@@ -56,10 +58,19 @@ const handleContinue = () => {
     showResult.value = false
   } else {
     showResult.value = true
+    if (isCorrect.value) {
+      setTimeout(() => handleContinue(), 1000)
+    }
   }
 }
 
 const showResult = ref(false)
+const isCorrect = computed(() => {
+  return (
+    correctLines.value.filter((line) => selectedLines.value.includes(line)).length ===
+    correctLines.value.length
+  )
+})
 </script>
 
 <template>
@@ -72,22 +83,25 @@ const showResult = ref(false)
         <p id="line-selection-label" ref="nextStop" class="station mb-16" tabindex="-1">
           {{ stop.name }}
         </p>
+        <selectable-lines
+          v-if="!showResult || isCorrect"
+          ref="selectableLinesSection"
+          v-model="lineSelections"
+          :stop="stop"
+          labelled-by-id="line-selection-label"
+          described-by-id="line-selection-description"
+          class="mb-24"
+        />
         <div aria-live="assertive">
-          <selectable-lines
-            v-if="!showResult"
-            ref="selectableLinesSection"
-            v-model="lineSelections"
-            :stop="stop"
-            labelled-by-id="line-selection-label"
-            described-by-id="line-selection-description"
-            class="mb-24"
-          />
-          <result-view
-            v-else
-            :selected-lines="selectedLines"
-            :correct-lines="correctLines"
-            class="mb-24"
-          />
+          <template v-if="showResult">
+            <success-banner v-if="isCorrect" />
+            <correction-view
+              v-else
+              :selected-lines="selectedLines"
+              :correct-lines="correctLines"
+              class="mb-24"
+            />
+          </template>
         </div>
       </template>
     </div>

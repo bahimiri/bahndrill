@@ -3,7 +3,6 @@ import { useLineData } from '@/stores/lineData.ts'
 import { storeToRefs } from 'pinia'
 import type { LineName, LineStop } from '@/types/lines.ts'
 import BaseLine from '@/components/BaseLine.vue'
-import { useTemplateRef } from 'vue'
 
 defineProps<{ stop: LineStop; labelledById: string; describedById: string }>()
 const lineSelections = defineModel<Record<LineName, boolean>>({ required: true })
