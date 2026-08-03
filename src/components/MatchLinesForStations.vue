@@ -2,13 +2,26 @@
 import SelectableLines from '@/components/SelectableLines.vue'
 import { storeToRefs } from 'pinia'
 import { useLineData } from '@/stores/lineData.ts'
-import { computed, nextTick, ref, useTemplateRef, watch } from 'vue'
+import { computed, ref, useTemplateRef, watch } from 'vue'
 import type { LineName, LineStop } from '@/types/lines.ts'
 import BaseButton from '@/components/BaseButton.vue'
 import CorrectionView from '@/components/CorrectionView.vue'
 import SuccessBanner from '@/components/SuccessBanner.vue'
+import { useGameSettings } from '@/stores/gameSettings.ts'
 
-const { initialized, stops, lines } = storeToRefs(useLineData())
+const { initialized, lines, stops } = storeToRefs(useLineData())
+const gameSettingsStore = useGameSettings()
+const { zonesToArray, getStopsForZone } = gameSettingsStore
+const { selectedZones } = storeToRefs(gameSettingsStore)
+
+const filteredStops = computed(() => {
+  const zones = zonesToArray(selectedZones.value)
+  return [
+    ...(zones.includes('A') ? getStopsForZone(stops.value, 'A') : []),
+    ...(zones.includes('B') ? getStopsForZone(stops.value, 'B') : []),
+    ...(zones.includes('C') ? getStopsForZone(stops.value, 'C') : []),
+  ]
+})
 
 const getAllDeselectedConfiguration = () =>
   Object.fromEntries(Object.keys(lines).map((lineName) => [lineName, false])) as Record<
@@ -18,7 +31,7 @@ const getAllDeselectedConfiguration = () =>
 const lineSelections = ref(getAllDeselectedConfiguration())
 
 const getNextStop = () => {
-  return stops.value[Math.floor(Math.random() * stops.value.length)]!
+  return filteredStops.value[Math.floor(Math.random() * filteredStops.value.length)]!
 }
 const stop = ref<LineStop | null>(null)
 watch(
