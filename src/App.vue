@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { onBeforeMount } from 'vue'
+import { onBeforeMount, ref } from 'vue'
 import { useLineData } from '@/stores/lineData.ts'
 import MatchLinesForStations from '@/components/MatchLinesForStations.vue'
+import BaseLine from '@/components/BaseLine.vue'
+import SelectableZones from '@/components/SelectableZones.vue'
+import ZoneFilter from '@/components/ZoneFilter.vue'
 
 const lineDataStore = useLineData()
 onBeforeMount(async () => {
@@ -9,6 +12,15 @@ onBeforeMount(async () => {
   lineDataStore.setLines(data.lines)
   lineDataStore.setStops(data.stops)
 })
+
+const selectedZones = ref(['A', 'B', 'C'])
+const toggleZone = (zone: 'A' | 'B' | 'C') => {
+  if (selectedZones.value.includes(zone) && selectedZones.value.length > 1) {
+    selectedZones.value.splice(selectedZones.value.indexOf(zone), 1)
+  } else {
+    selectedZones.value.push(zone)
+  }
+}
 </script>
 
 <template>
@@ -20,6 +32,8 @@ onBeforeMount(async () => {
       </div>
     </header>
     <main>
+      <h2 class="filter">Filter</h2>
+      <zone-filter class="mb-24" />
       <h2 class="mb-24">Welche Bahn fährt hier?</h2>
       <match-lines-for-stations />
     </main>
@@ -38,6 +52,19 @@ onBeforeMount(async () => {
   width: 100%;
   max-width: 600px;
   max-height: 100vh;
+
+  h2 {
+    font-size: 1.5rem;
+
+    &.filter {
+      font-size: 1rem;
+    }
+  }
+
+  [role='listbox'] {
+    display: flex;
+    gap: var(--space-4);
+  }
 
   main {
     padding: 24px;

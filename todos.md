@@ -4,6 +4,6 @@
 - lernalgorithmus: wiedervorlage bei Fehler, sonst längeres Warten
 - statistiken
 - gamification
-- line mapping refactorn
 - lint job
 - pwa Support
+- listbox keyboard handling

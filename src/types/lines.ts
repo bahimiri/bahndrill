@@ -33,4 +33,5 @@ export type Line = {
 export type LineStop = {
   name: string
   lines: Array<LineName>
+  zone: 'A' | 'B' | 'C'
 }
