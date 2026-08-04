@@ -1,7 +1,7 @@
 import { storeToRefs } from 'pinia'
 import { useLineData } from '@/stores/lineData.ts'
 import { useGameSettings } from '@/stores/gameSettings.ts'
-import { computed, ref, watch, watchEffect } from 'vue'
+import { computed, ref, watch } from 'vue'
 import type { Line, LineStop } from '@/types/lines.ts'
 
 export const useLineMatchingGame = () => {

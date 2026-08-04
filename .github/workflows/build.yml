@@ -9,5 +9,5 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  lint-and-build:
     uses: ./.github/workflows/reusable-build.yml
