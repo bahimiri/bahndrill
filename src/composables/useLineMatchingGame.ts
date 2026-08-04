@@ -1,7 +1,7 @@
 import { storeToRefs } from 'pinia'
 import { useLineData } from '@/stores/lineData.ts'
 import { useGameSettings } from '@/stores/gameSettings.ts'
-import { computed, ref, watch } from 'vue'
+import { computed, ref, watch, watchEffect } from 'vue'
 import type { Line, LineStop } from '@/types/lines.ts'
 
 export const useLineMatchingGame = () => {
@@ -19,15 +19,21 @@ export const useLineMatchingGame = () => {
     ]
   })
 
-  const getNextStop = () => {
-    return filteredStops.value[Math.floor(Math.random() * filteredStops.value.length)]!
+  watch(filteredStops, (newFilteredStops) => {
+    if (stop.value && !newFilteredStops.includes(stop.value)) {
+      setNextStop()
+    }
+  })
+
+  const setNextStop = () => {
+    stop.value = filteredStops.value[Math.floor(Math.random() * filteredStops.value.length)]!
   }
   const stop = ref<LineStop | null>(null)
   watch(
     initialized,
     () => {
       if (initialized) {
-        stop.value = getNextStop()
+        setNextStop()
       }
     },
     { once: true },
@@ -49,7 +55,7 @@ export const useLineMatchingGame = () => {
 
   const startChallenge = () => {
     selectedLines.value = []
-    stop.value = getNextStop()
+    setNextStop()
   }
 
   return {
