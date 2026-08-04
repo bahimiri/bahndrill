@@ -1,73 +1,22 @@
 <script setup lang="ts">
 import SelectableLines from '@/components/SelectableLines.vue'
-import { storeToRefs } from 'pinia'
-import { useLineData } from '@/stores/lineData.ts'
-import { computed, ref, useTemplateRef, watch } from 'vue'
-import type { LineName, LineStop } from '@/types/lines.ts'
+import { ref, useTemplateRef } from 'vue'
 import BaseButton from '@/components/BaseButton.vue'
 import CorrectionView from '@/components/CorrectionView.vue'
 import SuccessBanner from '@/components/SuccessBanner.vue'
-import { useGameSettings } from '@/stores/gameSettings.ts'
+import { useLineMatchingGame } from '@/composables/useLineMatchingGame.ts'
 
-const { initialized, lines, stops } = storeToRefs(useLineData())
-const gameSettingsStore = useGameSettings()
-const { zonesToArray, getStopsForZone } = gameSettingsStore
-const { selectedZones } = storeToRefs(gameSettingsStore)
-
-const filteredStops = computed(() => {
-  const zones = zonesToArray(selectedZones.value)
-  return [
-    ...(zones.includes('A') ? getStopsForZone(stops.value, 'A') : []),
-    ...(zones.includes('B') ? getStopsForZone(stops.value, 'B') : []),
-    ...(zones.includes('C') ? getStopsForZone(stops.value, 'C') : []),
-  ]
-})
-
-const getAllDeselectedConfiguration = () =>
-  Object.fromEntries(Object.keys(lines).map((lineName) => [lineName, false])) as Record<
-    LineName,
-    boolean
-  >
-const lineSelections = ref(getAllDeselectedConfiguration())
-
-const getNextStop = () => {
-  return filteredStops.value[Math.floor(Math.random() * filteredStops.value.length)]!
-}
-const stop = ref<LineStop | null>(null)
-watch(
-  initialized,
-  () => {
-    if (initialized) {
-      stop.value = getNextStop()
-    }
-  },
-  { once: true },
-)
+const { stop, selectedLines, correctLines, isCorrect, startChallenge } = useLineMatchingGame()
 
 const nextStopRef = useTemplateRef('nextStop')
-const showNext = async () => {
-  lineSelections.value = getAllDeselectedConfiguration()
-  stop.value = getNextStop()
-  setTimeout(() => {
-    nextStopRef.value?.focus()
-  }, 0)
-}
-
-// TODO line mapping refactorn
-const selectedLines = computed(() => {
-  const selectedLineNames = Object.keys(lineSelections.value).filter(
-    (lineName) => lineSelections.value[lineName as LineName],
-  )
-  return selectedLineNames.map((lineName) => lines.value.find((line) => line.name === lineName)!)
-})
-
-const correctLines = computed(() =>
-  (stop.value?.lines ?? []).map((lineName) => lines.value.find((line) => line.name === lineName)!),
-)
+const showResult = ref(false)
 
 const handleContinue = () => {
   if (showResult.value) {
-    showNext()
+    startChallenge()
+    setTimeout(() => {
+      nextStopRef.value?.focus()
+    }, 0)
     showResult.value = false
   } else {
     showResult.value = true
@@ -76,14 +25,6 @@ const handleContinue = () => {
     }
   }
 }
-
-const showResult = ref(false)
-const isCorrect = computed(() => {
-  return (
-    correctLines.value.filter((line) => selectedLines.value.includes(line)).length ===
-    correctLines.value.length
-  )
-})
 </script>
 
 <template>
@@ -99,7 +40,7 @@ const isCorrect = computed(() => {
         <selectable-lines
           v-if="!showResult || isCorrect"
           ref="selectableLinesSection"
-          v-model="lineSelections"
+          v-model="selectedLines"
           :stop="stop"
           labelled-by-id="line-selection-label"
           described-by-id="line-selection-description"

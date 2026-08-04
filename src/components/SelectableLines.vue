@@ -1,20 +1,22 @@
 <script setup lang="ts">
 import { useLineData } from '@/stores/lineData.ts'
 import { storeToRefs } from 'pinia'
-import type { LineName, LineStop } from '@/types/lines.ts'
+import type { Line, LineStop } from '@/types/lines.ts'
 import BaseLine from '@/components/BaseLine.vue'
 
 defineProps<{ stop: LineStop; labelledById: string; describedById: string }>()
-const lineSelections = defineModel<Record<LineName, boolean>>({ required: true })
+const selectedLines = defineModel<Array<Line>>({ required: true })
 const emit = defineEmits(['update:modelValue'])
 
 const { undergroundLines, trainLines } = storeToRefs(useLineData())
+const isSelected = (line: Line) => selectedLines.value.includes(line)
 
-const toggleLine = (lineName: LineName) => {
-  emit('update:modelValue', {
-    ...lineSelections.value,
-    [lineName]: !lineSelections.value[lineName],
-  })
+const toggleLine = (line: Line) => {
+  const newSelection = isSelected(line)
+    ? selectedLines.value.splice(selectedLines.value.indexOf(line), 1)
+    : [...selectedLines.value, line]
+
+  emit('update:modelValue', newSelection)
 }
 </script>
 
@@ -32,9 +34,9 @@ const toggleLine = (lineName: LineName) => {
           v-for="line in undergroundLines"
           :key="line.name"
           :line="line"
-          :is-selected="lineSelections[line.name]"
+          :is-selected="isSelected(line)"
           is-actionable
-          @click="toggleLine(line.name)"
+          @click="toggleLine(line)"
         />
       </div>
       <div class="lines" role="group" aria-label="S-Bahn">
@@ -42,9 +44,9 @@ const toggleLine = (lineName: LineName) => {
           v-for="line in trainLines"
           :key="line.name"
           :line="line"
-          :is-selected="lineSelections[line.name]"
+          :is-selected="isSelected(line)"
           is-actionable
-          @click="toggleLine(line.name)"
+          @click="toggleLine(line)"
         />
       </div>
     </div>
