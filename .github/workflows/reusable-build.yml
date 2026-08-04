@@ -3,13 +3,15 @@ name: Build
 on: workflow_call
 
 jobs:
-  reusable-build:
+  lint-and-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
       - name: Install
         run: npm ci
+      - name: Lint
+        run: npm run lint
       - name: Build
         run: npm run build
       - name: Upload app artifact

@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { onBeforeMount, ref } from 'vue'
+import { onBeforeMount } from 'vue'
 import { useLineData } from '@/stores/lineData.ts'
 import MatchLinesForStations from '@/components/MatchLinesForStations.vue'
-import BaseLine from '@/components/BaseLine.vue'
-import SelectableZones from '@/components/SelectableZones.vue'
 import ZoneFilter from '@/components/ZoneFilter.vue'
 
 const lineDataStore = useLineData()
@@ -12,15 +10,6 @@ onBeforeMount(async () => {
   lineDataStore.setLines(data.lines)
   lineDataStore.setStops(data.stops)
 })
-
-const selectedZones = ref(['A', 'B', 'C'])
-const toggleZone = (zone: 'A' | 'B' | 'C') => {
-  if (selectedZones.value.includes(zone) && selectedZones.value.length > 1) {
-    selectedZones.value.splice(selectedZones.value.indexOf(zone), 1)
-  } else {
-    selectedZones.value.push(zone)
-  }
-}
 </script>
 
 <template>

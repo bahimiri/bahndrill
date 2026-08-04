@@ -10,8 +10,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "run-s \"lint:*\"",
-    "lint:oxlint": "oxlint bahndrill --fix",
-    "lint:eslint": "eslint bahndrill --fix --cache",
+    "lint:oxlint": "oxlint . --fix",
+    "lint:eslint": "eslint . --fix --cache",
     "format": "prettier --write --experimental-cli src"
   },
   "dependencies": {
