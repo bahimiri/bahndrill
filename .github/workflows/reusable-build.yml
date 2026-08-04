@@ -37,6 +37,15 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: node-modules
+          path: node_modules
+      - name: Debug working directory
+        run: |
+          echo "=== Aktuelles Verzeichnis ==="
+          pwd
+          echo "=== Top-Level Inhalt ==="
+          ls -la
+          echo "=== node_modules Inhalt (erste 20 Einträge) ==="
+          ls -la node_modules | head -20
       - run: npm run build
       - name: Upload app artifact
         uses: actions/upload-pages-artifact@v3
