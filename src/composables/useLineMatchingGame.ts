@@ -22,6 +22,7 @@ export const useLineMatchingGame = () => {
   watch(filteredStops, (newFilteredStops) => {
     if (stop.value && !newFilteredStops.includes(stop.value)) {
       setNextStop()
+      selectedLines.value = []
     }
   })
 
