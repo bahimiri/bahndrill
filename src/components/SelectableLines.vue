@@ -13,7 +13,7 @@ const isSelected = (line: Line) => selectedLines.value.includes(line)
 
 const toggleLine = (line: Line) => {
   const newSelection = isSelected(line)
-    ? selectedLines.value.splice(selectedLines.value.indexOf(line), 1)
+    ? selectedLines.value.filter((selectedLine) => selectedLine !== line)
     : [...selectedLines.value, line]
 
   emit('update:modelValue', newSelection)
