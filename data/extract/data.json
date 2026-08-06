@@ -103,2141 +103,1247 @@
   },
   "stops": {
     "Flughafen BER": {
-      "lines": [
-        "S85",
-        "S9"
-      ],
+      "lines": ["S85", "S9"],
       "zone": "C"
     },
     "S Adlershof": {
-      "lines": [
-        "S46",
-        "S8",
-        "S85",
-        "S9"
-      ],
+      "lines": ["S46", "S8", "S85", "S9"],
       "zone": "B"
     },
     "S Ahrensfelde Bhf": {
-      "lines": [
-        "S7"
-      ],
+      "lines": ["S7"],
       "zone": "C"
     },
     "S Alt-Reinickendorf": {
-      "lines": [
-        "S25"
-      ],
+      "lines": ["S25"],
       "zone": "B"
     },
     "S Altglienicke": {
-      "lines": [
-        "S85",
-        "S9"
-      ],
+      "lines": ["S85", "S9"],
       "zone": "B"
     },
     "S Anhalter Bahnhof": {
-      "lines": [
-        "S1",
-        "S2",
-        "S25",
-        "S26"
-      ],
+      "lines": ["S1", "S2", "S25", "S26"],
       "zone": "A"
     },
     "S Attilastr.": {
-      "lines": [
-        "S2"
-      ],
+      "lines": ["S2"],
       "zone": "B"
     },
     "S Babelsberg": {
-      "lines": [
-        "S7"
-      ],
+      "lines": ["S7"],
       "zone": "C"
     },
     "S Baumschulenweg": {
-      "lines": [
-        "S46",
-        "S47",
-        "S8",
-        "S85",
-        "S9"
-      ],
+      "lines": ["S46", "S47", "S8", "S85", "S9"],
       "zone": "B"
     },
     "S Bellevue": {
-      "lines": [
-        "S3",
-        "S5",
-        "S7",
-        "S9"
-      ],
+      "lines": ["S3", "S5", "S7", "S9"],
       "zone": "A"
     },
     "S Bergfelde": {
-      "lines": [
-        "S8"
-      ],
+      "lines": ["S8"],
       "zone": "C"
     },
     "S Bernau Bhf": {
-      "lines": [
-        "S2"
-      ],
+      "lines": ["S2"],
       "zone": "C"
     },
     "S Bernau-Friedenstal": {
-      "lines": [
-        "S2"
-      ],
+      "lines": ["S2"],
       "zone": "C"
     },
     "S Betriebsbahnhof Rummelsburg": {
-      "lines": [
-        "S3"
-      ],
+      "lines": ["S3"],
       "zone": "B"
     },
     "S Beusselstr.": {
-      "lines": [
-        "S41",
-        "S42"
-      ],
+      "lines": ["S41", "S42"],
       "zone": "A"
     },
     "S Biesdorf": {
-      "lines": [
-        "S5"
-      ],
+      "lines": ["S5"],
       "zone": "B"
     },
     "S Birkenstein": {
-      "lines": [
-        "S5"
-      ],
+      "lines": ["S5"],
       "zone": "C"
     },
     "S Birkenwerder Bhf": {
-      "lines": [
-        "S1",
-        "S8"
-      ],
+      "lines": ["S1", "S8"],
       "zone": "C"
     },
     "S Blankenburg": {
-      "lines": [
-        "S2",
-        "S26",
-        "S8"
-      ],
+      "lines": ["S2", "S26", "S8"],
       "zone": "B"
     },
     "S Blankenfelde (TF) Bhf": {
-      "lines": [
-        "S2"
-      ],
+      "lines": ["S2"],
       "zone": "C"
     },
     "S Borgsdorf": {
-      "lines": [
-        "S1"
-      ],
+      "lines": ["S1"],
       "zone": "C"
     },
     "S Bornholmer Str.": {
-      "lines": [
-        "S1",
-        "S2",
-        "S25",
-        "S26",
-        "S8",
-        "S85"
-      ],
+      "lines": ["S1", "S2", "S25", "S26", "S8", "S85"],
       "zone": "B"
     },
     "S Botanischer Garten": {
-      "lines": [
-        "S1"
-      ],
+      "lines": ["S1"],
       "zone": "B"
     },
     "S Buch": {
-      "lines": [
-        "S2"
-      ],
+      "lines": ["S2"],
       "zone": "B"
     },
     "S Buckower Chaussee": {
-      "lines": [
-        "S2"
-      ],
+      "lines": ["S2"],
       "zone": "B"
     },
     "S Charlottenburg Bhf": {
-      "lines": [
-        "S3",
-        "S5",
-        "S7",
-        "S9"
-      ],
+      "lines": ["S3", "S5", "S7", "S9"],
       "zone": "A"
     },
     "S Eichborndamm": {
-      "lines": [
-        "S25"
-      ],
+      "lines": ["S25"],
       "zone": "B"
     },
     "S Eichwalde": {
-      "lines": [
-        "S46",
-        "S8"
-      ],
+      "lines": ["S46", "S8"],
       "zone": "C"
     },
     "S Erkner Bhf": {
-      "lines": [
-        "S3"
-      ],
+      "lines": ["S3"],
       "zone": "C"
     },
     "S Feuerbachstr.": {
-      "lines": [
-        "S1"
-      ],
+      "lines": ["S1"],
       "zone": "B"
     },
     "S Fredersdorf": {
-      "lines": [
-        "S5"
-      ],
+      "lines": ["S5"],
       "zone": "C"
     },
     "S Friedenau": {
-      "lines": [
-        "S1"
-      ],
+      "lines": ["S1"],
       "zone": "B"
     },
     "S Friedrichsfelde Ost": {
-      "lines": [
-        "S5",
-        "S7",
-        "S75"
-      ],
+      "lines": ["S5", "S7", "S75"],
       "zone": "B"
     },
     "S Friedrichshagen": {
-      "lines": [
-        "S3"
-      ],
+      "lines": ["S3"],
       "zone": "B"
     },
     "S Frohnau": {
-      "lines": [
-        "S1",
-        "S85"
-      ],
+      "lines": ["S1", "S85"],
       "zone": "B"
     },
     "S Gehrenseestr.": {
-      "lines": [
-        "S75"
-      ],
+      "lines": ["S75"],
       "zone": "B"
     },
     "S Greifswalder Str.": {
-      "lines": [
-        "S41",
-        "S42",
-        "S8",
-        "S85"
-      ],
+      "lines": ["S41", "S42", "S8", "S85"],
       "zone": "A"
     },
     "S Griebnitzsee Bhf": {
-      "lines": [
-        "S7"
-      ],
+      "lines": ["S7"],
       "zone": "C"
     },
     "S Grunewald": {
-      "lines": [
-        "S7"
-      ],
+      "lines": ["S7"],
       "zone": "B"
     },
     "S Grünau": {
-      "lines": [
-        "S46",
-        "S8"
-      ],
+      "lines": ["S46", "S8"],
       "zone": "B"
     },
     "S Grünbergallee": {
-      "lines": [
-        "S85",
-        "S9"
-      ],
+      "lines": ["S85", "S9"],
       "zone": "B"
     },
     "S Hackescher Markt": {
-      "lines": [
-        "S3",
-        "S5",
-        "S7",
-        "S9"
-      ],
+      "lines": ["S3", "S5", "S7", "S9"],
       "zone": "A"
     },
     "S Halensee": {
-      "lines": [
-        "S41",
-        "S42",
-        "S46"
-      ],
+      "lines": ["S41", "S42", "S46"],
       "zone": "A"
     },
     "S Heerstr.": {
-      "lines": [
-        "S3",
-        "S9"
-      ],
+      "lines": ["S3", "S9"],
       "zone": "B"
     },
     "S Hegermühle": {
-      "lines": [
-        "S5"
-      ],
+      "lines": ["S5"],
       "zone": "C"
     },
     "S Heiligensee": {
-      "lines": [
-        "S25"
-      ],
+      "lines": ["S25"],
       "zone": "B"
     },
     "S Hennigsdorf Bhf": {
-      "lines": [
-        "S25"
-      ],
+      "lines": ["S25"],
       "zone": "C"
     },
     "S Hermsdorf": {
-      "lines": [
-        "S1",
-        "S85"
-      ],
+      "lines": ["S1", "S85"],
       "zone": "B"
     },
     "S Hirschgarten": {
-      "lines": [
-        "S3"
-      ],
+      "lines": ["S3"],
       "zone": "B"
     },
     "S Hohen Neuendorf": {
-      "lines": [
-        "S1",
-        "S8"
-      ],
+      "lines": ["S1", "S8"],
       "zone": "C"
     },
     "S Hohenschönhausen Bhf": {
-      "lines": [
-        "S75"
-      ],
+      "lines": ["S75"],
       "zone": "B"
     },
     "S Hohenzollerndamm": {
-      "lines": [
-        "S41",
-        "S42",
-        "S46"
-      ],
+      "lines": ["S41", "S42", "S46"],
       "zone": "A"
     },
     "S Hoppegarten": {
-      "lines": [
-        "S5"
-      ],
+      "lines": ["S5"],
       "zone": "C"
     },
     "S Humboldthain": {
-      "lines": [
-        "S1",
-        "S2",
-        "S25",
-        "S26"
-      ],
+      "lines": ["S1", "S2", "S25", "S26"],
       "zone": "A"
     },
     "S Johannisthal": {
-      "lines": [
-        "S46",
-        "S8",
-        "S85",
-        "S9"
-      ],
+      "lines": ["S46", "S8", "S85", "S9"],
       "zone": "B"
     },
     "S Julius-Leber-Brücke": {
-      "lines": [
-        "S1"
-      ],
+      "lines": ["S1"],
       "zone": "A"
     },
     "S Karlshorst": {
-      "lines": [
-        "S3"
-      ],
+      "lines": ["S3"],
       "zone": "B"
     },
     "S Karow Bhf": {
-      "lines": [
-        "S2"
-      ],
+      "lines": ["S2"],
       "zone": "B"
     },
     "S Kaulsdorf": {
-      "lines": [
-        "S5"
-      ],
+      "lines": ["S5"],
       "zone": "B"
     },
     "S Köllnische Heide": {
-      "lines": [
-        "S46",
-        "S47"
-      ],
+      "lines": ["S46", "S47"],
       "zone": "B"
     },
     "S Königs Wusterhausen Bhf": {
-      "lines": [
-        "S46"
-      ],
+      "lines": ["S46"],
       "zone": "C"
     },
     "S Köpenick": {
-      "lines": [
-        "S3"
-      ],
+      "lines": ["S3"],
       "zone": "B"
     },
     "S Landsberger Allee": {
-      "lines": [
-        "S41",
-        "S42",
-        "S8",
-        "S85"
-      ],
+      "lines": ["S41", "S42", "S8", "S85"],
       "zone": "A"
     },
     "S Lankwitz": {
-      "lines": [
-        "S25",
-        "S26"
-      ],
+      "lines": ["S25", "S26"],
       "zone": "B"
     },
     "S Lehnitz": {
-      "lines": [
-        "S1"
-      ],
+      "lines": ["S1"],
       "zone": "C"
     },
     "S Lichtenrade": {
-      "lines": [
-        "S2"
-      ],
+      "lines": ["S2"],
       "zone": "B"
     },
     "S Lichterfelde Ost Bhf": {
-      "lines": [
-        "S25",
-        "S26"
-      ],
+      "lines": ["S25", "S26"],
       "zone": "B"
     },
     "S Lichterfelde Süd": {
-      "lines": [
-        "S25",
-        "S26"
-      ],
+      "lines": ["S25", "S26"],
       "zone": "B"
     },
     "S Lichterfelde West": {
-      "lines": [
-        "S1"
-      ],
+      "lines": ["S1"],
       "zone": "B"
     },
     "S Mahlow": {
-      "lines": [
-        "S2"
-      ],
+      "lines": ["S2"],
       "zone": "C"
     },
     "S Mahlsdorf Bhf": {
-      "lines": [
-        "S5"
-      ],
+      "lines": ["S5"],
       "zone": "B"
     },
     "S Marienfelde": {
-      "lines": [
-        "S2"
-      ],
+      "lines": ["S2"],
       "zone": "B"
     },
     "S Marzahn": {
-      "lines": [
-        "S7"
-      ],
+      "lines": ["S7"],
       "zone": "B"
     },
     "S Mehrower Allee": {
-      "lines": [
-        "S7"
-      ],
+      "lines": ["S7"],
       "zone": "B"
     },
     "S Messe Nord/ZOB": {
-      "lines": [
-        "S41",
-        "S42",
-        "S46"
-      ],
+      "lines": ["S41", "S42", "S46"],
       "zone": "A"
     },
     "S Messe Süd": {
-      "lines": [
-        "S3",
-        "S9"
-      ],
+      "lines": ["S3", "S9"],
       "zone": "B"
     },
     "S Mexikoplatz": {
-      "lines": [
-        "S1"
-      ],
+      "lines": ["S1"],
       "zone": "B"
     },
     "S Mühlenbeck-Mönchmühle": {
-      "lines": [
-        "S8"
-      ],
+      "lines": ["S8"],
       "zone": "C"
     },
     "S Neuenhagen (b Berlin)": {
-      "lines": [
-        "S5"
-      ],
+      "lines": ["S5"],
       "zone": "C"
     },
     "S Nikolassee": {
-      "lines": [
-        "S1",
-        "S7"
-      ],
+      "lines": ["S1", "S7"],
       "zone": "B"
     },
     "S Nordbahnhof": {
-      "lines": [
-        "S1",
-        "S2",
-        "S25",
-        "S26"
-      ],
+      "lines": ["S1", "S2", "S25", "S26"],
       "zone": "A"
     },
     "S Nöldnerplatz": {
-      "lines": [
-        "S5",
-        "S7",
-        "S75"
-      ],
+      "lines": ["S5", "S7", "S75"],
       "zone": "B"
     },
     "S Oberspree": {
-      "lines": [
-        "S47"
-      ],
+      "lines": ["S47"],
       "zone": "B"
     },
     "S Olympiastadion": {
-      "lines": [
-        "S3",
-        "S9"
-      ],
+      "lines": ["S3", "S9"],
       "zone": "B"
     },
     "S Oranienburg Bhf": {
-      "lines": [
-        "S1"
-      ],
+      "lines": ["S1"],
       "zone": "C"
     },
     "S Oranienburger Str.": {
-      "lines": [
-        "S1",
-        "S2",
-        "S25",
-        "S26"
-      ],
+      "lines": ["S1", "S2", "S25", "S26"],
       "zone": "A"
     },
     "S Osdorfer Str.": {
-      "lines": [
-        "S25",
-        "S26"
-      ],
+      "lines": ["S25", "S26"],
       "zone": "B"
     },
     "S Ostbahnhof": {
-      "lines": [
-        "S3",
-        "S5",
-        "S7",
-        "S9"
-      ],
+      "lines": ["S3", "S5", "S7", "S9"],
       "zone": "A"
     },
     "S Ostkreuz Bhf": {
-      "lines": [
-        "S3",
-        "S41",
-        "S42",
-        "S5",
-        "S7",
-        "S75",
-        "S8",
-        "S85"
-      ],
+      "lines": ["S3", "S41", "S42", "S5", "S7", "S75", "S8", "S85"],
       "zone": "A"
     },
     "S Pankow-Heinersdorf": {
-      "lines": [
-        "S2",
-        "S8"
-      ],
+      "lines": ["S2", "S8"],
       "zone": "B"
     },
     "S Petershagen Nord": {
-      "lines": [
-        "S5"
-      ],
+      "lines": ["S5"],
       "zone": "C"
     },
     "S Pichelsberg": {
-      "lines": [
-        "S3",
-        "S9"
-      ],
+      "lines": ["S3", "S9"],
       "zone": "B"
     },
     "S Plänterwald": {
-      "lines": [
-        "S8",
-        "S85",
-        "S9"
-      ],
+      "lines": ["S8", "S85", "S9"],
       "zone": "B"
     },
     "S Poelchaustr.": {
-      "lines": [
-        "S7"
-      ],
+      "lines": ["S7"],
       "zone": "B"
     },
     "S Potsdam Hauptbahnhof": {
-      "lines": [
-        "S7"
-      ],
+      "lines": ["S7"],
       "zone": "C"
     },
     "S Prenzlauer Allee": {
-      "lines": [
-        "S41",
-        "S42",
-        "S8",
-        "S85"
-      ],
+      "lines": ["S41", "S42", "S8", "S85"],
       "zone": "A"
     },
     "S Priesterweg": {
-      "lines": [
-        "S2",
-        "S25",
-        "S26"
-      ],
+      "lines": ["S2", "S25", "S26"],
       "zone": "B"
     },
     "S Rahnsdorf": {
-      "lines": [
-        "S3"
-      ],
+      "lines": ["S3"],
       "zone": "B"
     },
     "S Raoul-Wallenberg-Str.": {
-      "lines": [
-        "S7"
-      ],
+      "lines": ["S7"],
       "zone": "B"
     },
     "S Rummelsburg": {
-      "lines": [
-        "S3"
-      ],
+      "lines": ["S3"],
       "zone": "B"
     },
     "S Röntgental": {
-      "lines": [
-        "S2"
-      ],
+      "lines": ["S2"],
       "zone": "C"
     },
     "S Savignyplatz": {
-      "lines": [
-        "S3",
-        "S5",
-        "S7",
-        "S9"
-      ],
+      "lines": ["S3", "S5", "S7", "S9"],
       "zone": "A"
     },
     "S Schichauweg": {
-      "lines": [
-        "S2"
-      ],
+      "lines": ["S2"],
       "zone": "B"
     },
     "S Schlachtensee": {
-      "lines": [
-        "S1"
-      ],
+      "lines": ["S1"],
       "zone": "B"
     },
     "S Schulzendorf": {
-      "lines": [
-        "S25"
-      ],
+      "lines": ["S25"],
       "zone": "C"
     },
     "S Schöneberg": {
-      "lines": [
-        "S1",
-        "S41",
-        "S42",
-        "S46"
-      ],
+      "lines": ["S1", "S41", "S42", "S46"],
       "zone": "A"
     },
     "S Schönefeld (bei Berlin)": {
-      "lines": [
-        "S85",
-        "S9"
-      ],
+      "lines": ["S85", "S9"],
       "zone": "C"
     },
     "S Schöneweide Bhf": {
-      "lines": [
-        "S46",
-        "S47",
-        "S8",
-        "S85",
-        "S9"
-      ],
+      "lines": ["S46", "S47", "S8", "S85", "S9"],
       "zone": "B"
     },
     "S Schönfließ": {
-      "lines": [
-        "S8"
-      ],
+      "lines": ["S8"],
       "zone": "C"
     },
     "S Schönholz": {
-      "lines": [
-        "S1",
-        "S25",
-        "S85"
-      ],
+      "lines": ["S1", "S25", "S85"],
       "zone": "B"
     },
     "S Sonnenallee": {
-      "lines": [
-        "S41",
-        "S42"
-      ],
+      "lines": ["S41", "S42"],
       "zone": "A"
     },
     "S Spandau Bhf": {
-      "lines": [
-        "S3",
-        "S9"
-      ],
+      "lines": ["S3", "S9"],
       "zone": "B"
     },
     "S Spindlersfeld": {
-      "lines": [
-        "S47"
-      ],
+      "lines": ["S47"],
       "zone": "B"
     },
     "S Springpfuhl": {
-      "lines": [
-        "S7",
-        "S75"
-      ],
+      "lines": ["S7", "S75"],
       "zone": "B"
     },
     "S Storkower Str.": {
-      "lines": [
-        "S41",
-        "S42",
-        "S8",
-        "S85"
-      ],
+      "lines": ["S41", "S42", "S8", "S85"],
       "zone": "A"
     },
     "S Strausberg Bhf": {
-      "lines": [
-        "S5"
-      ],
+      "lines": ["S5"],
       "zone": "C"
     },
     "S Strausberg Nord": {
-      "lines": [
-        "S5"
-      ],
+      "lines": ["S5"],
       "zone": "C"
     },
     "S Strausberg Stadt": {
-      "lines": [
-        "S5"
-      ],
+      "lines": ["S5"],
       "zone": "C"
     },
     "S Stresow": {
-      "lines": [
-        "S3",
-        "S9"
-      ],
+      "lines": ["S3", "S9"],
       "zone": "B"
     },
     "S Sundgauer Str.": {
-      "lines": [
-        "S1"
-      ],
+      "lines": ["S1"],
       "zone": "B"
     },
     "S Südende": {
-      "lines": [
-        "S25",
-        "S26"
-      ],
+      "lines": ["S25", "S26"],
       "zone": "B"
     },
     "S Südkreuz Bhf": {
-      "lines": [
-        "S2",
-        "S25",
-        "S26",
-        "S41",
-        "S42",
-        "S46",
-        "S47"
-      ],
+      "lines": ["S2", "S25", "S26", "S41", "S42", "S46", "S47"],
       "zone": "A"
     },
     "S Tegel": {
-      "lines": [
-        "S25"
-      ],
+      "lines": ["S25"],
       "zone": "B"
     },
     "S Teltow Stadt": {
-      "lines": [
-        "S25",
-        "S26"
-      ],
+      "lines": ["S25", "S26"],
       "zone": "C"
     },
     "S Tiergarten": {
-      "lines": [
-        "S3",
-        "S5",
-        "S7",
-        "S9"
-      ],
-      "zone": "C"
+      "lines": ["S3", "S5", "S7", "S9"],
+      "zone": "A"
     },
     "S Treptower Park": {
-      "lines": [
-        "S41",
-        "S42",
-        "S8",
-        "S85",
-        "S9"
-      ],
+      "lines": ["S41", "S42", "S8", "S85", "S9"],
       "zone": "A"
     },
     "S Waidmannslust": {
-      "lines": [
-        "S1",
-        "S85"
-      ],
+      "lines": ["S1", "S85"],
       "zone": "B"
     },
     "S Wannsee Bhf": {
-      "lines": [
-        "S1",
-        "S7"
-      ],
+      "lines": ["S1", "S7"],
       "zone": "B"
     },
     "S Wartenberg": {
-      "lines": [
-        "S75"
-      ],
+      "lines": ["S75"],
       "zone": "B"
     },
     "S Waßmannsdorf": {
-      "lines": [
-        "S85",
-        "S9"
-      ],
+      "lines": ["S85", "S9"],
       "zone": "C"
     },
     "S Westend": {
-      "lines": [
-        "S41",
-        "S42",
-        "S46"
-      ],
+      "lines": ["S41", "S42", "S46"],
       "zone": "A"
     },
     "S Westkreuz": {
-      "lines": [
-        "S3",
-        "S41",
-        "S42",
-        "S46",
-        "S5",
-        "S7",
-        "S9"
-      ],
+      "lines": ["S3", "S41", "S42", "S46", "S5", "S7", "S9"],
       "zone": "A"
     },
     "S Wildau": {
-      "lines": [
-        "S46",
-        "S8"
-      ],
+      "lines": ["S46", "S8"],
       "zone": "C"
     },
     "S Wilhelmshagen": {
-      "lines": [
-        "S3"
-      ],
+      "lines": ["S3"],
       "zone": "B"
     },
     "S Wilhelmsruh": {
-      "lines": [
-        "S1",
-        "S85"
-      ],
+      "lines": ["S1", "S85"],
       "zone": "B"
     },
     "S Wollankstr.": {
-      "lines": [
-        "S1",
-        "S25",
-        "S85"
-      ],
+      "lines": ["S1", "S25", "S85"],
       "zone": "B"
     },
     "S Wuhlheide": {
-      "lines": [
-        "S3"
-      ],
+      "lines": ["S3"],
       "zone": "B"
     },
     "S Zehlendorf": {
-      "lines": [
-        "S1"
-      ],
+      "lines": ["S1"],
       "zone": "B"
     },
     "S Zepernick": {
-      "lines": [
-        "S2"
-      ],
+      "lines": ["S2"],
       "zone": "C"
     },
     "S Zeuthen": {
-      "lines": [
-        "S46",
-        "S8"
-      ],
+      "lines": ["S46", "S8"],
       "zone": "C"
     },
     "S+U Alexanderplatz Bhf": {
-      "lines": [
-        "S3",
-        "S5",
-        "S7",
-        "S9",
-        "U2",
-        "U5",
-        "U8"
-      ],
+      "lines": ["S3", "S5", "S7", "S9", "U2", "U5", "U8"],
       "zone": "A"
     },
     "S+U Berlin Hauptbahnhof": {
-      "lines": [
-        "S15",
-        "S3",
-        "S5",
-        "S7",
-        "S9",
-        "U5"
-      ],
+      "lines": ["S15", "S3", "S5", "S7", "S9", "U5"],
       "zone": "A"
     },
     "S+U Brandenburger Tor": {
-      "lines": [
-        "S1",
-        "S2",
-        "S25",
-        "S26",
-        "U5"
-      ],
+      "lines": ["S1", "S2", "S25", "S26", "U5"],
       "zone": "A"
     },
     "S+U Bundesplatz": {
-      "lines": [
-        "S41",
-        "S42",
-        "S46",
-        "U9"
-      ],
+      "lines": ["S41", "S42", "S46", "U9"],
       "zone": "A"
     },
     "S+U Frankfurter Allee": {
-      "lines": [
-        "S41",
-        "S42",
-        "S8",
-        "S85",
-        "U5"
-      ],
+      "lines": ["S41", "S42", "S8", "S85", "U5"],
       "zone": "A"
     },
     "S+U Friedrichstr. Bhf": {
-      "lines": [
-        "S1",
-        "S2",
-        "S25",
-        "S26",
-        "S3",
-        "S5",
-        "S7",
-        "S9",
-        "U6"
-      ],
+      "lines": ["S1", "S2", "S25", "S26", "S3", "S5", "S7", "S9", "U6"],
       "zone": "A"
     },
     "S+U Gesundbrunnen Bhf": {
-      "lines": [
-        "S1",
-        "S15",
-        "S2",
-        "S25",
-        "S26",
-        "S41",
-        "S42",
-        "U8"
-      ],
+      "lines": ["S1", "S15", "S2", "S25", "S26", "S41", "S42", "U8"],
       "zone": "A"
     },
     "S+U Heidelberger Platz": {
-      "lines": [
-        "S41",
-        "S42",
-        "S46",
-        "U3"
-      ],
+      "lines": ["S41", "S42", "S46", "U3"],
       "zone": "A"
     },
     "S+U Hermannstr.": {
-      "lines": [
-        "S41",
-        "S42",
-        "S46",
-        "S47",
-        "U8"
-      ],
+      "lines": ["S41", "S42", "S46", "S47", "U8"],
       "zone": "A"
     },
     "S+U Innsbrucker Platz": {
-      "lines": [
-        "S41",
-        "S42",
-        "S46",
-        "U4"
-      ],
+      "lines": ["S41", "S42", "S46", "U4"],
       "zone": "A"
     },
     "S+U Jannowitzbrücke": {
-      "lines": [
-        "S3",
-        "S5",
-        "S7",
-        "S9",
-        "U8"
-      ],
+      "lines": ["S3", "S5", "S7", "S9", "U8"],
       "zone": "A"
     },
     "S+U Jungfernheide Bhf": {
-      "lines": [
-        "S41",
-        "S42",
-        "U7"
-      ],
+      "lines": ["S41", "S42", "U7"],
       "zone": "A"
     },
     "S+U Karl-Bonhoeffer-Nervenklinik": {
-      "lines": [
-        "S25",
-        "U8"
-      ],
+      "lines": ["S25", "U8"],
       "zone": "B"
     },
     "S+U Lichtenberg Bhf": {
-      "lines": [
-        "S5",
-        "S7",
-        "S75",
-        "U5"
-      ],
+      "lines": ["S5", "S7", "S75", "U5"],
       "zone": "B"
     },
     "S+U Neukölln": {
-      "lines": [
-        "S41",
-        "S42",
-        "S46",
-        "S47",
-        "U7"
-      ],
+      "lines": ["S41", "S42", "S46", "S47", "U7"],
       "zone": "A"
     },
     "S+U Pankow": {
-      "lines": [
-        "S2",
-        "S8",
-        "S85",
-        "U2"
-      ],
+      "lines": ["S2", "S8", "S85", "U2"],
       "zone": "B"
     },
     "S+U Potsdamer Platz Bhf": {
-      "lines": [
-        "S1",
-        "S2",
-        "S25",
-        "S26",
-        "U2"
-      ],
+      "lines": ["S1", "S2", "S25", "S26", "U2"],
       "zone": "A"
     },
     "S+U Rathaus Spandau": {
-      "lines": [
-        "(S3)",
-        "U7"
-      ],
+      "lines": ["(S3)", "U7"],
       "zone": "B"
     },
     "S+U Rathaus Steglitz": {
-      "lines": [
-        "S1",
-        "U9"
-      ],
+      "lines": ["S1", "U9"],
       "zone": "B"
     },
     "S+U Schönhauser Allee": {
-      "lines": [
-        "S41",
-        "S42",
-        "S8",
-        "S85",
-        "U2"
-      ],
+      "lines": ["S41", "S42", "S8", "S85", "U2"],
       "zone": "A"
     },
     "S+U Tempelhof": {
-      "lines": [
-        "S41",
-        "S42",
-        "S46",
-        "S47",
-        "U6"
-      ],
+      "lines": ["S41", "S42", "S46", "S47", "U6"],
       "zone": "A"
     },
     "S+U Warschauer Str.": {
-      "lines": [
-        "S3",
-        "S5",
-        "S7",
-        "S75",
-        "S9",
-        "U1",
-        "U3"
-      ],
+      "lines": ["S3", "S5", "S7", "S75", "S9", "U1", "U3"],
       "zone": "A"
     },
     "S+U Wedding": {
-      "lines": [
-        "S15",
-        "S41",
-        "S42",
-        "U6"
-      ],
+      "lines": ["S15", "S41", "S42", "U6"],
       "zone": "A"
     },
     "S+U Westhafen": {
-      "lines": [
-        "S41",
-        "S42",
-        "U9"
-      ],
+      "lines": ["S41", "S42", "U9"],
       "zone": "A"
     },
     "S+U Wittenau": {
-      "lines": [
-        "S1",
-        "S85",
-        "U8"
-      ],
+      "lines": ["S1", "S85", "U8"],
       "zone": "B"
     },
     "S+U Wuhletal": {
-      "lines": [
-        "S5",
-        "U5"
-      ],
+      "lines": ["S5", "U5"],
       "zone": "B"
     },
     "S+U Yorckstr.": {
-      "lines": [
-        "S2",
-        "S25",
-        "S26",
-        "U7"
-      ],
+      "lines": ["S2", "S25", "S26", "U7"],
       "zone": "A"
     },
     "S+U Yorckstr. (Großgörschenstr.)": {
-      "lines": [
-        "S1"
-      ],
+      "lines": ["S1"],
       "zone": "A"
     },
     "S+U Zoologischer Garten Bhf": {
-      "lines": [
-        "S3",
-        "S5",
-        "S7",
-        "S9",
-        "U2",
-        "U9"
-      ],
+      "lines": ["S3", "S5", "S7", "S9", "U2", "U9"],
       "zone": "A"
     },
     "U Adenauerplatz": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "A"
     },
     "U Afrikanische Str.": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "B"
     },
     "U Alt-Mariendorf": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "B"
     },
     "U Alt-Tempelhof": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "B"
     },
     "U Altstadt Spandau": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Amrumer Str.": {
-      "lines": [
-        "U9"
-      ],
+      "lines": ["U9"],
       "zone": "B"
     },
     "U Anton-Wilhelm-Amo-Str.": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "A"
     },
     "U Augsburger Str.": {
-      "lines": [
-        "U3"
-      ],
+      "lines": ["U3"],
       "zone": "A"
     },
     "U Bayerischer Platz": {
-      "lines": [
-        "U4",
-        "U7"
-      ],
+      "lines": ["U4", "U7"],
       "zone": "A"
     },
     "U Berliner Str.": {
-      "lines": [
-        "U7",
-        "U9"
-      ],
+      "lines": ["U7", "U9"],
       "zone": "A"
     },
     "U Bernauer Str.": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "A"
     },
     "U Biesdorf-Süd": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "B"
     },
     "U Birkenstr.": {
-      "lines": [
-        "U9"
-      ],
+      "lines": ["U9"],
       "zone": "A"
     },
     "U Bismarckstr.": {
-      "lines": [
-        "U2",
-        "U7"
-      ],
+      "lines": ["U2", "U7"],
       "zone": "A"
     },
     "U Blaschkoallee": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Blissestr.": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "A"
     },
     "U Boddinstr.": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "A"
     },
     "U Breitenbachplatz": {
-      "lines": [
-        "U3"
-      ],
+      "lines": ["U3"],
       "zone": "B"
     },
     "U Britz-Süd": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Bundestag": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "A"
     },
     "U Bülowstr.": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "A"
     },
     "U Cottbusser Platz": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "B"
     },
     "U Dahlem-Dorf": {
-      "lines": [
-        "U3"
-      ],
+      "lines": ["U3"],
       "zone": "B"
     },
     "U Deutsche Oper": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "A"
     },
     "U Eberswalder Str.": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "A"
     },
     "U Eisenacher Str.": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "A"
     },
     "U Elsterwerdaer Platz": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "B"
     },
     "U Ernst-Reuter-Platz": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "A"
     },
     "U Fehrbelliner Platz": {
-      "lines": [
-        "U3",
-        "U7"
-      ],
+      "lines": ["U3", "U7"],
       "zone": "A"
     },
     "U Frankfurter Tor": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "A"
     },
     "U Franz-Neumann-Platz": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "B"
     },
     "U Freie Universität (Thielplatz)": {
-      "lines": [
-        "U3"
-      ],
+      "lines": ["U3"],
       "zone": "B"
     },
     "U Friedrich-Wilhelm-Platz": {
-      "lines": [
-        "U9"
-      ],
+      "lines": ["U9"],
       "zone": "B"
     },
     "U Friedrichsfelde": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "B"
     },
     "U Gleisdreieck": {
-      "lines": [
-        "U1",
-        "U2",
-        "U3"
-      ],
+      "lines": ["U1", "U2", "U3"],
       "zone": "A"
     },
     "U Gneisenaustr.": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "A"
     },
     "U Grenzallee": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Görlitzer Bahnhof": {
-      "lines": [
-        "U1",
-        "U3"
-      ],
+      "lines": ["U1", "U3"],
       "zone": "A"
     },
     "U Güntzelstr.": {
-      "lines": [
-        "U9"
-      ],
+      "lines": ["U9"],
       "zone": "A"
     },
     "U Halemweg": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Hallesches Tor": {
-      "lines": [
-        "U1",
-        "U3",
-        "U6"
-      ],
+      "lines": ["U1", "U3", "U6"],
       "zone": "A"
     },
     "U Hansaplatz": {
-      "lines": [
-        "U9"
-      ],
+      "lines": ["U9"],
       "zone": "A"
     },
     "U Haselhorst": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Hausvogteiplatz": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "A"
     },
     "U Heinrich-Heine-Str.": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "A"
     },
     "U Hellersdorf": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "B"
     },
     "U Hermannplatz": {
-      "lines": [
-        "U7",
-        "U8"
-      ],
+      "lines": ["U7", "U8"],
       "zone": "A"
     },
     "U Hohenzollernplatz": {
-      "lines": [
-        "U3"
-      ],
+      "lines": ["U3"],
       "zone": "A"
     },
     "U Hönow": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "C"
     },
     "U Jakob-Kaiser-Platz": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Johannisthaler Chaussee": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Kaiserdamm": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "A"
     },
     "U Kaiserin-Augusta-Str.": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "B"
     },
     "U Karl-Marx-Str.": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "A"
     },
     "U Kaulsdorf-Nord": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "B"
     },
     "U Kienberg (Gärten der Welt)": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "B"
     },
     "U Kleistpark": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "A"
     },
     "U Klosterstr.": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "A"
     },
     "U Kochstr. (Checkpoint Charlie)": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "A"
     },
     "U Konstanzer Str.": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "A"
     },
     "U Kottbusser Tor": {
-      "lines": [
-        "U1",
-        "U3",
-        "U8"
-      ],
+      "lines": ["U1", "U3", "U8"],
       "zone": "A"
     },
     "U Krumme Lanke": {
-      "lines": [
-        "U3"
-      ],
+      "lines": ["U3"],
       "zone": "B"
     },
     "U Kurfürstendamm": {
-      "lines": [
-        "U1",
-        "U9"
-      ],
+      "lines": ["U1", "U9"],
       "zone": "A"
     },
     "U Kurfürstenstr.": {
-      "lines": [
-        "U1",
-        "U3"
-      ],
+      "lines": ["U1", "U3"],
       "zone": "A"
     },
     "U Kurt-Schumacher-Platz": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "B"
     },
     "U Leinestr.": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "A"
     },
     "U Leopoldplatz": {
-      "lines": [
-        "U6",
-        "U9"
-      ],
+      "lines": ["U6", "U9"],
       "zone": "B"
     },
     "U Lindauer Allee": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "B"
     },
     "U Lipschitzallee": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Louis-Lewin-Str.": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "B"
     },
     "U Magdalenenstr.": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "B"
     },
     "U Mehringdamm": {
-      "lines": [
-        "U6",
-        "U7"
-      ],
+      "lines": ["U6", "U7"],
       "zone": "A"
     },
     "U Mendelssohn-Bartholdy-Park": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "A"
     },
     "U Mierendorffplatz": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "A"
     },
     "U Moritzplatz": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "A"
     },
     "U Museumsinsel": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "A"
     },
     "U Märkisches Museum": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "A"
     },
     "U Möckernbrücke": {
-      "lines": [
-        "U1",
-        "U3",
-        "U7"
-      ],
+      "lines": ["U1", "U3", "U7"],
       "zone": "A"
     },
     "U Naturkundemuseum": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "A"
     },
     "U Nauener Platz": {
-      "lines": [
-        "U9"
-      ],
+      "lines": ["U9"],
       "zone": "B"
     },
     "U Neu-Westend": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "B"
     },
     "U Nollendorfplatz": {
-      "lines": [
-        "U1",
-        "U2",
-        "U3",
-        "U4"
-      ],
+      "lines": ["U1", "U2", "U3", "U4"],
       "zone": "A"
     },
     "U Olympia-Stadion": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "B"
     },
     "U Onkel Toms Hütte": {
-      "lines": [
-        "U3"
-      ],
+      "lines": ["U3"],
       "zone": "B"
     },
     "U Oranienburger Tor": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "A"
     },
     "U Oskar-Helene-Heim": {
-      "lines": [
-        "U3"
-      ],
+      "lines": ["U3"],
       "zone": "B"
     },
     "U Osloer Str.": {
-      "lines": [
-        "U8",
-        "U9"
-      ],
+      "lines": ["U8", "U9"],
       "zone": "B"
     },
     "U Pankstr.": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "B"
     },
     "U Paracelsus-Bad": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "B"
     },
     "U Paradestr.": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "A"
     },
     "U Parchimer Allee": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Paulsternstr.": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Platz der Luftbrücke": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "A"
     },
     "U Podbielskiallee": {
-      "lines": [
-        "U3"
-      ],
+      "lines": ["U3"],
       "zone": "B"
     },
     "U Prinzenstr.": {
-      "lines": [
-        "U1",
-        "U3"
-      ],
+      "lines": ["U1", "U3"],
       "zone": "A"
     },
     "U Rathaus Neukölln": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "A"
     },
     "U Rathaus Reinickendorf": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "B"
     },
     "U Rathaus Schöneberg": {
-      "lines": [
-        "U4"
-      ],
+      "lines": ["U4"],
       "zone": "A"
     },
     "U Rehberge": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "B"
     },
     "U Reinickendorfer Str.": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "A"
     },
     "U Residenzstr.": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "B"
     },
     "U Richard-Wagner-Platz": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "A"
     },
     "U Rohrdamm": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Rosa-Luxemburg-Platz": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "A"
     },
     "U Rosenthaler Platz": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "A"
     },
     "U Rotes Rathaus": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "A"
     },
     "U Rudow": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Ruhleben": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "B"
     },
     "U Rüdesheimer Platz": {
-      "lines": [
-        "U3"
-      ],
+      "lines": ["U3"],
       "zone": "B"
     },
     "U Samariterstr.": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "A"
     },
     "U Schillingstr.": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "A"
     },
     "U Schlesisches Tor": {
-      "lines": [
-        "U1",
-        "U3"
-      ],
+      "lines": ["U1", "U3"],
       "zone": "A"
     },
     "U Schloßstr.": {
-      "lines": [
-        "U9"
-      ],
+      "lines": ["U9"],
       "zone": "B"
     },
     "U Schwartzkopffstr.": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "A"
     },
     "U Schönleinstr.": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "A"
     },
     "U Seestr.": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "B"
     },
     "U Senefelderplatz": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "A"
     },
     "U Siemensdamm": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Sophie-Charlotte-Platz": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "A"
     },
     "U Spichernstr.": {
-      "lines": [
-        "U3",
-        "U9"
-      ],
+      "lines": ["U3", "U9"],
       "zone": "A"
     },
     "U Spittelmarkt": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "A"
     },
     "U Stadtmitte": {
-      "lines": [
-        "U2",
-        "U6"
-      ],
+      "lines": ["U2", "U6"],
       "zone": "A"
     },
     "U Strausberger Platz": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "A"
     },
     "U Südstern": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "A"
     },
     "U Theodor-Heuss-Platz": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "B"
     },
     "U Tierpark": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "B"
     },
     "U Turmstr.": {
-      "lines": [
-        "U9"
-      ],
+      "lines": ["U9"],
       "zone": "A"
     },
     "U Uhlandstr.": {
-      "lines": [
-        "U1"
-      ],
+      "lines": ["U1"],
       "zone": "A"
     },
     "U Ullsteinstr.": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "B"
     },
     "U Unter den Linden": {
-      "lines": [
-        "U5",
-        "U6"
-      ],
+      "lines": ["U5", "U6"],
       "zone": "A"
     },
     "U Viktoria-Luise-Platz": {
-      "lines": [
-        "U4"
-      ],
+      "lines": ["U4"],
       "zone": "A"
     },
     "U Vinetastr.": {
-      "lines": [
-        "U2"
-      ],
+      "lines": ["U2"],
       "zone": "B"
     },
     "U Voltastr.": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "A"
     },
     "U Walther-Schreiber-Platz": {
-      "lines": [
-        "U9"
-      ],
+      "lines": ["U9"],
       "zone": "B"
     },
     "U Weberwiese": {
-      "lines": [
-        "U5"
-      ],
+      "lines": ["U5"],
       "zone": "A"
     },
     "U Weinmeisterstr.": {
-      "lines": [
-        "U8"
-      ],
+      "lines": ["U8"],
       "zone": "A"
     },
     "U Westphalweg": {
-      "lines": [
-        "U6"
-      ],
+      "lines": ["U6"],
       "zone": "B"
     },
     "U Wilmersdorfer Str.": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "A"
     },
     "U Wittenbergplatz": {
-      "lines": [
-        "U1",
-        "U2",
-        "U3"
-      ],
+      "lines": ["U1", "U2", "U3"],
       "zone": "A"
     },
     "U Wutzkyallee": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Zitadelle": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     },
     "U Zwickauer Damm": {
-      "lines": [
-        "U7"
-      ],
+      "lines": ["U7"],
       "zone": "B"
     }
   }
