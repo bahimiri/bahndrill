@@ -19,7 +19,10 @@ export const useLineMatchingGame = () => {
     ]
   })
 
+  const stopsForChallenge = ref<Array<LineStop>>([])
+
   watch(filteredStops, (newFilteredStops) => {
+    stopsForChallenge.value = newFilteredStops
     if (stop.value && !newFilteredStops.includes(stop.value)) {
       setNextStop()
       selectedLines.value = []
@@ -27,7 +30,8 @@ export const useLineMatchingGame = () => {
   })
 
   const setNextStop = () => {
-    stop.value = filteredStops.value[Math.floor(Math.random() * filteredStops.value.length)]!
+    stop.value =
+      stopsForChallenge.value[Math.floor(Math.random() * stopsForChallenge.value.length)]!
   }
   const stop = ref<LineStop | null>(null)
   watch(
@@ -55,6 +59,15 @@ export const useLineMatchingGame = () => {
   )
 
   const startChallenge = () => {
+    if (isCorrect.value) {
+      if (stopsForChallenge.value.length === 1) {
+        stopsForChallenge.value = filteredStops.value
+      } else {
+        stopsForChallenge.value = stopsForChallenge.value.filter(
+          (stopForChallenge) => stopForChallenge !== stop.value,
+        )
+      }
+    }
     selectedLines.value = []
     setNextStop()
   }
